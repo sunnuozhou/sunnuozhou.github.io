@@ -7,13 +7,15 @@
   
   <title>test_my_site | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="article">
+  <meta name="description" content="$1\le 2$">
+<meta property="og:type" content="article">
 <meta property="og:title" content="test_my_site">
 <meta property="og:url" content="http://yoursite.com/2020/01/07/test-my-site/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="$1\le 2$">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-01-07T06:55:54.000Z">
-<meta property="article:modified_time" content="2020-01-07T06:55:54.199Z">
+<meta property="article:modified_time" content="2020-01-07T07:34:39.346Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -86,7 +88,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <p>$1\le 2$</p>
+
       
     </div>
     <footer class="article-footer">
@@ -191,5 +194,22 @@
 
 
   </div>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
 </body>
 </html>
