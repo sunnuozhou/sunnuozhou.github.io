@@ -55,8 +55,10 @@
 <meta property="og:image" content="http://sunnuozhou.github.io/2020/01/07/hexo%E5%AE%89%E8%A3%85/1.png">
 <meta property="og:image" content="http://sunnuozhou.github.io/2020/01/07/hexo%E5%AE%89%E8%A3%85/2.png">
 <meta property="og:image" content="http://sunnuozhou.github.io/2020/01/07/hexo%E5%AE%89%E8%A3%85/3.png">
+<meta property="og:image" content="http://sunnuozhou.github.io/2020/01/07/hexo%E5%AE%89%E8%A3%85/4.png">
+<meta property="og:image" content="http://sunnuozhou.github.io/2020/01/07/hexo%E5%AE%89%E8%A3%85/5.png">
 <meta property="article:published_time" content="2020-01-06T16:00:00.000Z">
-<meta property="article:modified_time" content="2020-01-08T09:07:36.102Z">
+<meta property="article:modified_time" content="2020-01-08T10:00:41.421Z">
 <meta property="article:author" content="sunnuozhou">
 <meta property="article:tag" content="技术">
 <meta name="twitter:card" content="summary">
@@ -239,7 +241,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-01-08 17:07:36" itemprop="dateModified" datetime="2020-01-08T17:07:36+08:00">2020-01-08</time>
+                <time title="Modified: 2020-01-08 18:00:41" itemprop="dateModified" datetime="2020-01-08T18:00:41+08:00">2020-01-08</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -302,8 +304,8 @@
 <p>就下来就可以推送到网上了。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean </span><br><span class="line">hexo g </span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
 <p>然后你就可以在username.github.io上看到你的博客了。</p>
-<h2 id="使用Latex公式"><a href="#使用Latex公式" class="headerlink" title="使用Latex公式"></a>使用Latex公式</h2><p><a href="https://www.jianshu.com/p/68e6f82d88b7" target="_blank" rel="noopener">见此文章</a></p>
-<h2 id="插入图片"><a href="#插入图片" class="headerlink" title="插入图片"></a>插入图片</h2><p>先将_config.yml中的post_asset_folder的值改为true，这样就可以使用资源文件夹（与文章名字相同的文件夹）。</p>
+<h2 id="添加常用功能"><a href="#添加常用功能" class="headerlink" title="添加常用功能"></a>添加常用功能</h2><h3 id="使用Latex公式"><a href="#使用Latex公式" class="headerlink" title="使用Latex公式"></a>使用Latex公式</h3><p><a href="https://www.jianshu.com/p/68e6f82d88b7" target="_blank" rel="noopener">见此文章</a></p>
+<h3 id="插入图片"><a href="#插入图片" class="headerlink" title="插入图片"></a>插入图片</h3><p>先将_config.yml中的post_asset_folder的值改为true，这样就可以使用资源文件夹（与文章名字相同的文件夹）。</p>
 <p>然后执行以下命令</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo npm install https:&#x2F;&#x2F;github.com&#x2F;CodeFalling&#x2F;hexo-asset-image --save</span><br></pre></td></tr></table></figure>
 <p>其中lodash库爆出安全漏洞，但是我也不懂什么是原型污染，就先用着了。</p>
@@ -337,6 +339,20 @@
 <h3 id="代码块复制"><a href="#代码块复制" class="headerlink" title="代码块复制"></a>代码块复制</h3><p>搜索<code>copy_button</code>，设为<code>enable</code>。</p>
 <h3 id="访客统计"><a href="#访客统计" class="headerlink" title="访客统计"></a>访客统计</h3><p>搜索<code>busuanzi_count</code>，设为<code>enable</code>。</p>
 <p>要注意的是，总统计数在本地会显示错误，但推送到网站上就没问题。</p>
+<h2 id="遇到的问题"><a href="#遇到的问题" class="headerlink" title="遇到的问题"></a>遇到的问题</h2><p>推送到github上的网页和在本地预览的不一样。</p>
+<p>github上如下：</p>
+<p><img src="/2020/01/07/hexo%E5%AE%89%E8%A3%85/4.png" alt></p>
+<p>本地如下：<br><img src="/2020/01/07/hexo%E5%AE%89%E8%A3%85/5.png" alt></p>
+<p>以及其他一些小的显示错误。</p>
+<p>可能是本地缓存的问题：</p>
+<ul>
+<li>在部署前先<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>​    重新生成一遍。</p>
+<ul>
+<li>如果在本机还是有显示问题，可能是浏览器缓存的问题，按<code>ctrl+F5</code>强制刷新就好了。</li>
+</ul>
 
     </div>
 
@@ -411,7 +427,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#hexo安装"><span class="nav-number">1.</span> <span class="nav-text">hexo安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#推送网站"><span class="nav-number">2.</span> <span class="nav-text">推送网站</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用Latex公式"><span class="nav-number">3.</span> <span class="nav-text">使用Latex公式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#插入图片"><span class="nav-number">4.</span> <span class="nav-text">插入图片</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#美化博客"><span class="nav-number">5.</span> <span class="nav-text">美化博客</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#页脚设置"><span class="nav-number">5.1.</span> <span class="nav-text">页脚设置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#关于-amp-标签-amp-分类"><span class="nav-number">5.2.</span> <span class="nav-text">关于&amp;标签&amp;分类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#搜索"><span class="nav-number">5.3.</span> <span class="nav-text">搜索</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#社交网站"><span class="nav-number">5.4.</span> <span class="nav-text">社交网站</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#阅读百分比-amp-回到顶部"><span class="nav-number">5.5.</span> <span class="nav-text">阅读百分比&amp;回到顶部</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#不展示全文"><span class="nav-number">5.6.</span> <span class="nav-text">不展示全文</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码块复制"><span class="nav-number">5.7.</span> <span class="nav-text">代码块复制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#访客统计"><span class="nav-number">5.8.</span> <span class="nav-text">访客统计</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#hexo安装"><span class="nav-number">1.</span> <span class="nav-text">hexo安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#推送网站"><span class="nav-number">2.</span> <span class="nav-text">推送网站</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加常用功能"><span class="nav-number">3.</span> <span class="nav-text">添加常用功能</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#使用Latex公式"><span class="nav-number">3.1.</span> <span class="nav-text">使用Latex公式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#插入图片"><span class="nav-number">3.2.</span> <span class="nav-text">插入图片</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#美化博客"><span class="nav-number">4.</span> <span class="nav-text">美化博客</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#页脚设置"><span class="nav-number">4.1.</span> <span class="nav-text">页脚设置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#关于-amp-标签-amp-分类"><span class="nav-number">4.2.</span> <span class="nav-text">关于&amp;标签&amp;分类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#搜索"><span class="nav-number">4.3.</span> <span class="nav-text">搜索</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#社交网站"><span class="nav-number">4.4.</span> <span class="nav-text">社交网站</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#阅读百分比-amp-回到顶部"><span class="nav-number">4.5.</span> <span class="nav-text">阅读百分比&amp;回到顶部</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#不展示全文"><span class="nav-number">4.6.</span> <span class="nav-text">不展示全文</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码块复制"><span class="nav-number">4.7.</span> <span class="nav-text">代码块复制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#访客统计"><span class="nav-number">4.8.</span> <span class="nav-text">访客统计</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#遇到的问题"><span class="nav-number">5.</span> <span class="nav-text">遇到的问题</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 

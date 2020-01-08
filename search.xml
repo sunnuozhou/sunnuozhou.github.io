@@ -34,8 +34,8 @@
 <p>就下来就可以推送到网上了。</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo clean </span><br><span class="line">hexo g </span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
 <p>然后你就可以在username.github.io上看到你的博客了。</p>
-<h2 id="使用Latex公式"><a href="#使用Latex公式" class="headerlink" title="使用Latex公式"></a>使用Latex公式</h2><p><a href="https://www.jianshu.com/p/68e6f82d88b7" target="_blank" rel="noopener">见此文章</a></p>
-<h2 id="插入图片"><a href="#插入图片" class="headerlink" title="插入图片"></a>插入图片</h2><p>先将_config.yml中的post_asset_folder的值改为true，这样就可以使用资源文件夹（与文章名字相同的文件夹）。</p>
+<h2 id="添加常用功能"><a href="#添加常用功能" class="headerlink" title="添加常用功能"></a>添加常用功能</h2><h3 id="使用Latex公式"><a href="#使用Latex公式" class="headerlink" title="使用Latex公式"></a>使用Latex公式</h3><p><a href="https://www.jianshu.com/p/68e6f82d88b7" target="_blank" rel="noopener">见此文章</a></p>
+<h3 id="插入图片"><a href="#插入图片" class="headerlink" title="插入图片"></a>插入图片</h3><p>先将_config.yml中的post_asset_folder的值改为true，这样就可以使用资源文件夹（与文章名字相同的文件夹）。</p>
 <p>然后执行以下命令</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo npm install https:&#x2F;&#x2F;github.com&#x2F;CodeFalling&#x2F;hexo-asset-image --save</span><br></pre></td></tr></table></figure>
 <p>其中lodash库爆出安全漏洞，但是我也不懂什么是原型污染，就先用着了。</p>
@@ -69,6 +69,20 @@
 <h3 id="代码块复制"><a href="#代码块复制" class="headerlink" title="代码块复制"></a>代码块复制</h3><p>搜索<code>copy_button</code>，设为<code>enable</code>。</p>
 <h3 id="访客统计"><a href="#访客统计" class="headerlink" title="访客统计"></a>访客统计</h3><p>搜索<code>busuanzi_count</code>，设为<code>enable</code>。</p>
 <p>要注意的是，总统计数在本地会显示错误，但推送到网站上就没问题。</p>
+<h2 id="遇到的问题"><a href="#遇到的问题" class="headerlink" title="遇到的问题"></a>遇到的问题</h2><p>推送到github上的网页和在本地预览的不一样。</p>
+<p>github上如下：</p>
+<p><img src="/2020/01/07/hexo%E5%AE%89%E8%A3%85/4.png" alt></p>
+<p>本地如下：<br><img src="/2020/01/07/hexo%E5%AE%89%E8%A3%85/5.png" alt></p>
+<p>以及其他一些小的显示错误。</p>
+<p>可能是本地缓存的问题：</p>
+<ul>
+<li>在部署前先<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>​    重新生成一遍。</p>
+<ul>
+<li>如果在本机还是有显示问题，可能是浏览器缓存的问题，按<code>ctrl+F5</code>强制刷新就好了。</li>
+</ul>
 ]]></content>
       <categories>
         <category>实用工具</category>
