@@ -72,7 +72,7 @@ ssh-keygen -t rsa -C "email"
 
 把`id_rsa.pub`里的所有内容全扔到[github](https://github.com)中的SSH keys / Add new里。
 
-![记得allow write access](hexo安装/1.png)
+![](hexo安装/1.png)
 
 尝试一下是否成功
 
@@ -127,6 +127,40 @@ sudo npm install https://github.com/CodeFalling/hexo-asset-image --save
 ```
 hexo clean
 ```
+
+### 同步到github
+
+先在[github](github.com)上新建一个分支。
+
+![](hexo安装/6.png)
+
+在左上角的`branch`中输入新分支的名字，点击`create`。
+
+然后在`Settings/Branches`中将新分支设为默认。
+
+在本地用`git clone`把新分支复制下来，然后把博客的部署文件全复制到新分支下，并在新分支下输入:
+
+```
+git add .
+git commit -m "注释"
+git push
+```
+
+每一次写博客前先
+
+```
+git pull
+```
+
+写完后在输入
+
+```
+git add .
+git commit -m "注释"
+git push
+```
+
+来更新部署文件。
 
 ## 美化博客
 
@@ -224,6 +258,8 @@ search:
 
 ## 遇到的问题
 
+### 本地预览和网上不同
+
 推送到github上的网页和在本地预览的不一样。
 
 github上如下：
@@ -246,3 +282,23 @@ hexo g
 ​	重新生成一遍。
 
 - 如果在本机还是有显示问题，可能是浏览器缓存的问题，按`ctrl+F5`强制刷新就好了。
+
+### git push时要输入密码
+
+秘钥的设置见上文**推送网站**章节。
+
+```
+git remote -v
+```
+
+进行检查，如果结果是`https://xxx`说明连接方式是`https`，而不是前面配置的`ssh`。
+
+输入：
+
+```
+git remote set-url origin git@github.com:NAME/PROJECT.git
+```
+
+或者在`.git/config`中进行修改。
+
+**注意**：`github.com`后面是冒号":"而不是斜杠“/”。

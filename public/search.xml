@@ -281,7 +281,7 @@
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;email&quot;</span><br></pre></td></tr></table></figure>
 <p>密码和存储地址都可以不用设置。</p>
 <p>把<code>id_rsa.pub</code>里的所有内容全扔到<a href="https://github.com" target="_blank" rel="noopener">github</a>中的SSH keys / Add new里。</p>
-<p><img src="/2020/01/07/hexo%E5%AE%89%E8%A3%85/1.png" alt="记得allow write access"></p>
+<p><img src="/2020/01/07/hexo%E5%AE%89%E8%A3%85/1.png" alt></p>
 <p>尝试一下是否成功</p>
 <p><img src="/2020/01/07/hexo%E5%AE%89%E8%A3%85/2.png" alt="这说明成功了"></p>
 <p>接下来打开博客目录下的配置文件_config.yml，将最后改为</p>
@@ -299,6 +299,17 @@
 <p>然后将要用的图片放在同名文件夹下，就可以像正常的markdown一样显示了。</p>
 <p>如果显示失败的话要先执行</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br></pre></td></tr></table></figure>
+<h3 id="同步到github"><a href="#同步到github" class="headerlink" title="同步到github"></a>同步到github</h3><p>先在<a href="github.com">github</a>上新建一个分支。</p>
+<p><img src="/2020/01/07/hexo%E5%AE%89%E8%A3%85/6.png" alt></p>
+<p>在左上角的<code>branch</code>中输入新分支的名字，点击<code>create</code>。</p>
+<p>然后在<code>Settings/Branches</code>中将新分支设为默认。</p>
+<p>在本地用<code>git clone</code>把新分支复制下来，然后把博客的部署文件全复制到新分支下，并在新分支下输入:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit -m &quot;注释&quot;</span><br><span class="line">git push</span><br></pre></td></tr></table></figure>
+<p>每一次写博客前先</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git pull</span><br></pre></td></tr></table></figure>
+<p>写完后在输入</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit -m &quot;注释&quot;</span><br><span class="line">git push</span><br></pre></td></tr></table></figure>
+<p>来更新部署文件。</p>
 <h2 id="美化博客"><a href="#美化博客" class="headerlink" title="美化博客"></a>美化博客</h2><p>首先先下载Next主题，在博客文件夹中</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git clone https:&#x2F;&#x2F;github.com&#x2F;theme-next&#x2F;hexo-theme-next.git themes&#x2F;next</span><br></pre></td></tr></table></figure>
 <p>然后选择<code>theme/next/_config.yml</code>中选择其中的主题，我选的是Pisces。</p>
@@ -326,7 +337,7 @@
 <h3 id="代码块复制"><a href="#代码块复制" class="headerlink" title="代码块复制"></a>代码块复制</h3><p>搜索<code>copy_button</code>，设为<code>enable</code>。</p>
 <h3 id="访客统计"><a href="#访客统计" class="headerlink" title="访客统计"></a>访客统计</h3><p>搜索<code>busuanzi_count</code>，设为<code>enable</code>。</p>
 <p>要注意的是，总统计数在本地会显示错误，但推送到网站上就没问题。</p>
-<h2 id="遇到的问题"><a href="#遇到的问题" class="headerlink" title="遇到的问题"></a>遇到的问题</h2><p>推送到github上的网页和在本地预览的不一样。</p>
+<h2 id="遇到的问题"><a href="#遇到的问题" class="headerlink" title="遇到的问题"></a>遇到的问题</h2><h3 id="本地预览和网上不同"><a href="#本地预览和网上不同" class="headerlink" title="本地预览和网上不同"></a>本地预览和网上不同</h3><p>推送到github上的网页和在本地预览的不一样。</p>
 <p>github上如下：</p>
 <p><img src="/2020/01/07/hexo%E5%AE%89%E8%A3%85/4.png" alt></p>
 <p>本地如下：<br><img src="/2020/01/07/hexo%E5%AE%89%E8%A3%85/5.png" alt></p>
@@ -340,6 +351,13 @@
 <ul>
 <li>如果在本机还是有显示问题，可能是浏览器缓存的问题，按<code>ctrl+F5</code>强制刷新就好了。</li>
 </ul>
+<h3 id="git-push时要输入密码"><a href="#git-push时要输入密码" class="headerlink" title="git push时要输入密码"></a>git push时要输入密码</h3><p>秘钥的设置见上文<strong>推送网站</strong>章节。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git remote -v</span><br></pre></td></tr></table></figure>
+<p>进行检查，如果结果是<code>https://xxx</code>说明连接方式是<code>https</code>，而不是前面配置的<code>ssh</code>。</p>
+<p>输入：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git remote set-url origin git@github.com:NAME&#x2F;PROJECT.git</span><br></pre></td></tr></table></figure>
+<p>或者在<code>.git/config</code>中进行修改。</p>
+<p><strong>注意</strong>：<code>github.com</code>后面是冒号”:”而不是斜杠“/”。</p>
 ]]></content>
       <categories>
         <category>实用工具</category>
