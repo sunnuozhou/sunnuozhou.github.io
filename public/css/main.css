@@ -1162,6 +1162,7 @@ pre .javascript .function {
   margin: 0 auto;
   max-width: 120px;
   padding: 2px;
+  border-radius: 50%;
 }
 .site-author-name {
   color: #222;
@@ -1189,7 +1190,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #855eda;
+  background: #49bfff;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2265,6 +2266,10 @@ ul.breadcrumb li + li:last-child {
   top: 50%;
   transform: translate(-50%, -50%);
 }
+.has-jax {
+  overflow-x: auto;
+  overflow-y: hidden;
+}
 .header {
   margin: 0 auto;
   position: relative;
@@ -2583,4 +2588,13 @@ ul.breadcrumb li + li:last-child {
 }
 .links-of-blogroll-item {
   padding: 0;
+}
+body {
+  background-image: url("/images/background.jpeg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+.main-inner {
+  opacity: 0.9;
 }
