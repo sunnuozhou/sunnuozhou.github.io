@@ -46,20 +46,23 @@
   };
 </script>
 
-  <meta name="description" content="Day -2提前1天就来了广州，下午颓废了半天，不知道应该干嘛。晚上提起精神背了背笔试题库。 Day -1早上睡了个懒觉。然后就出发去报到了，广州是真得热，我感觉我在外面不能呆超过15分钟。">
+  <meta name="description" content="E.Pairing Points题目大意在一个圆上顺序排列着$2N$个点，保证任意3个点对的连线不交于一点。求有多少中将$2N$个点分成$N$个点对的方法，使得$N$个点对间的连线连通且无环，并且有一些点对不允许出现。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="NOI2019游记">
-<meta property="og:url" content="http://sunnuozhou.github.io/2020/01/08/NOI2019%E6%B8%B8%E8%AE%B0/index.html">
+<meta property="og:title" content="atcoder grand contest 039">
+<meta property="og:url" content="http://sunnuozhou.github.io/2020/01/09/atcoder-grand-contest-039/index.html">
 <meta property="og:site_name" content="SNZ的博客">
-<meta property="og:description" content="Day -2提前1天就来了广州，下午颓废了半天，不知道应该干嘛。晚上提起精神背了背笔试题库。 Day -1早上睡了个懒觉。然后就出发去报到了，广州是真得热，我感觉我在外面不能呆超过15分钟。">
-<meta property="article:published_time" content="2020-01-08T13:59:29.000Z">
-<meta property="article:modified_time" content="2020-01-08T14:02:02.684Z">
+<meta property="og:description" content="E.Pairing Points题目大意在一个圆上顺序排列着$2N$个点，保证任意3个点对的连线不交于一点。求有多少中将$2N$个点分成$N$个点对的方法，使得$N$个点对间的连线连通且无环，并且有一些点对不允许出现。">
+<meta property="og:image" content="http://sunnuozhou.github.io/2020/01/09/atcoder-grand-contest-039/2.png">
+<meta property="article:published_time" content="2020-01-09T08:40:01.000Z">
+<meta property="article:modified_time" content="2020-01-09T08:43:58.211Z">
 <meta property="article:author" content="sunnuozhou">
 <meta property="article:tag" content="OI">
-<meta property="article:tag" content="游记">
+<meta property="article:tag" content="atcoder">
+<meta property="article:tag" content="解题报告">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://sunnuozhou.github.io/2020/01/09/atcoder-grand-contest-039/2.png">
 
-<link rel="canonical" href="http://sunnuozhou.github.io/2020/01/08/NOI2019%E6%B8%B8%E8%AE%B0/">
+<link rel="canonical" href="http://sunnuozhou.github.io/2020/01/09/atcoder-grand-contest-039/">
 
 
 <script id="page-configurations">
@@ -71,7 +74,7 @@
   };
 </script>
 
-  <title>NOI2019游记 | SNZ的博客</title>
+  <title>atcoder grand contest 039 | SNZ的博客</title>
   
 
 
@@ -206,7 +209,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-Haus">
-    <link itemprop="mainEntityOfPage" href="http://sunnuozhou.github.io/2020/01/08/NOI2019%E6%B8%B8%E8%AE%B0/">
+    <link itemprop="mainEntityOfPage" href="http://sunnuozhou.github.io/2020/01/09/atcoder-grand-contest-039/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -219,7 +222,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          NOI2019游记
+          atcoder grand contest 039
         </h1>
 
         <div class="post-meta">
@@ -230,7 +233,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2020-01-08 21:59:29 / Modified: 22:02:02" itemprop="dateCreated datePublished" datetime="2020-01-08T21:59:29+08:00">2020-01-08</time>
+              <time title="Created: 2020-01-09 16:40:01 / Modified: 16:43:58" itemprop="dateCreated datePublished" datetime="2020-01-09T16:40:01+08:00">2020-01-09</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -238,8 +241,8 @@
               </span>
               <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%B8%B8%E8%AE%B0/" itemprop="url" rel="index">
-                    <span itemprop="name">游记</span>
+                  <a href="/categories/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/" itemprop="url" rel="index">
+                    <span itemprop="name">解题报告</span>
                   </a>
                 </span>
             </span>
@@ -262,76 +265,23 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2 id="Day-2"><a href="#Day-2" class="headerlink" title="Day -2"></a>Day -2</h2><p>提前1天就来了广州，下午颓废了半天，不知道应该干嘛。晚上提起精神背了背笔试题库。</p>
-<h2 id="Day-1"><a href="#Day-1" class="headerlink" title="Day -1"></a>Day -1</h2><p>早上睡了个懒觉。然后就出发去报到了，广州是真得热，我感觉我在外面不能呆超过15分钟。</p>
+        <h2 id="E-Pairing-Points"><a href="#E-Pairing-Points" class="headerlink" title="E.Pairing Points"></a>E.Pairing Points</h2><h3 id="题目大意"><a href="#题目大意" class="headerlink" title="题目大意"></a>题目大意</h3><p>在一个圆上顺序排列着$2N$个点，保证任意3个点对的连线不交于一点。求有多少中将$2N$个点分成$N$个点对的方法，使得$N$个点对间的连线连通且无环，并且有一些点对不允许出现。</p>
 <a id="more"></a>
-<p>我的宿舍在5楼，爬楼梯真的让人非常不爽。不过5楼貌似比下面要凉快一点。</p>
-<p>下午回宾馆接着颓废。</p>
-<p>晚上到宿舍后发现现在和冬令营不一样，蚊帐大幅缩小了我的可用空间，我不能像冬令营一样把所有东西都放床边的架子上了。</p>
-<p>和戴大爷，zhf一个房间，整个宿舍就我一个不是A类，被打爆了。</p>
-<p>现在真得虚的要死。</p>
-<h2 id="Day-0"><a href="#Day-0" class="headerlink" title="Day 0"></a>Day 0</h2><p>昨天晚上一直闹得要死，我根本睡不着，半夜还起来把耳塞翻出来。</p>
-<p>今天早上醒来的时候发现噪声的来源是电风扇没关。。。</p>
-<p>因为早上没什么事，我起得特别晚，结果到食堂发现没什么能吃的了。</p>
-<p>中午的伙食是真得差，4个菜只有两个勉强能吃。</p>
-<p>下午笔试的时候竟然没有挂分，难以置信！</p>
-<p>下午试机的时候发现这里的机子是真得慢，1000000的NTT要跑1.2s（而且还是我优化过的，没有优化的NTT要跑2.0s），我发现在这机子上long long跑得特别慢，不知道是不是32位的原因。试机的题目有两道传统题和一道交互题，没有题答题对我这种不会玩题答的人是个好事，可是交互我也不怎么会做呢。xyx预测交互会在D1T3的位置出现，让我担心明天就会被交互题区分下去。</p>
-<p>吃饭前zhf大佬现场教学了zsh的使用方法，我就装了一个zsh（发现挺好用的）。我发现戴大爷和zhf这两个vim选手都是把vim当普通的编辑器用的，而不是用vim来进行神仙操作。</p>
-<p>晚饭比午饭可食用多了，除了某个超级辣的辣椒炒肉。</p>
-<h2 id="Day-1-1"><a href="#Day-1-1" class="headerlink" title="Day 1"></a>Day 1</h2><p>不开风扇后果然噪声小多了，总体睡眠质量好多了。</p>
-<p>早上起得有一点早，感到身体状态不是很好，去早了后早饭的内容果然多多了，尽管我没吃多少。</p>
-<p>考试开始前超级紧张。。。</p>
-<p>CCF一如既往的咕咕了1分钟。（比赛时间8:01-13:01）</p>
-<p>8:01 比赛开始</p>
-<p>先看了一下题型，发现是3道传统题，空间都是512MB，时间分别1s，3s，1s。</p>
-<p>仔细读完T1，发现是一个DP题，并且可以简单地斜率优化。仔细想了想细节，发现没有什么问题，就开始写了，过程还是比较顺利的。</p>
-<p>8:40 写完T1</p>
-<p>测了一下小样例，发现WA了，再一看，发现最后的答案要减去C。测样例3的时候发现RE了，原来是我的vector的size开小了。</p>
-<p>8:50 过T1样例</p>
-<p>为了求稳，我T1还是写了一个对拍，但没有拍出错。</p>
-<p>9:05 过T1对拍</p>
-<p>看完T2题意，第一眼不是很会做。再想了一下发现最大值必须在中间的几个位置，写了个程序跑了一下，发现n=300的时候有效区间的个数只有2047个，然后我就会了一个2047×maxB的做法（其实在n&lt;=300的时候可能会到两千一百多）。因为有50分，我想都没想就开始写了，一测发现小样例过了，第二个样例WA了，但答案有几万，我并不能进行调试。我测了一下改之前的样例1，发现我竟然输出了2。我一番调试后发现我对于长度为1的区间我不应该递归下去。然后一下就过了样例2，但在测样例3的时候我RE了，我发现n=300的时候状态数并不是最大，开大数组后就过了。</p>
-<p>我看了看后面的数据范围，心想：这不是离散化一下就AC了吗，然后写了一个字母后就发现我在YY，我感觉我不是很会T2，就先去看T3了。</p>
-<p>10:10 T2写完50分</p>
-<p>看完T3，感觉像个费用流，但想了5分钟不会建图，就不想费用流了（然后就和费用流擦肩而过）。我想了一个贪心，仔细想了想没什么问题，就开始写了，我先写了一个n^3的做法，经过不断调试后，我过了第1，第2个样例，第3个样例比较大，我的n^3一下跑出了前5问的解，我看了一下发现没有问题，就把n^3改成n^2log了，然后一测，发现第3的样例的第6问WA了，这一问n到1500,根本不能调试。</p>
-<p>11:30 T3 n^2log 挂样例</p>
-<p>我当时心态直接爆炸，只好写暴力对拍。拍出错后，我手玩了一下，发现我贪心基于的性质是假的，心态疯狂爆炸。我冷静了一下，发现我好像可以修锅，于是开始不断小修小补，但由于我心态不是很好，花了很长时间在修好。</p>
-<p>12:20 T3 n^2log 过对拍</p>
-<p>我现在的预计分数是100+50+64，远低于去年NOI Day1的暴力分，去年T2暴力56，我今年只会50，去年T3暴力68，今年我只会64，感觉很凉。我当时突然发现我T2和T3没怎么对着满分想，万一T2或T3有一道非常可做我不就凉了。在这种想法的驱使下，我就去想T2的后面的分，但实力有限，我实在不会做，最后只好把目标定在T2的特殊性质上。</p>
-<p>12:30 调整好策略</p>
-<p>我觉得这是个关于B的多项式，于是我就写了一个拉格朗日插值，发现插出来的结果并不对，我感到非常绝望，认为我的想法错了，可能这并不是多项式。于是我只好检查检查3道题，然后不管了。</p>
-<p>13:01 考试结束</p>
-<p>我本来以为我凉透了，结果发现别人考得也不是很好，wyj只有163，bly只有194，除了神仙lj有250高分以外，没有什么同水平选手比我高。</p>
-<p>考完到复测的一段时间内，我一直很虚我fst，尤其是T1，因为我的数据造的完全没有强度，而且我写的也有一些小问题。</p>
-<p>复测的时候发现并没有fst，对比了一下其他人，感觉考得还可以。但我伏笔了10分，T2其实是一个多项式，只是我的插值的分子分母写反了而已。</p>
-<p>感觉嘉年华的活动挺有趣的，但我什么也没拿到。</p>
-<p>晚上讲评试题，T1有一半人A，T2有一堆人比我高，T3有几十个比我高，200分以上41个，150分以上150+个。</p>
-<h2 id="Day2"><a href="#Day2" class="headerlink" title="Day2"></a>Day2</h2><p>上午去参加社会活动。。。</p>
-<p>下午咕咕咕。。。</p>
-<h2 id="Day3"><a href="#Day3" class="headerlink" title="Day3"></a>Day3</h2><p>day1考得还行，所以心态比考day1的时候好一些，但还有一些紧张。</p>
-<p>今天CCF居然没有咕咕咕。</p>
-<p>8:00 比赛开始</p>
-<p>看了一下题，发现果然有交互。先看T1，读完题先想到KDtree优化建图，但我想了想发现好像过不了。想了半个小时还不会别的做法（我当时思维完全沉浸在优化建图上了，没想别的做法，加上只有128MB空间，我直接放弃了树套树）。我只会一边缓慢地写读入，一边纠结要不要写KDtree。后来我想了想，KDtree好像至少也有88分，就开始写了。</p>
-<p>我测了随机的大数据，发现要跑1.8s，KDtree一共遍历了1.3<em>10^8个点,连了6</em>10^7条边，拓展了6*10^5次。我想了想，一时不会优化，就不管了。</p>
-<p>9:15 T1过对拍</p>
-<p>我看了看T2，发现40分挺简单的，就直接开始写了。</p>
-<p>10:00 T2得到40分</p>
-<p>我想着D2T2应该挺难的，40分也不少了，就果断放弃了这一题，开始交互。</p>
-<p>我先写了一个暴力，熟悉了一下题目。</p>
-<p>然后我想了一下，发现我会做m=n/2的点和B类特殊性质，一共有44分。</p>
-<p>11:30 写完T3 44分</p>
-<p>我发现我从现在开始就不会得分了，我想了好久，发现我会了一个做法，就是随机选出一些点，modify他们，然后查看每个点的值，有变化的说明和被选出的点有连边，在用分治处理掉能找到的连边，但不知道是我写错了还是什么问题，我写的这个做法拿不到分数（询问次数爆了）。</p>
-<p>12:40 自闭了大量时间在一个拿不到分数的做法上。</p>
-<p>检查了20分钟，就交题了。</p>
-<p>13:00 比赛结束</p>
-<p>今天上厕所居然限制了一次只能有一个人，我今天去了8次厕所，有3次因为等的人太多被劝退了，还有一次等得无聊，就踩了踩旁边屏风的轮子，结果屏风就被我踩塌了。。。</p>
-<p>感觉Day2挺自闭的，没什么会做的分，期望100（88）+40+44，出来后发现我今天被打爆了，T2有好多人会做，听说打个表就A了（答案是一个1或2次函数）。</p>
-<p>复测时后特别紧张，幸好没有fst。</p>
-<p>总得分 0+100+214（100+50+64）+184（100+40+44）=498</p>
-<p>听说集训队分数爆高的时候虚了一会儿，结果队线只有477分，还算比较稳的。</p>
-<p>下午去换了保送约，感觉爽翻了！！！</p>
-<p>晚上不用去签约，就可以在宿舍疯狂颓废。</p>
-<p>7:00出了榜，我排第33名，感觉还行（毕竟是靠打暴力进的队）。</p>
+<h3 id="数据范围"><a href="#数据范围" class="headerlink" title="数据范围"></a>数据范围</h3><p>$1\le N\le 20$</p>
+<h3 id="解题过程"><a href="#解题过程" class="headerlink" title="解题过程"></a>解题过程</h3><p>令$n=2N$，即总点数。</p>
+<p>先考虑1号点的对应点，假设为$i$。现在问题变成了在$[2,i)\cup (i,n]$中连一些点对，至少有一组点对$(P,Q)$满足$P\in [2,i),Q\in (i,n]$并且所有$(P_1,Q_1),(P_2,Q_2),P_1,P_2\in [2,i),Q_1,Q_2\in (i,n]$，满足$[P_1 &lt; P_2]==[Q_1 &lt; Q_2]$。我们现在用$F(2,i,n)$来表示上述问题。</p>
+<p>考虑如何解决这个问题：</p>
+<p>因为至少有一个点对横跨两边。所有考虑枚举横跨两边的点对$(P,Q)$中，$P$最小的点对，设该点对为$(j,k)$。</p>
+<p><img src="/2020/01/09/atcoder-grand-contest-039/2.png" alt></p>
+<p>可以发现，在$(j,i)$中，有一部分点会和线段$（i,X）$连通，有一部分点会和线段$(j,X)$连通，并且它们存在一个分界点$p$。</p>
+<p>同样的，在$(i,k)$中有一部分点会和点$i$连通，有一部分点会和点$k$连通，并且它们存在一个分界点$q$。</p>
+<p>由于$[2,j)$和$(j,p]$都不会连出与$(1,i)$相交的点，所以区间$[2,j)\cup (j,p]$的问题为$F(2,j,p)$，由于$[q,k)$和$(k,n]$都不会连出与$(1,i)$相交的点，所以区间$[q,k)\cup (k,n]$的问题为$F(q,k,n)$。</p>
+<p>再来考虑$[p+1,i)$和$(i,q-1]$，它们不会和$(j,k)$相交，所以这个问题也是$F(p+1,i,q-1)$。</p>
+<p>考虑记忆化搜索，状态数为$O(n^3)$，转移为$O(n^4)$，总复杂度$O(n^7)$。现在的时间复杂度已经通过这道题了，但是比较慢，考虑优化这个算法。</p>
+<p>因为记忆化搜索不太好优化，我们先把记忆化搜索转化为DP。现在我们的状态为$(l,i,r)$，转移时枚举了$(j,k,p,q)$。因为DP转移依赖性的必要，先按$r-l+1$的大小枚举$(l,r)$。考虑优化DP，转移时枚举$(p,q)$，因为原DP转移是$F(l,i,r)+=F(l,j,p)<em>F(q,k,r)</em>F(p+1,i,q-1)$，转移条件为$l\le j\le p&lt; i &lt; q \le k\le r，A_{j,k}=1$，所以考虑记$Fs(l,x,r)$表示$\sum_{A_{x,i}=1}{F(l,i,r)}$,计算$S=\sum F(l,j,p)<em>F(q,k,r)=\sum Fs(l,k,p)</em>F(q,k,r)$。计算时只需枚举$k$。</p>
+<p>对于DP转移的另一项$F(p+1,i,q-1)$，因为$p,q$已经枚举了，可以直接枚举$i$，并将$F(p+1,i,q-1)\times S$转移到$F(l,i,r)$。每一轮转移完后更新$Fs$。</p>
+<p>此时的复杂度为$O(n^5)$。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> ll long long</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> tn&gt; <span class="function"><span class="keyword">void</span> <span class="title">read</span><span class="params">(tn &amp;a)</span></span>&#123;</span><br><span class="line">	tn x=<span class="number">0</span>,f=<span class="number">1</span>; <span class="keyword">char</span> c=<span class="string">' '</span>;</span><br><span class="line">	<span class="keyword">for</span>(;!<span class="built_in">isdigit</span>(c);c=getchar()) <span class="keyword">if</span>(c==<span class="string">'-'</span>) f=<span class="number">-1</span>;</span><br><span class="line">	<span class="keyword">for</span>(;<span class="built_in">isdigit</span>(c);c=getchar()) x=x*<span class="number">10</span>+c-<span class="string">'0'</span>;</span><br><span class="line">	a=x*f;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">int</span> n;</span><br><span class="line"><span class="keyword">char</span> mp[<span class="number">45</span>][<span class="number">45</span>];</span><br><span class="line">ll f[<span class="number">45</span>][<span class="number">45</span>][<span class="number">45</span>],fs[<span class="number">45</span>][<span class="number">45</span>][<span class="number">45</span>];</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	read(n);</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=<span class="number">2</span>*n;i++)&#123;</span><br><span class="line">		<span class="built_in">cin</span>&gt;&gt;mp[i]+<span class="number">1</span>;</span><br><span class="line">		f[i][i][i]=<span class="number">1</span>;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> j=i+<span class="number">1</span>;j&lt;=<span class="number">2</span>*n;j++)</span><br><span class="line">			fs[i][j][i]=mp[i][j]==<span class="string">'1'</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	n*=<span class="number">2</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> len=<span class="number">3</span>;len&lt;=n;len++)&#123;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> l=<span class="number">1</span>;l&lt;=n-len+<span class="number">1</span>;l++)&#123;</span><br><span class="line">			<span class="keyword">int</span> r=l+len<span class="number">-1</span>;</span><br><span class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> p=l;p&lt;r;p++)</span><br><span class="line">				<span class="keyword">for</span>(<span class="keyword">int</span> q=l+<span class="number">1</span>;q&lt;=r;q++)&#123;</span><br><span class="line">					ll now=<span class="number">0</span>;</span><br><span class="line">					<span class="keyword">for</span>(<span class="keyword">int</span> k=q;k&lt;=r;k++) now+=f[q][k][r]*fs[l][k][p];</span><br><span class="line">					<span class="keyword">for</span>(<span class="keyword">int</span> mid=l+<span class="number">1</span>;mid&lt;r;mid++) f[l][mid][r]+=now*f[p+<span class="number">1</span>][mid][q<span class="number">-1</span>];</span><br><span class="line">				&#125;</span><br><span class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> mid1=l+<span class="number">1</span>;mid1&lt;r;mid1++)</span><br><span class="line">				<span class="keyword">for</span>(<span class="keyword">int</span> mid2=r+<span class="number">1</span>;mid2&lt;=n;mid2++)</span><br><span class="line">					<span class="keyword">if</span>(mp[mid1][mid2]==<span class="string">'1'</span>)</span><br><span class="line">						fs[l][mid2][r]+=f[l][mid1][r];</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	ll ans=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">2</span>;i&lt;=n;i++)</span><br><span class="line">		<span class="keyword">if</span>(mp[<span class="number">1</span>][i]==<span class="string">'1'</span>) ans+=f[<span class="number">2</span>][i][n];</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;ans&lt;&lt;<span class="string">'\n'</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
     </div>
 
@@ -342,7 +292,8 @@
       <footer class="post-footer">
           <div class="post-tags">
               <a href="/tags/OI/" rel="tag"># OI</a>
-              <a href="/tags/%E6%B8%B8%E8%AE%B0/" rel="tag"># 游记</a>
+              <a href="/tags/atcoder/" rel="tag"># atcoder</a>
+              <a href="/tags/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/" rel="tag"># 解题报告</a>
           </div>
 
         
@@ -351,12 +302,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2020/01/08/APIO2019%E6%B8%B8%E8%AE%B0/" rel="prev" title="APIO2019游记">
-      <i class="fa fa-chevron-left"></i> APIO2019游记
+    <a href="/2020/01/09/atcoder-grand-contest-025/" rel="prev" title="atcoder grand contest 025">
+      <i class="fa fa-chevron-left"></i> atcoder grand contest 025
     </a></div>
       <div class="post-nav-item">
-    <a href="/2020/01/08/CSP2019%E6%B8%B8%E8%AE%B0/" rel="next" title="CSP2019游记">
-      CSP2019游记 <i class="fa fa-chevron-right"></i>
+    <a href="/2020/01/09/codeforces-582/" rel="next" title="codeforces 582">
+      codeforces 582 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -417,7 +368,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Day-2"><span class="nav-number">1.</span> <span class="nav-text">Day -2</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Day-1"><span class="nav-number">2.</span> <span class="nav-text">Day -1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Day-0"><span class="nav-number">3.</span> <span class="nav-text">Day 0</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Day-1-1"><span class="nav-number">4.</span> <span class="nav-text">Day 1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Day2"><span class="nav-number">5.</span> <span class="nav-text">Day2</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Day3"><span class="nav-number">6.</span> <span class="nav-text">Day3</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#E-Pairing-Points"><span class="nav-number">1.</span> <span class="nav-text">E.Pairing Points</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#题目大意"><span class="nav-number">1.1.</span> <span class="nav-text">题目大意</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数据范围"><span class="nav-number">1.2.</span> <span class="nav-text">数据范围</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解题过程"><span class="nav-number">1.3.</span> <span class="nav-text">解题过程</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
