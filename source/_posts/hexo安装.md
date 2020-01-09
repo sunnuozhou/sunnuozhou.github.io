@@ -100,6 +100,22 @@ hexo d
 
 然后你就可以在username.github.io上看到你的博客了。
 
+但现在使用`hexo d`的时候需要输入账号和密码，非常烦。
+
+可以在`_config.yml`中搜索`deploy`，进行以下修改。
+
+```
+https://github.com/username/xxx
+```
+
+改为
+
+```
+git@github.com:username/xxx
+```
+
+
+
 
 
 ## 添加常用功能

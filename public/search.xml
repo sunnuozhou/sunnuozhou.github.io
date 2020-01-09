@@ -291,6 +291,11 @@
 <p>就下来就可以推送到网上了。</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo clean </span><br><span class="line">hexo g </span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
 <p>然后你就可以在username.github.io上看到你的博客了。</p>
+<p>但现在使用<code>hexo d</code>的时候需要输入账号和密码，非常烦。</p>
+<p>可以在<code>_config.yml</code>中搜索<code>deploy</code>，进行以下修改。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;github.com&#x2F;username&#x2F;xxx</span><br></pre></td></tr></table></figure>
+<p>改为</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git@github.com:username&#x2F;xxx</span><br></pre></td></tr></table></figure>
 <h2 id="添加常用功能"><a href="#添加常用功能" class="headerlink" title="添加常用功能"></a>添加常用功能</h2><h3 id="使用Latex公式"><a href="#使用Latex公式" class="headerlink" title="使用Latex公式"></a>使用Latex公式</h3><p><a href="https://www.jianshu.com/p/68e6f82d88b7" target="_blank" rel="noopener">见此文章</a></p>
 <h3 id="插入图片"><a href="#插入图片" class="headerlink" title="插入图片"></a>插入图片</h3><p>先将_config.yml中的post_asset_folder的值改为true，这样就可以使用资源文件夹（与文章名字相同的文件夹）。</p>
 <p>然后执行以下命令</p>
