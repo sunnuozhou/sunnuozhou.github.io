@@ -143,6 +143,7 @@ sudo npm install https://github.com/CodeFalling/hexo-asset-image --save
 ```
 hexo clean
 ```
+注意，如果使用了`next`主题，需要在`theme/next/_config.yml`中修改`math`参数。
 
 ### 同步到github
 

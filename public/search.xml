@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>codeforces 526</title>
+    <url>/2020/01/09/codeforces-526/</url>
+    <content><![CDATA[<h2 id="F-Pudding-Monsters"><a href="#F-Pudding-Monsters" class="headerlink" title="F.Pudding Monsters"></a>F.Pudding Monsters</h2><p><a href="https://codeforces.com/contest/526/problem/F" target="_blank" rel="noopener">题目链接</a></p>
+]]></content>
+      <categories>
+        <category>解题报告</category>
+      </categories>
+      <tags>
+        <tag>OI</tag>
+        <tag>解题报告</tag>
+        <tag>codeforces</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>codeforces 582</title>
     <url>/2020/01/09/codeforces-582/</url>
     <content><![CDATA[<h2 id="E-Boolean-Function"><a href="#E-Boolean-Function" class="headerlink" title="E.Boolean Function"></a>E.Boolean Function</h2><h3 id="题目大意"><a href="#题目大意" class="headerlink" title="题目大意"></a>题目大意</h3><p>给你一个逻辑表达式，包含$A,B,C,D$这4个变量和$\&amp;,|$这2个运算符。现在这个逻辑表达式的一些变量和运算符看不清了。</p>
@@ -400,6 +414,7 @@
 <p>然后将要用的图片放在同名文件夹下，就可以像正常的markdown一样显示了。</p>
 <p>如果显示失败的话要先执行</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br></pre></td></tr></table></figure>
+<p>注意，如果使用了<code>next</code>主题，需要在<code>theme/next/_config.yml</code>中修改<code>math</code>参数。</p>
 <h3 id="同步到github"><a href="#同步到github" class="headerlink" title="同步到github"></a>同步到github</h3><p>先在<a href="github.com">github</a>上新建一个分支。</p>
 <p><img src="/2020/01/07/hexo%E5%AE%89%E8%A3%85/6.png" alt></p>
 <p>在左上角的<code>branch</code>中输入新分支的名字，点击<code>create</code>。</p>

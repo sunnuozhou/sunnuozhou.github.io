@@ -226,7 +226,7 @@
               6 tags in total
             </div>
             <div class="tag-cloud-tags">
-              <a href="/tags/OI/" style="font-size: 30px; color: #111">OI</a> <a href="/tags/atcoder/" style="font-size: 16.5px; color: #9d9d9d">atcoder</a> <a href="/tags/codeforces/" style="font-size: 12px; color: #ccc">codeforces</a> <a href="/tags/%E6%8A%80%E6%9C%AF/" style="font-size: 12px; color: #ccc">技术</a> <a href="/tags/%E6%B8%B8%E8%AE%B0/" style="font-size: 25.5px; color: #404040">游记</a> <a href="/tags/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/" style="font-size: 21px; color: #6f6f6f">解题报告</a>
+              <a href="/tags/OI/" style="font-size: 30px; color: #111">OI</a> <a href="/tags/atcoder/" style="font-size: 16.5px; color: #9d9d9d">atcoder</a> <a href="/tags/codeforces/" style="font-size: 16.5px; color: #9d9d9d">codeforces</a> <a href="/tags/%E6%8A%80%E6%9C%AF/" style="font-size: 12px; color: #ccc">技术</a> <a href="/tags/%E6%B8%B8%E8%AE%B0/" style="font-size: 25.5px; color: #404040">游记</a> <a href="/tags/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/" style="font-size: 21px; color: #6f6f6f">解题报告</a>
             </div>
           </div>
         
@@ -304,7 +304,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">11</span>
+          <span class="site-state-item-count">12</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -441,6 +441,56 @@
 
 
   
+
+  
+      
+<script type="text/x-mathjax-config">
+
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$', '$'], ['\\(', '\\)'] ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      equationNumbers: {
+        autoNumber: 'AMS'
+      }
+    }
+  });
+
+  MathJax.Hub.Register.StartupHook('TeX Jax Ready', function() {
+    MathJax.InputJax.TeX.prefilterHooks.Add(function(data) {
+      if (data.display) {
+        var next = data.script.nextSibling;
+        while (next && next.nodeName.toLowerCase() === '#text') {
+          next = next.nextSibling;
+        }
+        if (next && next.nodeName.toLowerCase() === 'br') {
+          next.parentNode.removeChild(next);
+        }
+      }
+    });
+  });
+
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for (i = 0; i < all.length; i += 1) {
+      element = document.getElementById(all[i].inputID + '-Frame').parentNode;
+      if (element.nodeName.toLowerCase() == 'li') {
+        element = element.parentNode;
+      }
+      element.classList.add('has-jax');
+    }
+  });
+</script>
+<script>
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML', () => {
+    MathJax.Hub.Typeset();
+  }, window.MathJax);
+</script>
+
+    
 
   
 
