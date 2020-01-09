@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="zh-Haus">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    hostname: new URL('http://sunnuozhou.github.io').hostname,
+    root: '/',
+    scheme: 'Pisces',
+    version: '7.7.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},
+    copycode: {"enable":true,"show_result":true,"style":"flat"},
+    back2top: {"enable":true,"sidebar":true,"scrollpercent":true},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    comments: {"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: 'search.xml',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}
+  };
+</script>
+
+  <meta name="description" content="JSOI2019-ROUND1-游记 Day0由于这一次的省选在常州，我终于可以不用去南京比赛了（然而在常州的主场优势没有什么用，我不仅没有睡好，还因为家离得远需要早起）。下午报道试机，发现那边电脑还是挺好的，虚拟机下的NOI Linux一点都不卡，果断选择用Linux。试机的时候码了一个FFT和一个SA。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JSOI2019-Round1游记">
+<meta property="og:url" content="http://sunnuozhou.github.io/2020/01/08/JSOI2019-Round1%E6%B8%B8%E8%AE%B0/index.html">
+<meta property="og:site_name" content="SNZ的博客">
+<meta property="og:description" content="JSOI2019-ROUND1-游记 Day0由于这一次的省选在常州，我终于可以不用去南京比赛了（然而在常州的主场优势没有什么用，我不仅没有睡好，还因为家离得远需要早起）。下午报道试机，发现那边电脑还是挺好的，虚拟机下的NOI Linux一点都不卡，果断选择用Linux。试机的时候码了一个FFT和一个SA。">
+<meta property="article:published_time" content="2020-01-08T13:43:12.000Z">
+<meta property="article:modified_time" content="2020-01-08T13:48:18.454Z">
+<meta property="article:author" content="sunnuozhou">
+<meta property="article:tag" content="OI">
+<meta property="article:tag" content="游记">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://sunnuozhou.github.io/2020/01/08/JSOI2019-Round1%E6%B8%B8%E8%AE%B0/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true
+  };
+</script>
+
+  <title>JSOI2019-Round1游记 | SNZ的博客</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">SNZ的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>About</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>Tags</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>Categories</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+
+</nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="Searching..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
+</div>
+    </header>
+
+    
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-Haus">
+    <link itemprop="mainEntityOfPage" href="http://sunnuozhou.github.io/2020/01/08/JSOI2019-Round1%E6%B8%B8%E8%AE%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="sunnuozhou">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="SNZ的博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          JSOI2019-Round1游记
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2020-01-08 21:43:12 / Modified: 21:48:18" itemprop="dateCreated datePublished" datetime="2020-01-08T21:43:12+08:00">2020-01-08</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%B8%B8%E8%AE%B0/" itemprop="url" rel="index">
+                    <span itemprop="name">游记</span>
+                  </a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">Views: </span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>JSOI2019-ROUND1-游记</p>
+<h2 id="Day0"><a href="#Day0" class="headerlink" title="Day0"></a>Day0</h2><p>由于这一次的省选在常州，我终于可以不用去南京比赛了（然而在常州的主场优势没有什么用，我不仅没有睡好，还因为家离得远需要早起）。下午报道试机，发现那边电脑还是挺好的，虚拟机下的NOI Linux一点都不卡，果断选择用Linux。试机的时候码了一个FFT和一个SA。</p>
+<a id="more"></a>
+<h2 id="Day1"><a href="#Day1" class="headerlink" title="Day1"></a>Day1</h2><p>到了以后一直等到8:00才进场，JSOI差点又咕咕了。</p>
+<p>边上坐着初二神仙djq，发题之后我看到djq飞快地看完了前两题，并发出了兴奋的声音（就好像A题了一样），让我感到很慌。我匆匆忙忙看完第一题，发现不难，花半小时写了一个01trie，稍微调试一下就过样例了，一遍过了对拍，考完后听到别人都用了可持久化01trie+堆的神仙做法，完全不懂。</p>
+<p>大概9:00开始想t2，想了一会儿发现建一个后缀树就有80，但我不会后缀树。我就决定先写一个后缀数组，然后在用后缀数组建后缀树，但这道题巨大的代码量让我很慌。不过我想着如果这题的80分我拿到了，那今天就稳了，于是我就开始写了，终于在10:40的时候过了样例和对拍。</p>
+<p>调整了一下状态开始写t3，发现这是一个蛇皮题，把测试点都给我然后不告诉我题意，让我从测试点中看题意。我做这题做了好久，到11:30的时候拿到了25分，然后发现我没有会做的了，这时候我发现我会了t2的100分做法，不过我当时想着求稳就没有写，又做一30分钟t3，然后一分没得。检查了30分钟就交题了。</p>
+<p>考完后本来以为考得不错，结果t2只拿了10分，复测时候一看，发现wa光了。最终得分只有100+10+25=135分，被各种爆锤，心态崩了。</p>
+<h2 id="Day2"><a href="#Day2" class="headerlink" title="Day2"></a>Day2</h2><p>今天旁边的是一个不认识的人，但他200+行的t1和一个FFT严重影响了我的心态（我发现他是一个完完全全的终端选手，连文件操作都是用的cp，mv）。</p>
+<p>我看完3题发现一题都不会，心态有点小崩，想了一想发现t1的k=0部分分很好做，再想想发现暴力也很好写，而且加起来有70分，我就写了一个暴力加部分分，9:30写完。</p>
+<p>t2我一看暴力分很多就直接写暴力了，结果t2是今天最简单的一题，我虽然一眼没想出来，但本来多想想应该可以想出来的，结果因为我自闭t1太久导致没有足够的时间与胆量再一直想下去了，当时只想着稳着3题暴力的分。</p>
+<p>开始码T3暴力，一开始想写k=1的部分分，有好多分，但写着写着发现长链剖分+线段树太难写了，就码了 l=n,k=1 的8分，然后码了前两个点的暴力。我又发现l=n,k!=1的时候写可以做就赶紧写了一个，写完就没什么时间了，稍微检查了一下就交题了。</p>
+<p>下午一出成绩发现我有fst了，t2的数组开小了，有15分没拿到。</p>
+<p>这一次省选一共fst了85分，我感觉平时训练我都没有fst的这么惨过，进队凉了，刚好被卡在线外，希望下一轮省选能翻盘。</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/OI/" rel="tag"># OI</a>
+              <a href="/tags/%E6%B8%B8%E8%AE%B0/" rel="tag"># 游记</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/01/08/noip2018%E6%B8%B8%E8%AE%B0/" rel="prev" title="noip2018游记">
+      <i class="fa fa-chevron-left"></i> noip2018游记
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020/01/08/JSOI2019-Round2%E6%B8%B8%E8%AE%B0/" rel="next" title="JSOI2019-Round2游记">
+      JSOI2019-Round2游记 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let activeClass = CONFIG.comments.activeClass;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Day0"><span class="nav-number">1.</span> <span class="nav-text">Day0</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Day1"><span class="nav-number">2.</span> <span class="nav-text">Day1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Day2"><span class="nav-number">3.</span> <span class="nav-text">Day2</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">sunnuozhou</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">8</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/sunnuozhou" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;sunnuozhou" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.codeforces.com/profile/sunnuozhou" title="Codeforces → https:&#x2F;&#x2F;www.codeforces.com&#x2F;profile&#x2F;sunnuozhou" rel="noopener" target="_blank"><i class="fa fa-fw fa-code"></i>Codeforces</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://space.bilibili.com/369660377" title="Bilibili → https:&#x2F;&#x2F;space.bilibili.com&#x2F;369660377" rel="noopener" target="_blank"><i class="fa fa-fw fa-tv"></i>Bilibili</a>
+      </span>
+  </div>
+
+
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-snz"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">sunnuozhou</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> v4.2.0
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">Theme – <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.7.0
+  </div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="Total Visitors">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="Total Views">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>

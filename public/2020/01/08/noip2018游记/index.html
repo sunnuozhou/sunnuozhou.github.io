@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="zh-Haus">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    hostname: new URL('http://sunnuozhou.github.io').hostname,
+    root: '/',
+    scheme: 'Pisces',
+    version: '7.7.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},
+    copycode: {"enable":true,"show_result":true,"style":"flat"},
+    back2top: {"enable":true,"sidebar":true,"scrollpercent":true},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    comments: {"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: 'search.xml',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}
+  };
+</script>
+
+  <meta name="description" content="【NOIP2018游记】 还是不得不吐槽一下NOIP2018的难度分布，Day1普及组难度，Day2省选难度，比NOIP2016还不正常。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="noip2018游记">
+<meta property="og:url" content="http://sunnuozhou.github.io/2020/01/08/noip2018%E6%B8%B8%E8%AE%B0/index.html">
+<meta property="og:site_name" content="SNZ的博客">
+<meta property="og:description" content="【NOIP2018游记】 还是不得不吐槽一下NOIP2018的难度分布，Day1普及组难度，Day2省选难度，比NOIP2016还不正常。">
+<meta property="article:published_time" content="2020-01-08T13:39:07.000Z">
+<meta property="article:modified_time" content="2020-01-08T13:57:49.199Z">
+<meta property="article:author" content="sunnuozhou">
+<meta property="article:tag" content="OI">
+<meta property="article:tag" content="游记">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://sunnuozhou.github.io/2020/01/08/noip2018%E6%B8%B8%E8%AE%B0/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true
+  };
+</script>
+
+  <title>noip2018游记 | SNZ的博客</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">SNZ的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>About</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>Tags</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>Categories</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+
+</nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="Searching..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
+</div>
+    </header>
+
+    
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-Haus">
+    <link itemprop="mainEntityOfPage" href="http://sunnuozhou.github.io/2020/01/08/noip2018%E6%B8%B8%E8%AE%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="sunnuozhou">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="SNZ的博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          noip2018游记
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2020-01-08 21:39:07 / Modified: 21:57:49" itemprop="dateCreated datePublished" datetime="2020-01-08T21:39:07+08:00">2020-01-08</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%B8%B8%E8%AE%B0/" itemprop="url" rel="index">
+                    <span itemprop="name">游记</span>
+                  </a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">Views: </span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>【NOIP2018游记】</p>
+<p>还是不得不吐槽一下NOIP2018的难度分布，Day1普及组难度，Day2省选难度，比NOIP2016还不正常。</p>
+<a id="more"></a>
+<h2 id="Day0"><a href="#Day0" class="headerlink" title="Day0"></a>Day0</h2><p>这次NOIP住的酒店真的很不错，一到酒店就开始各种颓废。</p>
+<p>晚上8:30就准备睡觉了，睡前仔细想了想以前训练时犯的错，但因为个人觉得平时训练的题并不像NOIP风格，莫名很慌。（我觉得这次NOIP的题也不像NOIP风格）</p>
+<h2 id="Day1"><a href="#Day1" class="headerlink" title="Day1"></a>Day1</h2><p>晚上睡眠很好，早上十分清醒（在南航门口吹了吹冷风就更清醒了），在南航主楼门口跟同学聊了几句，进考场的时候压力小了不少。</p>
+<p>试机的时候发现键盘非常不爽，“\”键和我平时用的键盘不在同一个位置，导致我打“\n”的时候总是打到回车。而且虚拟机的linux居然是保护的，对于我这种手残党来说南航的linux环境十分不友好,纠结了一会儿决定用windows写题。</p>
+<p>8:30 开始考试</p>
+<p>打开试题发现CCF的老年机居然被换掉了，非常吃惊。</p>
+<p>T1题面中有一句话里有“首尾相连”，让我以为是一个环，写完了以后发现样例过不去，仔细看了看样例解释才发现不是环，改了一下代码样例就过了，粗略地看了一眼，感觉没什么问题就不管了，期望得分100分。</p>
+<p>T2看完题感觉比T1还简单（可能是我T1看错一次题的缘故吧），花了几分钟就写完了，期望得分100分。</p>
+<p>T3看完题发现二分显然，check应该就是一个贪心一样的东西，想到标算没花多久，但写完之后大样例一直过不去，而这道题的暴力也不好写，不怎么能对拍，心态有些爆炸。后来我发现我从不同的点做贪心，答案好像会不一样，我就拿两个不同的点做贪心，然后对拍，不一会儿就调对了，期望得分100分。</p>
+<p>三题写完，我发现才9:47，深感今天的难度不对劲，三题都静态查错了好久，一直处于无聊状态。</p>
+<p>考完出考场发现好多人也都AK了，开始担心day2超级难。</p>
+<h2 id="Day2"><a href="#Day2" class="headerlink" title="Day2"></a>Day2</h2><p>因为昨天试过机了，所以试机的时候非常无聊，就开始趴着睡觉，感觉状态没有Day1好。</p>
+<p>8:30开始考试。</p>
+<p>T1看完题立刻想出了一个假算法，看一下数据范围m&lt;=n，n&lt;=5000，然后仔细一想，我的算法果然是错的，不过数据范围比较小，重新想到正确的算法没有花很久，大概9:00写完T1，期望得分100分。</p>
+<p>然后开始看T2：</p>
+<p>10min后，假算法*1,心态爆炸20%</p>
+<p>又10min后，假算法*2,心态爆炸40%</p>
+<p>又10min后，假算法*3,心态爆炸60%</p>
+<p>………………</p>
+<p>然后我从9:00到10:00什么都没写，只看完了T2，T3。10:00后，我下定决心先把T3的暴力写了，期望得分44分，T3还看错了一次题，花了20min才写完。然后我又开始纠结去想T2还是写T3的部分分，纠结到了10:45，期间顺便把T2会写的分先写了，期望得分50分。</p>
+<p>我忽然想起来xyx大佬提出的T1至少80，T2至少60，T3至少45的建议，就决定写离建议最接近的T3，我大概到11:10把T3的A1，A2部分分写完了，期望得分64分，然后我总结了一下T2发现的性质，想到了一个T2的很优秀又很好写的暴力，就赶紧把它写出来了。我通过这个暴力轻松找到了n=3这个部分分的规律。</p>
+<p>11:30，我开始打T2的表，因为暴力的效率还不错，我在11:47的时候打完了n=7,m=8以内的表。到11:52的时候，我发现n=8,m=8的表还是没有打出来，就弃疗准备交题了，T1期望100分，T2期望75分，T3期望64分。</p>
+<p>我在11:45的时候也想到了T3 84分的做法，但因为时间不够就没写。</p>
+<p>刚考完的时候心情挺差的，但听到大家分数都不是特别高，心情就好多了。</p>
+<p>后记</p>
+<p>官测出来和我的估分一样是539，总体来说这次的分数不差，但在时间和心态上要把握的再好一些。（我还是没有养成看完3题再做的好习惯）</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/OI/" rel="tag"># OI</a>
+              <a href="/tags/%E6%B8%B8%E8%AE%B0/" rel="tag"># 游记</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/01/07/hexo%E5%AE%89%E8%A3%85/" rel="prev" title="博客搭建">
+      <i class="fa fa-chevron-left"></i> 博客搭建
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020/01/08/JSOI2019-Round1%E6%B8%B8%E8%AE%B0/" rel="next" title="JSOI2019-Round1游记">
+      JSOI2019-Round1游记 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let activeClass = CONFIG.comments.activeClass;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Day0"><span class="nav-number">1.</span> <span class="nav-text">Day0</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Day1"><span class="nav-number">2.</span> <span class="nav-text">Day1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Day2"><span class="nav-number">3.</span> <span class="nav-text">Day2</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">sunnuozhou</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">8</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/sunnuozhou" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;sunnuozhou" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.codeforces.com/profile/sunnuozhou" title="Codeforces → https:&#x2F;&#x2F;www.codeforces.com&#x2F;profile&#x2F;sunnuozhou" rel="noopener" target="_blank"><i class="fa fa-fw fa-code"></i>Codeforces</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://space.bilibili.com/369660377" title="Bilibili → https:&#x2F;&#x2F;space.bilibili.com&#x2F;369660377" rel="noopener" target="_blank"><i class="fa fa-fw fa-tv"></i>Bilibili</a>
+      </span>
+  </div>
+
+
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-snz"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">sunnuozhou</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> v4.2.0
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">Theme – <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.7.0
+  </div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="Total Visitors">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="Total Views">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
