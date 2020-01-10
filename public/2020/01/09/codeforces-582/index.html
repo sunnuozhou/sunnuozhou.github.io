@@ -46,14 +46,14 @@
   };
 </script>
 
-  <meta name="description" content="E.Boolean Function题目大意给你一个逻辑表达式，包含$A,B,C,D$这4个变量和$\&amp;,|$这2个运算符。现在这个逻辑表达式的一些变量和运算符看不清了。 已知在$n$种不同的$A,B,C,D$取值下，表达式的值，求有多少可能的表达式。">
+  <meta name="description" content="E.Boolean Function题目大意给你一个逻辑表达式，包含$A,B,C,D$这4个变量和$\&amp;,|$这2个运算符。现在这个逻辑表达式的一些变量和运算符看不清了。 已知在$n$种不同的$A,B,C,D$取值下，表达式的值，求有多少可能的表达式。 数据范围表达式长度$\le 500$ $n\le 16$">
 <meta property="og:type" content="article">
 <meta property="og:title" content="codeforces 582">
 <meta property="og:url" content="http://sunnuozhou.github.io/2020/01/09/codeforces-582/index.html">
 <meta property="og:site_name" content="SNZ的博客">
-<meta property="og:description" content="E.Boolean Function题目大意给你一个逻辑表达式，包含$A,B,C,D$这4个变量和$\&amp;,|$这2个运算符。现在这个逻辑表达式的一些变量和运算符看不清了。 已知在$n$种不同的$A,B,C,D$取值下，表达式的值，求有多少可能的表达式。">
+<meta property="og:description" content="E.Boolean Function题目大意给你一个逻辑表达式，包含$A,B,C,D$这4个变量和$\&amp;,|$这2个运算符。现在这个逻辑表达式的一些变量和运算符看不清了。 已知在$n$种不同的$A,B,C,D$取值下，表达式的值，求有多少可能的表达式。 数据范围表达式长度$\le 500$ $n\le 16$">
 <meta property="article:published_time" content="2020-01-09T08:45:29.000Z">
-<meta property="article:modified_time" content="2020-01-10T01:25:21.851Z">
+<meta property="article:modified_time" content="2020-01-10T05:15:45.324Z">
 <meta property="article:author" content="sunnuozhou">
 <meta property="article:tag" content="OI">
 <meta property="article:tag" content="解题报告">
@@ -237,7 +237,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-01-10 09:25:21" itemprop="dateModified" datetime="2020-01-10T09:25:21+08:00">2020-01-10</time>
+                <time title="Modified: 2020-01-10 13:15:45" itemprop="dateModified" datetime="2020-01-10T13:15:45+08:00">2020-01-10</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -270,9 +270,10 @@
 
       
         <h2 id="E-Boolean-Function"><a href="#E-Boolean-Function" class="headerlink" title="E.Boolean Function"></a>E.Boolean Function</h2><h3 id="题目大意"><a href="#题目大意" class="headerlink" title="题目大意"></a>题目大意</h3><p>给你一个逻辑表达式，包含$A,B,C,D$这4个变量和$\&amp;,|$这2个运算符。现在这个逻辑表达式的一些变量和运算符看不清了。</p>
-<p>已知在$n$种不同的$A,B,C,D$取值下，表达式的值，求有多少可能的表达式。<br><a id="more"></a></p>
+<p>已知在$n$种不同的$A,B,C,D$取值下，表达式的值，求有多少可能的表达式。</p>
 <h3 id="数据范围"><a href="#数据范围" class="headerlink" title="数据范围"></a>数据范围</h3><p>表达式长度$\le 500$</p>
 <p>$n\le 16$</p>
+<a id="more"></a>
 <h3 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h3><p>考虑到$n\le 16$，将一个表达式每一种情况下当前的答案是0还是1记为一个$g(s)$,$g(s)$是一个$n$位的二进制数，（$0\le g(s) &lt; 2^n$，$s$为一个表达式）。</p>
 <p>显然的，$g((s1)|(s2))=g(s1)|g(s2)，g(((s1)\&amp;(s2))=g(s1)\&amp;g(s2)$。</p>
 <p>接着考虑题目，一个表达式可以被建为一个二叉树，其节点个数为$\frac{|s|}{6}$级别的。转换为树后开始考虑树形DP，记录$dp[v][x]$，表示所有可以被以$v$为根的子树代表的表达式中（即通过把’?’变为确定符号得到），有多少表达式$s$的$g(s)=x$。该DP的转移为$dp[v][x|y]+=dp[ls][x]\times dp[rs][y]$或$dp[v][x\&amp;y]+=dp[ls][x]\times dp[rs][y]$，其中$ls$为左儿子，$rs$为右儿子。</p>
@@ -383,7 +384,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">12</span>
+          <span class="site-state-item-count">13</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>

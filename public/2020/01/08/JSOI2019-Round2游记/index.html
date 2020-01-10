@@ -46,14 +46,14 @@
   };
 </script>
 
-  <meta name="description" content="JSOI2019-ROUND2-游记 Day0中午就到了南京，愉快地颓废了一下午之后就去试机了。南航的机房通风不是很好，在机房里很闷，而且试机的时候有好多电脑开不起来，我用的那台电脑Linux有点卡，我写了一个FFT，跑1000000的数据要0.7s，比在Luogu上都慢，整体感觉不是很好。">
+  <meta name="description" content="JSOI2019-ROUND2-游记 Day0中午就到了南京，愉快地颓废了一下午之后就去试机了。南航的机房通风不是很好，在机房里很闷，而且试机的时候有好多电脑开不起来，我用的那台电脑Linux有点卡，我写了一个FFT，跑1000000的数据要0.7s，比在Luogu上都慢，整体感觉不是很好。 Day1到了以后一直等到8:11才进场，JSOI又咕咕了。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JSOI2019-Round2游记">
 <meta property="og:url" content="http://sunnuozhou.github.io/2020/01/08/JSOI2019-Round2%E6%B8%B8%E8%AE%B0/index.html">
 <meta property="og:site_name" content="SNZ的博客">
-<meta property="og:description" content="JSOI2019-ROUND2-游记 Day0中午就到了南京，愉快地颓废了一下午之后就去试机了。南航的机房通风不是很好，在机房里很闷，而且试机的时候有好多电脑开不起来，我用的那台电脑Linux有点卡，我写了一个FFT，跑1000000的数据要0.7s，比在Luogu上都慢，整体感觉不是很好。">
+<meta property="og:description" content="JSOI2019-ROUND2-游记 Day0中午就到了南京，愉快地颓废了一下午之后就去试机了。南航的机房通风不是很好，在机房里很闷，而且试机的时候有好多电脑开不起来，我用的那台电脑Linux有点卡，我写了一个FFT，跑1000000的数据要0.7s，比在Luogu上都慢，整体感觉不是很好。 Day1到了以后一直等到8:11才进场，JSOI又咕咕了。">
 <meta property="article:published_time" content="2020-01-08T13:44:32.000Z">
-<meta property="article:modified_time" content="2020-01-08T13:49:04.979Z">
+<meta property="article:modified_time" content="2020-01-10T05:16:32.629Z">
 <meta property="article:author" content="sunnuozhou">
 <meta property="article:tag" content="OI">
 <meta property="article:tag" content="游记">
@@ -228,10 +228,16 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: 2020-01-08 21:44:32 / Modified: 21:49:04" itemprop="dateCreated datePublished" datetime="2020-01-08T21:44:32+08:00">2020-01-08</time>
+              <time title="Created: 2020-01-08 21:44:32" itemprop="dateCreated datePublished" datetime="2020-01-08T21:44:32+08:00">2020-01-08</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-01-10 13:16:32" itemprop="dateModified" datetime="2020-01-10T13:16:32+08:00">2020-01-10</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
@@ -264,8 +270,8 @@
       
         <p>JSOI2019-ROUND2-游记</p>
 <h2 id="Day0"><a href="#Day0" class="headerlink" title="Day0"></a>Day0</h2><p>中午就到了南京，愉快地颓废了一下午之后就去试机了。南航的机房通风不是很好，在机房里很闷，而且试机的时候有好多电脑开不起来，我用的那台电脑Linux有点卡，我写了一个FFT，跑1000000的数据要0.7s，比在Luogu上都慢，整体感觉不是很好。</p>
-<a id="more"></a>
 <h2 id="Day1"><a href="#Day1" class="headerlink" title="Day1"></a>Day1</h2><p>到了以后一直等到8:11才进场，JSOI又咕咕了。</p>
+<a id="more"></a>
 <p>T1看完没什么思路，数据范围又大得很，T2感觉像是充满JSOI风格的树形dp，仔细想一想感觉好像会做了，T3看完觉得不太可做，脑补了一个后缀数组的30分做法就去想T1了。</p>
 <p>我想了一会儿T1，发现这好像是一个2-sat问题，然后我就脑补了一个假算法开始写，写了一半发现这是假算法，心态有一点小崩，再想了想，会了一个用bitset优化的做法，但只有60分了，为了调整心态，我决定先放弃T1，去做T2，这时候已经9:17了。</p>
 <p>我先行云流水地码完了T2，一测样例发现WA了，仔细一想，发现我的做法又是假的。心态崩了，我两题满分做法全是假的，我当时感觉我可能三位数都上不了了（T2几乎没有暴力分）。我花了5-10分钟调整了心态，重新开始想T2。经过了将近30分钟的思考，我终于会做T2了，一遍就过了样例，内心有点激动。我在差不多10:30的时候写完了对拍，结果一拍就出错。我错的是m=1的数据，但我完全不知道为什么错（我当时已经几乎思考不动了）。我就不断换容斥系数，好不容易m=1的数据对了，样例却WA了。我当时真心觉得自己没什么问题，就先不管m=1的情况，去对拍m!=1的数据，然后发现m!=1的数据我没问题。我仔细想了一想，发现m=1的时候好像是特殊情况，和m!=1不一样，不是我算法的问题，于是我就把m=1的数据特判掉，然后不管T2了。</p>
@@ -375,7 +381,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">12</span>
+          <span class="site-state-item-count">13</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>

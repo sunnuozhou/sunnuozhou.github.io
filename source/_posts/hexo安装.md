@@ -8,8 +8,6 @@ categories: 实用工具
 
 今天安装了hexo，并成功搭建了第一个blog。
 
-<!-- more -->
-
 ## hexo安装
 
 hexo是使用npm安装的，其实npm在apt中就有，可以直接一句话就装好。
@@ -22,7 +20,7 @@ sudo apt install npm
 
 然后我把我下的东西丢到了/usr里，这导致我后面每一个npm的命令都要加一个sudo。
 
-
+<!-- more -->
 
 下好npm后，直接
 
