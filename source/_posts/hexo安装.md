@@ -180,7 +180,7 @@ git push
 
 ### 置顶功能
 
-在`\node_modules\hexo-generator-index\lib\generator.js`中的`const post=xxx`后插入以下代码。
+在`node_modules/hexo-generator-index/lib/generator.js`中的`const post=xxx`后插入以下代码。
 
 ```js
 posts.data = posts.data.sort(function(a, b) {
