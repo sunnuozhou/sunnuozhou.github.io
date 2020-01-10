@@ -4,6 +4,7 @@ date: 2020-01-07
 tags:
 - 技术
 categories: 实用工具
+top: 5
 ---
 
 今天安装了hexo，并成功搭建了第一个blog。
@@ -176,6 +177,30 @@ git push
 ```
 
 来更新部署文件。
+
+### 置顶功能
+
+在`\node_modules\hexo-generator-index\lib\generator.js`中的`const post=xxx`后插入以下代码。
+
+```js
+posts.data = posts.data.sort(function(a, b) {
+    if(a.top && b.top) {
+        if(a.top == b.top) return b.date - a.date;
+        else return b.top - a.top;
+    }
+    else if(a.top && !b.top) {
+        return -1;
+    }
+    else if(!a.top && b.top) {
+        return 1;
+    }
+    else return b.date - a.date;
+});
+```
+
+然后就可以在博文的顶栏添加`top: `，表示置顶的等级，默认`-inf`。
+
+并且可以在`scaffolds\post.md`加入`tops:`是`new`出来的文章自带这个属性。
 
 ## 美化博客
 
