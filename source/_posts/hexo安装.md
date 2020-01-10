@@ -273,6 +273,34 @@ search:
 
 要注意的是，总统计数在本地会显示错误，但推送到网站上就没问题。
 
+### 头像
+
+搜索`avatar`，根据喜好设置。
+
+### 背景图片
+
+这里是针对NexT版本高于7.3的设置方法，低于7.3的设置方法在网上有大量教程。
+
+在`theme/next/source/css/main.styl`中添加一下内容：
+
+```stylus
+//个人设置
+body {
+    background-image:url(/images/background.jpeg);
+    //图片位置，/images为theme/next/source/images
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+    background-size: cover;
+}
+
+.main-inner {
+    opacity: 0.9;
+    //透明度
+}
+```
+或者在`theme/next/_config.yml`中将`custom_file_path`中的`styles`的注释消掉，然后创建`source/_data/styles.styl`，并添加相应内容。
+
+
 ## 遇到的问题
 
 ### 本地预览和网上不同
@@ -319,3 +347,15 @@ git remote set-url origin git@github.com:NAME/PROJECT.git
 或者在`.git/config`中进行修改。
 
 **注意**：`github.com`后面是冒号":"而不是斜杠“/”。
+
+### 添加背景图片失败
+
+在NexT版本7.3以后，没有了`_custom`文件夹，添加的方式就和以前不一样了。
+
+本来正确的方法是在`theme/next/_config.yml`中将`custom_file_path`中的注释消掉，然后创建`source/_data/styles.styl`，并添加相应内容。
+
+但是我失败了，输入`hexo g`的时候并没有异常(如果没有`source/_data/styles/styl`，在这一步会直接报错)，但是`hexo s`的时候会报错。
+
+于是我就使用了上文**背景图片**的第一种方法。
+
+但其实我出现的问题仅仅是因为没有先`hexo clean`，先`hexo clean`一下就好了。
