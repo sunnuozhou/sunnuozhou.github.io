@@ -1,10 +1,11 @@
 ---
-title: codeforces 521
+title: codeforces 521E
 date: 2020-01-10 12:50:44
 tags:
 - OI
 - codeforces
 - 解题报告
+- dfs
 categories: 解题报告
 ---
 

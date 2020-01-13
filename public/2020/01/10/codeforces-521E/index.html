@@ -48,19 +48,20 @@
 
   <meta name="description" content="题目链接 求出一棵dfs树，如果题目有解，一定有一个解的起点和终点是祖先后代关系，并且3条路径中包含恰好2个返祖边。 对于一个点$x$，假设该点自身有$s1$条返祖边，有$s2$个儿子的子树中有返祖边连向$x$的祖先。 如果$s1+s2\ge2$，那么必有一个起点为$x$的解。 假设终点为$y$，第一条路径为一直走父亲边走到$y$，第二条路径为走若干条儿子边，再走一条到$y$的返祖边，第三条路径为">
 <meta property="og:type" content="article">
-<meta property="og:title" content="codeforces 521">
-<meta property="og:url" content="http://sunnuozhou.github.io/2020/01/10/codeforces-521/index.html">
+<meta property="og:title" content="codeforces 521E">
+<meta property="og:url" content="http://sunnuozhou.github.io/2020/01/10/codeforces-521E/index.html">
 <meta property="og:site_name" content="SNZ的博客">
 <meta property="og:description" content="题目链接 求出一棵dfs树，如果题目有解，一定有一个解的起点和终点是祖先后代关系，并且3条路径中包含恰好2个返祖边。 对于一个点$x$，假设该点自身有$s1$条返祖边，有$s2$个儿子的子树中有返祖边连向$x$的祖先。 如果$s1+s2\ge2$，那么必有一个起点为$x$的解。 假设终点为$y$，第一条路径为一直走父亲边走到$y$，第二条路径为走若干条儿子边，再走一条到$y$的返祖边，第三条路径为">
 <meta property="article:published_time" content="2020-01-10T04:50:44.000Z">
-<meta property="article:modified_time" content="2020-01-10T05:14:36.774Z">
+<meta property="article:modified_time" content="2020-01-13T00:38:26.326Z">
 <meta property="article:author" content="sunnuozhou">
 <meta property="article:tag" content="OI">
 <meta property="article:tag" content="解题报告">
 <meta property="article:tag" content="codeforces">
+<meta property="article:tag" content="dfs">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://sunnuozhou.github.io/2020/01/10/codeforces-521/">
+<link rel="canonical" href="http://sunnuozhou.github.io/2020/01/10/codeforces-521E/">
 
 
 <script id="page-configurations">
@@ -72,7 +73,7 @@
   };
 </script>
 
-  <title>codeforces 521 | SNZ的博客</title>
+  <title>codeforces 521E | SNZ的博客</title>
   
 
 
@@ -207,7 +208,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-Haus">
-    <link itemprop="mainEntityOfPage" href="http://sunnuozhou.github.io/2020/01/10/codeforces-521/">
+    <link itemprop="mainEntityOfPage" href="http://sunnuozhou.github.io/2020/01/10/codeforces-521E/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.png">
@@ -220,7 +221,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          codeforces 521
+          codeforces 521E
         </h1>
 
         <div class="post-meta">
@@ -229,10 +230,16 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: 2020-01-10 12:50:44 / Modified: 13:14:36" itemprop="dateCreated datePublished" datetime="2020-01-10T12:50:44+08:00">2020-01-10</time>
+              <time title="Created: 2020-01-10 12:50:44" itemprop="dateCreated datePublished" datetime="2020-01-10T12:50:44+08:00">2020-01-10</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-01-13 08:38:26" itemprop="dateModified" datetime="2020-01-13T08:38:26+08:00">2020-01-13</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
@@ -283,6 +290,7 @@
               <a href="/tags/OI/" rel="tag"># OI</a>
               <a href="/tags/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/" rel="tag"># 解题报告</a>
               <a href="/tags/codeforces/" rel="tag"># codeforces</a>
+              <a href="/tags/dfs/" rel="tag"># dfs</a>
           </div>
 
         
@@ -291,10 +299,13 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2020/01/09/codeforces-526/" rel="prev" title="codeforces 526">
-      <i class="fa fa-chevron-left"></i> codeforces 526
+    <a href="/2020/01/09/codeforces-526F/" rel="prev" title="codeforces 526F">
+      <i class="fa fa-chevron-left"></i> codeforces 526F
     </a></div>
-      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/2020/01/13/codeforces-504E/" rel="next" title="codeforces 504E">
+      codeforces 504E <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
       </footer>
     
@@ -369,7 +380,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">13</span>
+          <span class="site-state-item-count">14</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -382,7 +393,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-count">14</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>

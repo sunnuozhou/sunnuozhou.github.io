@@ -46,21 +46,22 @@
   };
 </script>
 
-  <meta name="description" content="F.Addition and Andition题目大意给你两个正整数$X,Y$，进行$K$次以下操作：  令Z&#x3D;X and Y，and为位运算与。  X+&#x3D;Z,Y+&#x3D;Z   输出最终的$X,Y$。 数据范围$X,Y$二进制表示下长度不超过$10^6$。 $1\le K\le 10^6$">
+  <meta name="description" content="Addition and Andition题目大意给你两个正整数$X,Y$，进行$K$次以下操作：  令Z&#x3D;X and Y，and为位运算与。  X+&#x3D;Z,Y+&#x3D;Z   输出最终的$X,Y$。 数据范围$X,Y$二进制表示下长度不超过$10^6$。 $1\le K\le 10^6$">
 <meta property="og:type" content="article">
-<meta property="og:title" content="atcoder grand contest 025">
-<meta property="og:url" content="http://sunnuozhou.github.io/2020/01/09/atcoder-grand-contest-025/index.html">
+<meta property="og:title" content="atcoder grand contest 025F">
+<meta property="og:url" content="http://sunnuozhou.github.io/2020/01/09/atcoder-grand-contest-025F/index.html">
 <meta property="og:site_name" content="SNZ的博客">
-<meta property="og:description" content="F.Addition and Andition题目大意给你两个正整数$X,Y$，进行$K$次以下操作：  令Z&#x3D;X and Y，and为位运算与。  X+&#x3D;Z,Y+&#x3D;Z   输出最终的$X,Y$。 数据范围$X,Y$二进制表示下长度不超过$10^6$。 $1\le K\le 10^6$">
+<meta property="og:description" content="Addition and Andition题目大意给你两个正整数$X,Y$，进行$K$次以下操作：  令Z&#x3D;X and Y，and为位运算与。  X+&#x3D;Z,Y+&#x3D;Z   输出最终的$X,Y$。 数据范围$X,Y$二进制表示下长度不超过$10^6$。 $1\le K\le 10^6$">
 <meta property="article:published_time" content="2020-01-09T08:37:20.000Z">
-<meta property="article:modified_time" content="2020-01-10T05:15:16.403Z">
+<meta property="article:modified_time" content="2020-01-13T00:36:12.898Z">
 <meta property="article:author" content="sunnuozhou">
 <meta property="article:tag" content="OI">
 <meta property="article:tag" content="atcoder">
 <meta property="article:tag" content="解题报告">
+<meta property="article:tag" content="势能分析">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://sunnuozhou.github.io/2020/01/09/atcoder-grand-contest-025/">
+<link rel="canonical" href="http://sunnuozhou.github.io/2020/01/09/atcoder-grand-contest-025F/">
 
 
 <script id="page-configurations">
@@ -72,7 +73,7 @@
   };
 </script>
 
-  <title>atcoder grand contest 025 | SNZ的博客</title>
+  <title>atcoder grand contest 025F | SNZ的博客</title>
   
 
 
@@ -207,7 +208,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-Haus">
-    <link itemprop="mainEntityOfPage" href="http://sunnuozhou.github.io/2020/01/09/atcoder-grand-contest-025/">
+    <link itemprop="mainEntityOfPage" href="http://sunnuozhou.github.io/2020/01/09/atcoder-grand-contest-025F/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.png">
@@ -220,7 +221,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          atcoder grand contest 025
+          atcoder grand contest 025F
         </h1>
 
         <div class="post-meta">
@@ -237,7 +238,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-01-10 13:15:16" itemprop="dateModified" datetime="2020-01-10T13:15:16+08:00">2020-01-10</time>
+                <time title="Modified: 2020-01-13 08:36:12" itemprop="dateModified" datetime="2020-01-13T08:36:12+08:00">2020-01-13</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -269,7 +270,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2 id="F-Addition-and-Andition"><a href="#F-Addition-and-Andition" class="headerlink" title="F.Addition and Andition"></a>F.Addition and Andition</h2><h3 id="题目大意"><a href="#题目大意" class="headerlink" title="题目大意"></a>题目大意</h3><p>给你两个正整数$X,Y$，进行$K$次以下操作：</p>
+        <h2 id="Addition-and-Andition"><a href="#Addition-and-Andition" class="headerlink" title="Addition and Andition"></a>Addition and Andition</h2><h3 id="题目大意"><a href="#题目大意" class="headerlink" title="题目大意"></a>题目大意</h3><p>给你两个正整数$X,Y$，进行$K$次以下操作：</p>
 <ul>
 <li><p>令Z=X and Y，and为位运算与。</p>
 </li>
@@ -309,6 +310,7 @@
               <a href="/tags/OI/" rel="tag"># OI</a>
               <a href="/tags/atcoder/" rel="tag"># atcoder</a>
               <a href="/tags/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/" rel="tag"># 解题报告</a>
+              <a href="/tags/%E5%8A%BF%E8%83%BD%E5%88%86%E6%9E%90/" rel="tag"># 势能分析</a>
           </div>
 
         
@@ -321,8 +323,8 @@
       <i class="fa fa-chevron-left"></i> CSP2019游记
     </a></div>
       <div class="post-nav-item">
-    <a href="/2020/01/09/atcoder-grand-contest-039/" rel="next" title="atcoder grand contest 039">
-      atcoder grand contest 039 <i class="fa fa-chevron-right"></i>
+    <a href="/2020/01/09/atcoder-grand-contest-039E/" rel="next" title="atcoder grand contest 039E">
+      atcoder grand contest 039E <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -383,7 +385,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#F-Addition-and-Andition"><span class="nav-number">1.</span> <span class="nav-text">F.Addition and Andition</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#题目大意"><span class="nav-number">1.1.</span> <span class="nav-text">题目大意</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数据范围"><span class="nav-number">1.2.</span> <span class="nav-text">数据范围</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解题过程"><span class="nav-number">1.3.</span> <span class="nav-text">解题过程</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Addition-and-Andition"><span class="nav-number">1.</span> <span class="nav-text">Addition and Andition</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#题目大意"><span class="nav-number">1.1.</span> <span class="nav-text">题目大意</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数据范围"><span class="nav-number">1.2.</span> <span class="nav-text">数据范围</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解题过程"><span class="nav-number">1.3.</span> <span class="nav-text">解题过程</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -399,7 +401,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">13</span>
+          <span class="site-state-item-count">14</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -412,7 +414,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-count">14</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>

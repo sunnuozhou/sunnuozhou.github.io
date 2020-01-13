@@ -1,13 +1,14 @@
 ---
-title: atcoder grand contest 025
+title: atcoder grand contest 025F
 date: 2020-01-09 16:37:20
 tags:
 - OI
 - atcoder
 - 解题报告
+- 势能分析
 categories: 解题报告
 ---
-## F.Addition and Andition
+## Addition and Andition
 
 ### 题目大意
 

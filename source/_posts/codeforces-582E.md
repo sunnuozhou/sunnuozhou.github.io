@@ -1,14 +1,17 @@
 ---
-title: codeforces 582
+title: codeforces 582E
 date: 2020-01-09 16:45:29
 tags:
 - OI
 - codeforces
 - 解题报告
+- FWT
+- DP
+- 树形DP
 categories: 解题报告
 ---
 
-## E.Boolean Function
+## Boolean Function
 
 ### 题目大意
 

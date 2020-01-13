@@ -46,21 +46,24 @@
   };
 </script>
 
-  <meta name="description" content="E.Boolean Function题目大意给你一个逻辑表达式，包含$A,B,C,D$这4个变量和$\&amp;,|$这2个运算符。现在这个逻辑表达式的一些变量和运算符看不清了。 已知在$n$种不同的$A,B,C,D$取值下，表达式的值，求有多少可能的表达式。 数据范围表达式长度$\le 500$ $n\le 16$">
+  <meta name="description" content="Boolean Function题目大意给你一个逻辑表达式，包含$A,B,C,D$这4个变量和$\&amp;,|$这2个运算符。现在这个逻辑表达式的一些变量和运算符看不清了。 已知在$n$种不同的$A,B,C,D$取值下，表达式的值，求有多少可能的表达式。 数据范围表达式长度$\le 500$ $n\le 16$">
 <meta property="og:type" content="article">
-<meta property="og:title" content="codeforces 582">
-<meta property="og:url" content="http://sunnuozhou.github.io/2020/01/09/codeforces-582/index.html">
+<meta property="og:title" content="codeforces 582E">
+<meta property="og:url" content="http://sunnuozhou.github.io/2020/01/09/codeforces-582E/index.html">
 <meta property="og:site_name" content="SNZ的博客">
-<meta property="og:description" content="E.Boolean Function题目大意给你一个逻辑表达式，包含$A,B,C,D$这4个变量和$\&amp;,|$这2个运算符。现在这个逻辑表达式的一些变量和运算符看不清了。 已知在$n$种不同的$A,B,C,D$取值下，表达式的值，求有多少可能的表达式。 数据范围表达式长度$\le 500$ $n\le 16$">
+<meta property="og:description" content="Boolean Function题目大意给你一个逻辑表达式，包含$A,B,C,D$这4个变量和$\&amp;,|$这2个运算符。现在这个逻辑表达式的一些变量和运算符看不清了。 已知在$n$种不同的$A,B,C,D$取值下，表达式的值，求有多少可能的表达式。 数据范围表达式长度$\le 500$ $n\le 16$">
 <meta property="article:published_time" content="2020-01-09T08:45:29.000Z">
-<meta property="article:modified_time" content="2020-01-10T05:15:45.324Z">
+<meta property="article:modified_time" content="2020-01-13T00:41:25.433Z">
 <meta property="article:author" content="sunnuozhou">
 <meta property="article:tag" content="OI">
 <meta property="article:tag" content="解题报告">
 <meta property="article:tag" content="codeforces">
+<meta property="article:tag" content="DP">
+<meta property="article:tag" content="FWT">
+<meta property="article:tag" content="树形DP">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://sunnuozhou.github.io/2020/01/09/codeforces-582/">
+<link rel="canonical" href="http://sunnuozhou.github.io/2020/01/09/codeforces-582E/">
 
 
 <script id="page-configurations">
@@ -72,7 +75,7 @@
   };
 </script>
 
-  <title>codeforces 582 | SNZ的博客</title>
+  <title>codeforces 582E | SNZ的博客</title>
   
 
 
@@ -207,7 +210,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-Haus">
-    <link itemprop="mainEntityOfPage" href="http://sunnuozhou.github.io/2020/01/09/codeforces-582/">
+    <link itemprop="mainEntityOfPage" href="http://sunnuozhou.github.io/2020/01/09/codeforces-582E/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.png">
@@ -220,7 +223,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          codeforces 582
+          codeforces 582E
         </h1>
 
         <div class="post-meta">
@@ -237,7 +240,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-01-10 13:15:45" itemprop="dateModified" datetime="2020-01-10T13:15:45+08:00">2020-01-10</time>
+                <time title="Modified: 2020-01-13 08:41:25" itemprop="dateModified" datetime="2020-01-13T08:41:25+08:00">2020-01-13</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -269,7 +272,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2 id="E-Boolean-Function"><a href="#E-Boolean-Function" class="headerlink" title="E.Boolean Function"></a>E.Boolean Function</h2><h3 id="题目大意"><a href="#题目大意" class="headerlink" title="题目大意"></a>题目大意</h3><p>给你一个逻辑表达式，包含$A,B,C,D$这4个变量和$\&amp;,|$这2个运算符。现在这个逻辑表达式的一些变量和运算符看不清了。</p>
+        <h2 id="Boolean-Function"><a href="#Boolean-Function" class="headerlink" title="Boolean Function"></a>Boolean Function</h2><h3 id="题目大意"><a href="#题目大意" class="headerlink" title="题目大意"></a>题目大意</h3><p>给你一个逻辑表达式，包含$A,B,C,D$这4个变量和$\&amp;,|$这2个运算符。现在这个逻辑表达式的一些变量和运算符看不清了。</p>
 <p>已知在$n$种不同的$A,B,C,D$取值下，表达式的值，求有多少可能的表达式。</p>
 <h3 id="数据范围"><a href="#数据范围" class="headerlink" title="数据范围"></a>数据范围</h3><p>表达式长度$\le 500$</p>
 <p>$n\le 16$</p>
@@ -294,6 +297,9 @@
               <a href="/tags/OI/" rel="tag"># OI</a>
               <a href="/tags/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/" rel="tag"># 解题报告</a>
               <a href="/tags/codeforces/" rel="tag"># codeforces</a>
+              <a href="/tags/DP/" rel="tag"># DP</a>
+              <a href="/tags/FWT/" rel="tag"># FWT</a>
+              <a href="/tags/%E6%A0%91%E5%BD%A2DP/" rel="tag"># 树形DP</a>
           </div>
 
         
@@ -302,12 +308,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2020/01/09/atcoder-grand-contest-039/" rel="prev" title="atcoder grand contest 039">
-      <i class="fa fa-chevron-left"></i> atcoder grand contest 039
+    <a href="/2020/01/09/atcoder-grand-contest-039E/" rel="prev" title="atcoder grand contest 039E">
+      <i class="fa fa-chevron-left"></i> atcoder grand contest 039E
     </a></div>
       <div class="post-nav-item">
-    <a href="/2020/01/09/codeforces-526/" rel="next" title="codeforces 526">
-      codeforces 526 <i class="fa fa-chevron-right"></i>
+    <a href="/2020/01/09/codeforces-526F/" rel="next" title="codeforces 526F">
+      codeforces 526F <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -368,7 +374,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#E-Boolean-Function"><span class="nav-number">1.</span> <span class="nav-text">E.Boolean Function</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#题目大意"><span class="nav-number">1.1.</span> <span class="nav-text">题目大意</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数据范围"><span class="nav-number">1.2.</span> <span class="nav-text">数据范围</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解题思路"><span class="nav-number">1.3.</span> <span class="nav-text">解题思路</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Boolean-Function"><span class="nav-number">1.</span> <span class="nav-text">Boolean Function</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#题目大意"><span class="nav-number">1.1.</span> <span class="nav-text">题目大意</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数据范围"><span class="nav-number">1.2.</span> <span class="nav-text">数据范围</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解题思路"><span class="nav-number">1.3.</span> <span class="nav-text">解题思路</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -384,7 +390,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">13</span>
+          <span class="site-state-item-count">14</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -397,7 +403,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-count">14</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
