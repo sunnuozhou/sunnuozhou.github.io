@@ -25,7 +25,7 @@
     version: '7.7.0',
     exturl: false,
     sidebar: {"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},
-    copycode: {"enable":true,"show_result":true,"style":"flat"},
+    copycode: {"enable":true,"show_result":true,"style":"mac"},
     back2top: {"enable":true,"sidebar":true,"scrollpercent":true},
     bookmark: {"enable":false,"color":"#222","save":"auto"},
     fancybox: false,
@@ -264,6 +264,91 @@
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2020/01/07/hexo%E5%AE%89%E8%A3%85/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-Haus">
+    <link itemprop="mainEntityOfPage" href="http://sunnuozhou.github.io/2020/01/14/codeforces-587F/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="sunnuozhou">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="SNZ的博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/01/14/codeforces-587F/" class="post-title-link" itemprop="url">codeforces 587F</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2020-01-14 17:00:09 / Modified: 17:27:11" itemprop="dateCreated datePublished" datetime="2020-01-14T17:00:09+08:00">2020-01-14</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/" itemprop="url" rel="index">
+                    <span itemprop="name">解题报告</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><a href="https://codeforces.com/contest/587/problem/F" target="_blank" rel="noopener">题目链接</a></p>
+<p>这题很简单，但我很菜。</p>
+<p>先建一个AC自动机，然后再考虑这道题。把询问差分后离线，现在要求的就是前$i$个串在第$k$个串中出现次数的总和。</p>
+<p>对于一个AC自动机，我们把原trie树和fail树分开了看，那么新加入第$i$个串相当于在fail树上的一个子树全体加一。询问就是在原trie树上一个点到根的路径求和。</p>
+<p>考虑分块。</p>
+<p>先将fail树按dfs序分成根号块，记录下数组$sum_{i,j}$表示第$i$个串在原树上对应的点有几个在第$j$个块中，对于整块加就记录下来。</p>
+<p>对于单点加，可以转换为$n\sqrt n$个原树上子树加和$n$个单点求值。再差分一下变为单点加，区间求值，使用分块可以修改$O(1)$，询问$O(\sqrt n)$。</p>
+<p>询问时先算出前面单点加的产生的贡献，再算整块。对于一个整块$j$，贡献为$sum_{i,j}\times tag_j$，$tag_j$为整块被修改的次数。</p>
+<p>总复杂度$O(n\sqrt n)$。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/01/14/codeforces-587F/#more" rel="contents">
                 Read more &raquo;
               </a>
             </div>
@@ -972,93 +1057,6 @@
   
   
 
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-Haus">
-    <link itemprop="mainEntityOfPage" href="http://sunnuozhou.github.io/2020/01/08/APIO2019%E6%B8%B8%E8%AE%B0/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.png">
-      <meta itemprop="name" content="sunnuozhou">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="SNZ的博客">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/01/08/APIO2019%E6%B8%B8%E8%AE%B0/" class="post-title-link" itemprop="url">APIO2019游记</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2020-01-08 21:58:33" itemprop="dateCreated datePublished" datetime="2020-01-08T21:58:33+08:00">2020-01-08</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-01-10 13:15:04" itemprop="dateModified" datetime="2020-01-10T13:15:04+08:00">2020-01-10</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%B8%B8%E8%AE%B0/" itemprop="url" rel="index">
-                    <span itemprop="name">游记</span>
-                  </a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>APIO2019游记</p>
-<p>这次APIO我又分到了和CTS一样的考场，一共2场CTS，1场APIO，都在一个考场，真的赚。</p>
-<p>9:00开始考试，打开题面先浏览3道题，发现第一题只会43分，第二题只会10分，第三题只会60分。</p>
-<p>浏览完题目后，我就开始盯着T1看，T1是一道在无向图上的题，其中有一个部分分是树，我盯着这个部分分想了好久，发现根本不会。</p>
-<p>我就换了一个思路想，想到了一个根号log的做法，而且完全没有用树的性质，我仔细理了理我的算法，发现没什么问题，就开始写了。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/01/08/APIO2019%E6%B8%B8%E8%AE%B0/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
   </div>
 
   
@@ -1131,7 +1129,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">14</span>
+          <span class="site-state-item-count">15</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -1144,7 +1142,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">14</span>
+        <span class="site-state-item-count">16</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
