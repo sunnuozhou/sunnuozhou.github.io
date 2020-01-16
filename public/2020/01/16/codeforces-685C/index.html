@@ -46,20 +46,22 @@
   };
 </script>
 
-  <meta name="description" content="JSOI2019-ROUND1-游记 Day0由于这一次的省选在常州，我终于可以不用去南京比赛了（然而在常州的主场优势没有什么用，我不仅没有睡好，还因为家离得远需要早起）。下午报道试机，发现那边电脑还是挺好的，虚拟机下的NOI Linux一点都不卡，果断选择用Linux。试机的时候码了一个FFT和一个SA。">
+  <meta name="description" content="题目描述 先二分答案，考虑对于一个答案如何检验。 二分答案后，一个点的限制就是在八个方向各有一个限制。而多个点的限制就是每个方向的限制取最大值。整理限制可以得到一下式子： $l_0\le x+y+z \le r_0$ $l_1\le -x+y+z \le r_1$ $l_2\le x-y+z \le r_2$ $l_3\le x+y-z \le r_3$ 设$a&#x3D;-x+y+z,b&#x3D;x-y+z,c&#x3D;">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JSOI2019-Round1游记">
-<meta property="og:url" content="http://sunnuozhou.github.io/2020/01/08/JSOI2019-Round1%E6%B8%B8%E8%AE%B0/index.html">
+<meta property="og:title" content="codeforces 685C">
+<meta property="og:url" content="http://sunnuozhou.github.io/2020/01/16/codeforces-685C/index.html">
 <meta property="og:site_name" content="SNZ的博客">
-<meta property="og:description" content="JSOI2019-ROUND1-游记 Day0由于这一次的省选在常州，我终于可以不用去南京比赛了（然而在常州的主场优势没有什么用，我不仅没有睡好，还因为家离得远需要早起）。下午报道试机，发现那边电脑还是挺好的，虚拟机下的NOI Linux一点都不卡，果断选择用Linux。试机的时候码了一个FFT和一个SA。">
-<meta property="article:published_time" content="2020-01-08T13:43:12.000Z">
-<meta property="article:modified_time" content="2020-01-08T13:48:18.454Z">
+<meta property="og:description" content="题目描述 先二分答案，考虑对于一个答案如何检验。 二分答案后，一个点的限制就是在八个方向各有一个限制。而多个点的限制就是每个方向的限制取最大值。整理限制可以得到一下式子： $l_0\le x+y+z \le r_0$ $l_1\le -x+y+z \le r_1$ $l_2\le x-y+z \le r_2$ $l_3\le x+y-z \le r_3$ 设$a&#x3D;-x+y+z,b&#x3D;x-y+z,c&#x3D;">
+<meta property="article:published_time" content="2020-01-16T00:03:24.000Z">
+<meta property="article:modified_time" content="2020-01-16T00:18:28.222Z">
 <meta property="article:author" content="sunnuozhou">
 <meta property="article:tag" content="OI">
-<meta property="article:tag" content="游记">
+<meta property="article:tag" content="解题报告">
+<meta property="article:tag" content="codeforces">
+<meta property="article:tag" content="二分答案">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://sunnuozhou.github.io/2020/01/08/JSOI2019-Round1%E6%B8%B8%E8%AE%B0/">
+<link rel="canonical" href="http://sunnuozhou.github.io/2020/01/16/codeforces-685C/">
 
 
 <script id="page-configurations">
@@ -71,7 +73,7 @@
   };
 </script>
 
-  <title>JSOI2019-Round1游记 | SNZ的博客</title>
+  <title>codeforces 685C | SNZ的博客</title>
   
 
 
@@ -206,7 +208,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-Haus">
-    <link itemprop="mainEntityOfPage" href="http://sunnuozhou.github.io/2020/01/08/JSOI2019-Round1%E6%B8%B8%E8%AE%B0/">
+    <link itemprop="mainEntityOfPage" href="http://sunnuozhou.github.io/2020/01/16/codeforces-685C/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.png">
@@ -219,7 +221,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          JSOI2019-Round1游记
+          codeforces 685C
         </h1>
 
         <div class="post-meta">
@@ -230,7 +232,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2020-01-08 21:43:12 / Modified: 21:48:18" itemprop="dateCreated datePublished" datetime="2020-01-08T21:43:12+08:00">2020-01-08</time>
+              <time title="Created: 2020-01-16 08:03:24 / Modified: 08:18:28" itemprop="dateCreated datePublished" datetime="2020-01-16T08:03:24+08:00">2020-01-16</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -238,8 +240,8 @@
               </span>
               <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%B8%B8%E8%AE%B0/" itemprop="url" rel="index">
-                    <span itemprop="name">游记</span>
+                  <a href="/categories/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/" itemprop="url" rel="index">
+                    <span itemprop="name">解题报告</span>
                   </a>
                 </span>
             </span>
@@ -262,20 +264,22 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>JSOI2019-ROUND1-游记</p>
-<h2 id="Day0"><a href="#Day0" class="headerlink" title="Day0"></a>Day0</h2><p>由于这一次的省选在常州，我终于可以不用去南京比赛了（然而在常州的主场优势没有什么用，我不仅没有睡好，还因为家离得远需要早起）。下午报道试机，发现那边电脑还是挺好的，虚拟机下的NOI Linux一点都不卡，果断选择用Linux。试机的时候码了一个FFT和一个SA。</p>
+        <p><a href="https://codeforces.com/contest/685/problem/C" target="_blank" rel="noopener">题目描述</a></p>
+<p>先二分答案，考虑对于一个答案如何检验。</p>
+<p>二分答案后，一个点的限制就是在八个方向各有一个限制。而多个点的限制就是每个方向的限制取最大值。整理限制可以得到一下式子：</p>
+<p>$l_0\le x+y+z \le r_0$</p>
+<p>$l_1\le -x+y+z \le r_1$</p>
+<p>$l_2\le x-y+z \le r_2$</p>
+<p>$l_3\le x+y-z \le r_3$</p>
+<p>设$a=-x+y+z,b=x-y+z,c=x+y-z$，那么限制变为</p>
+<p>$l_0\le a+b+c \le r_0$</p>
+<p>$l_1\le a \le r_1$</p>
+<p>$l_2\le b \le r_2$</p>
+<p>$l_3\le c \le r_3$</p>
+<p>因为$x=\frac{b+c}{2},y=\frac{a+c}{2},z=\frac{a+b}{2}$，所以$a,b,c$必须同奇或同偶，分类讨论即可。</p>
+<p>时间复杂度$O(T(n+\log V))$，其中$V$为值域。</p>
 <a id="more"></a>
-<h2 id="Day1"><a href="#Day1" class="headerlink" title="Day1"></a>Day1</h2><p>到了以后一直等到8:00才进场，JSOI差点又咕咕了。</p>
-<p>边上坐着初二神仙djq，发题之后我看到djq飞快地看完了前两题，并发出了兴奋的声音（就好像A题了一样），让我感到很慌。我匆匆忙忙看完第一题，发现不难，花半小时写了一个01trie，稍微调试一下就过样例了，一遍过了对拍，考完后听到别人都用了可持久化01trie+堆的神仙做法，完全不懂。</p>
-<p>大概9:00开始想t2，想了一会儿发现建一个后缀树就有80，但我不会后缀树。我就决定先写一个后缀数组，然后在用后缀数组建后缀树，但这道题巨大的代码量让我很慌。不过我想着如果这题的80分我拿到了，那今天就稳了，于是我就开始写了，终于在10:40的时候过了样例和对拍。</p>
-<p>调整了一下状态开始写t3，发现这是一个蛇皮题，把测试点都给我然后不告诉我题意，让我从测试点中看题意。我做这题做了好久，到11:30的时候拿到了25分，然后发现我没有会做的了，这时候我发现我会了t2的100分做法，不过我当时想着求稳就没有写，又做一30分钟t3，然后一分没得。检查了30分钟就交题了。</p>
-<p>考完后本来以为考得不错，结果t2只拿了10分，复测时候一看，发现wa光了。最终得分只有100+10+25=135分，被各种爆锤，心态崩了。</p>
-<h2 id="Day2"><a href="#Day2" class="headerlink" title="Day2"></a>Day2</h2><p>今天旁边的是一个不认识的人，但他200+行的t1和一个FFT严重影响了我的心态（我发现他是一个完完全全的终端选手，连文件操作都是用的cp，mv）。</p>
-<p>我看完3题发现一题都不会，心态有点小崩，想了一想发现t1的k=0部分分很好做，再想想发现暴力也很好写，而且加起来有70分，我就写了一个暴力加部分分，9:30写完。</p>
-<p>t2我一看暴力分很多就直接写暴力了，结果t2是今天最简单的一题，我虽然一眼没想出来，但本来多想想应该可以想出来的，结果因为我自闭t1太久导致没有足够的时间与胆量再一直想下去了，当时只想着稳着3题暴力的分。</p>
-<p>开始码T3暴力，一开始想写k=1的部分分，有好多分，但写着写着发现长链剖分+线段树太难写了，就码了 l=n,k=1 的8分，然后码了前两个点的暴力。我又发现l=n,k!=1的时候写可以做就赶紧写了一个，写完就没什么时间了，稍微检查了一下就交题了。</p>
-<p>下午一出成绩发现我有fst了，t2的数组开小了，有15分没拿到。</p>
-<p>这一次省选一共fst了85分，我感觉平时训练我都没有fst的这么惨过，进队凉了，刚好被卡在线外，希望下一轮省选能翻盘。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> ll long long</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> lld long double</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> tn&gt; <span class="function"><span class="keyword">void</span> <span class="title">read</span><span class="params">(tn &amp;a)</span></span>&#123;</span><br><span class="line">	tn x=<span class="number">0</span>,f=<span class="number">1</span>; <span class="keyword">char</span> c=<span class="string">' '</span>;</span><br><span class="line">	<span class="keyword">for</span>(;!<span class="built_in">isdigit</span>(c);c=getchar()) <span class="keyword">if</span>(c==<span class="string">'-'</span>) f=<span class="number">-1</span>;</span><br><span class="line">	<span class="keyword">for</span>(;<span class="built_in">isdigit</span>(c);c=getchar()) x=x*<span class="number">10</span>+c-<span class="string">'0'</span>;</span><br><span class="line">	a=x*f;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N = <span class="number">101000</span>;</span><br><span class="line">ll lim[<span class="number">8</span>],lm[<span class="number">8</span>];</span><br><span class="line"><span class="keyword">int</span> n;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">point</span>&#123;</span></span><br><span class="line">	ll x,y,z;</span><br><span class="line">	<span class="function">ll <span class="title">getval</span><span class="params">(<span class="keyword">int</span> k)</span></span>&#123;</span><br><span class="line">		<span class="keyword">return</span> x*(k&amp;<span class="number">1</span>?<span class="number">-1</span>:<span class="number">1</span>)+y*(k&gt;&gt;<span class="number">1</span>&amp;<span class="number">1</span>?<span class="number">-1</span>:<span class="number">1</span>)+z*(k&gt;&gt;<span class="number">2</span>&amp;<span class="number">1</span>?<span class="number">-1</span>:<span class="number">1</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;p[N],ans;</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">chk</span><span class="params">(<span class="keyword">int</span> tag,ll*lim)</span></span>&#123;</span><br><span class="line">	ll l[<span class="number">4</span>]=&#123;(-lim[<span class="number">7</span>]+<span class="number">1</span><span class="number">-3</span>*tag)&gt;&gt;<span class="number">1</span>,(-lim[<span class="number">6</span>]+<span class="number">1</span>-tag)&gt;&gt;<span class="number">1</span>,(-lim[<span class="number">5</span>]+<span class="number">1</span>-tag)&gt;&gt;<span class="number">1</span>,(-lim[<span class="number">3</span>]+<span class="number">1</span>-tag)&gt;&gt;<span class="number">1</span>&#125;;</span><br><span class="line">	ll r[<span class="number">4</span>]=&#123;(lim[<span class="number">0</span>]<span class="number">-3</span>*tag)&gt;&gt;<span class="number">1</span>,(lim[<span class="number">1</span>]-tag)&gt;&gt;<span class="number">1</span>,(lim[<span class="number">2</span>]-tag)&gt;&gt;<span class="number">1</span>,(lim[<span class="number">4</span>]-tag)&gt;&gt;<span class="number">1</span>&#125;;</span><br><span class="line">	ll a=l[<span class="number">1</span>],b=l[<span class="number">2</span>],c=l[<span class="number">3</span>];</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="number">4</span>;i++) <span class="keyword">if</span>(r[i]&lt;l[i]) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">if</span>(a+b+c&gt;r[<span class="number">0</span>]) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">if</span>(a+b+c&lt;l[<span class="number">0</span>])&#123;</span><br><span class="line">		a=min(r[<span class="number">1</span>],l[<span class="number">0</span>]-b-c);</span><br><span class="line">		b=min(r[<span class="number">2</span>],l[<span class="number">0</span>]-a-c);</span><br><span class="line">		c=min(r[<span class="number">3</span>],l[<span class="number">0</span>]-a-b);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span>(a+b+c&lt;l[<span class="number">0</span>]) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">	ans=&#123;b+c+tag,a+c+tag,a+b+tag&#125;;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">check</span><span class="params">(ll len)</span></span>&#123;</span><br><span class="line">	<span class="built_in">memcpy</span>(lm,lim,<span class="keyword">sizeof</span>(lm));</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="number">8</span>;i++) lm[i]+=len;</span><br><span class="line">	<span class="keyword">if</span>(chk(<span class="number">0</span>,lm)) <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">if</span>(chk(<span class="number">1</span>,lm)) <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> T;read(T);</span><br><span class="line">	<span class="keyword">while</span>(T--)&#123;</span><br><span class="line">		read(n);</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">			read(p[i].x),read(p[i].y),read(p[i].z);</span><br><span class="line">		<span class="built_in">memset</span>(lim,<span class="number">63</span>,<span class="keyword">sizeof</span>(lim));</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;<span class="number">8</span>;j++)</span><br><span class="line">				lim[j]=min(lim[j],p[i].getval(j));</span><br><span class="line">		ll l=<span class="number">-1</span>,r=<span class="number">4e18</span>l+<span class="number">1</span>;</span><br><span class="line">		<span class="keyword">while</span>(l+<span class="number">1</span>&lt;r)&#123;</span><br><span class="line">			ll mid=l+r&gt;&gt;<span class="number">1</span>;</span><br><span class="line">			<span class="keyword">if</span>(check(mid)) r=mid;</span><br><span class="line">			<span class="keyword">else</span> l=mid;</span><br><span class="line">		&#125;</span><br><span class="line">		check(r);</span><br><span class="line">		<span class="built_in">cout</span>&lt;&lt;ans.x&lt;&lt;<span class="string">' '</span>&lt;&lt;ans.y&lt;&lt;<span class="string">' '</span>&lt;&lt;ans.z&lt;&lt;<span class="string">'\n'</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
     </div>
 
@@ -286,7 +290,9 @@
       <footer class="post-footer">
           <div class="post-tags">
               <a href="/tags/OI/" rel="tag"># OI</a>
-              <a href="/tags/%E6%B8%B8%E8%AE%B0/" rel="tag"># 游记</a>
+              <a href="/tags/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/" rel="tag"># 解题报告</a>
+              <a href="/tags/codeforces/" rel="tag"># codeforces</a>
+              <a href="/tags/%E4%BA%8C%E5%88%86%E7%AD%94%E6%A1%88/" rel="tag"># 二分答案</a>
           </div>
 
         
@@ -295,12 +301,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2020/01/08/noip2018%E6%B8%B8%E8%AE%B0/" rel="prev" title="noip2018游记">
-      <i class="fa fa-chevron-left"></i> noip2018游记
+    <a href="/2020/01/14/codeforces-587F/" rel="prev" title="codeforces 587F">
+      <i class="fa fa-chevron-left"></i> codeforces 587F
     </a></div>
       <div class="post-nav-item">
-    <a href="/2020/01/08/JSOI2019-Round2%E6%B8%B8%E8%AE%B0/" rel="next" title="JSOI2019-Round2游记">
-      JSOI2019-Round2游记 <i class="fa fa-chevron-right"></i>
+    <a href="/2020/01/16/codeforces-578F/" rel="next" title="codeforces 578F">
+      codeforces 578F <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -361,7 +367,6 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Day0"><span class="nav-number">1.</span> <span class="nav-text">Day0</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Day1"><span class="nav-number">2.</span> <span class="nav-text">Day1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Day2"><span class="nav-number">3.</span> <span class="nav-text">Day2</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
