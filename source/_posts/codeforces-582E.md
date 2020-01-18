@@ -4,7 +4,6 @@ date: 2020-01-09 16:45:29
 tags:
 - OI
 - codeforces
-- 解题报告
 - FWT
 - DP
 - 树形DP

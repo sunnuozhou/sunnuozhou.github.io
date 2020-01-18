@@ -4,7 +4,6 @@ date: 2020-01-09 16:37:20
 tags:
 - OI
 - atcoder
-- 解题报告
 - 势能分析
 categories: 解题报告
 ---

@@ -1,6 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>codeforces 536D</title>
+    <url>/2020/01/18/codeforces-536D/</url>
+    <content><![CDATA[<p><a href="https://codeforces.com/contest/536/problem/D" target="_blank" rel="noopener">题目链接</a></p>
+<p>先求出从$s$到每一个点的最短路和从t到每一个点的最短路，记为$ds_i,dt_i$。</p>
+<p>那么这个游戏就可以变为先手每次选一个$k$,得到一些$ds_i\le k$的点，后手每次选一个$k$,得到一些$dt_i\le k$的点。</p>
+<p>记$f_{i,j}$表示先手选的$k$现在是$i$，后手选的$k$现在是$j$的时候先手减后手的差，倒着DP。</p>
+<p>DP时记录后缀max，可优化到$O(n^2)$。</p>
+<a id="more"></a>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> ll long long</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> lld long double</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> tn&gt; <span class="function"><span class="keyword">void</span> <span class="title">read</span><span class="params">(tn &amp;a)</span></span>&#123;</span><br><span class="line">	tn x=<span class="number">0</span>,f=<span class="number">1</span>; <span class="keyword">char</span> c=<span class="string">' '</span>;</span><br><span class="line">	<span class="keyword">for</span>(;!<span class="built_in">isdigit</span>(c);c=getchar()) <span class="keyword">if</span>(c==<span class="string">'-'</span>) f=<span class="number">-1</span>;</span><br><span class="line">	<span class="keyword">for</span>(;<span class="built_in">isdigit</span>(c);c=getchar()) x=x*<span class="number">10</span>+c-<span class="string">'0'</span>;</span><br><span class="line">	a=x*f;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N = <span class="number">2010</span>;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">edge</span>&#123;</span><span class="keyword">int</span> v,w;&#125;;</span><br><span class="line"><span class="built_in">vector</span>&lt;edge&gt; e[N];</span><br><span class="line">ll dis[N],b[N],f[N][N][<span class="number">2</span>],val[N],s[N][N],mx[N][N][<span class="number">2</span>];</span><br><span class="line"><span class="keyword">int</span> n,m,S,T,cnt,m1,m2,d1[N],d2[N],h[N][N][<span class="number">2</span>],ss[N][N];</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">dij</span><span class="params">(<span class="keyword">int</span> s,<span class="keyword">int</span>*d)</span></span>&#123;</span><br><span class="line">	<span class="built_in">memset</span>(dis,<span class="number">63</span>,<span class="keyword">sizeof</span>(dis));</span><br><span class="line">	priority_queue&lt;pair&lt;ll,<span class="keyword">int</span>&gt;,<span class="built_in">vector</span>&lt;pair&lt;ll,<span class="keyword">int</span>&gt; &gt;,greater&lt;pair&lt;ll,<span class="keyword">int</span>&gt; &gt; &gt; q;</span><br><span class="line">	dis[s]=<span class="number">0</span>;q.push(make_pair(<span class="number">0</span>,s));</span><br><span class="line">	<span class="keyword">while</span>(!q.empty())&#123;</span><br><span class="line">		<span class="keyword">int</span> u=q.top().second; ll dist=q.top().first; q.pop();</span><br><span class="line">		<span class="keyword">if</span>(dist!=dis[u]) <span class="keyword">continue</span>;</span><br><span class="line">		<span class="keyword">for</span>(edge v:e[u]) </span><br><span class="line">			<span class="keyword">if</span>(dis[v.v]&gt;dis[u]+v.w)&#123;</span><br><span class="line">				dis[v.v]=dis[u]+v.w;</span><br><span class="line">				q.push(make_pair(dis[v.v],v.v));</span><br><span class="line">			&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	cnt=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) b[++cnt]=dis[i];</span><br><span class="line">	sort(b+<span class="number">1</span>,b+cnt+<span class="number">1</span>);</span><br><span class="line">	cnt=unique(b+<span class="number">1</span>,b+cnt+<span class="number">1</span>)-b<span class="number">-1</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) d[i]=lower_bound(b+<span class="number">1</span>,b+cnt+<span class="number">1</span>,dis[i])-b;</span><br><span class="line">	<span class="keyword">return</span> cnt;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	read(n);read(m);</span><br><span class="line">	read(S);read(T);</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) read(val[i]);</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=m;i++)&#123;</span><br><span class="line">		<span class="keyword">int</span> x,y,z;read(x);read(y);read(z);</span><br><span class="line">		e[x].push_back(&#123;y,z&#125;);</span><br><span class="line">		e[y].push_back(&#123;x,z&#125;);</span><br><span class="line">	&#125;</span><br><span class="line">	m1=dij(S,d1);</span><br><span class="line">	m2=dij(T,d2);</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">		ss[d1[i]][d2[i]]++,s[d1[i]][d2[i]]+=val[i];<span class="comment">//cerr&lt;&lt;i&lt;&lt;' '&lt;&lt;d1[i]&lt;&lt;' '&lt;&lt;d2[i]&lt;&lt;'\n';;</span></span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;=m1;i++)</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;=m2;j++)</span><br><span class="line">			f[i][j][<span class="number">0</span>]=<span class="number">1e18</span>,f[i][j][<span class="number">1</span>]=<span class="number">1e18</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=m1;~i;i--)</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> j=m2;~j;j--)</span><br><span class="line">			s[i][j]=-s[i+<span class="number">1</span>][j+<span class="number">1</span>]+s[i+<span class="number">1</span>][j]+s[i][j+<span class="number">1</span>]+s[i][j],</span><br><span class="line">			ss[i][j]=-ss[i+<span class="number">1</span>][j+<span class="number">1</span>]+ss[i+<span class="number">1</span>][j]+ss[i][j+<span class="number">1</span>]+ss[i][j];</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=m1;i;i--)</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> j=m2;j;j--)&#123;</span><br><span class="line">			h[i][j][<span class="number">0</span>]=ss[i][j]!=ss[i+<span class="number">1</span>][j]?i+<span class="number">1</span>:h[i+<span class="number">1</span>][j][<span class="number">0</span>];</span><br><span class="line">			h[i][j][<span class="number">1</span>]=ss[i][j]!=ss[i][j+<span class="number">1</span>]?j+<span class="number">1</span>:h[i][j+<span class="number">1</span>][<span class="number">1</span>];</span><br><span class="line">			<span class="keyword">if</span>(h[i][j][<span class="number">0</span>])&#123;</span><br><span class="line">				f[i][j][<span class="number">0</span>]=s[i][j]+mx[h[i][j][<span class="number">0</span>]][j][<span class="number">0</span>];</span><br><span class="line">				mx[i][j][<span class="number">1</span>]=max(mx[i][j][<span class="number">1</span>],-f[i][j][<span class="number">0</span>]-s[i][j]);</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">if</span>(h[i][j][<span class="number">1</span>])&#123;</span><br><span class="line">				f[i][j][<span class="number">1</span>]=s[i][j]+mx[i][h[i][j][<span class="number">1</span>]][<span class="number">1</span>];</span><br><span class="line">				mx[i][j][<span class="number">0</span>]=max(mx[i][j][<span class="number">0</span>],-f[i][j][<span class="number">1</span>]-s[i][j]);</span><br><span class="line">			&#125;</span><br><span class="line">			mx[i][j][<span class="number">0</span>]=max(mx[i][j][<span class="number">0</span>],mx[i+<span class="number">1</span>][j][<span class="number">0</span>]);</span><br><span class="line">			mx[i][j][<span class="number">1</span>]=max(mx[i][j][<span class="number">1</span>],mx[i][j+<span class="number">1</span>][<span class="number">1</span>]);</span><br><span class="line">		&#125;</span><br><span class="line">	<span class="keyword">if</span>(f[<span class="number">1</span>][<span class="number">1</span>][<span class="number">0</span>]==<span class="number">0</span>) <span class="built_in">puts</span>(<span class="string">"Flowers"</span>);</span><br><span class="line">	<span class="keyword">if</span>(f[<span class="number">1</span>][<span class="number">1</span>][<span class="number">0</span>]&gt;<span class="number">0</span>) <span class="built_in">puts</span>(<span class="string">"Break a heart"</span>);</span><br><span class="line">	<span class="keyword">if</span>(f[<span class="number">1</span>][<span class="number">1</span>][<span class="number">0</span>]&lt;<span class="number">0</span>) <span class="built_in">puts</span>(<span class="string">"Cry"</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>解题报告</category>
+      </categories>
+      <tags>
+        <tag>OI</tag>
+        <tag>codeforces</tag>
+        <tag>DP</tag>
+        <tag>最短路</tag>
+        <tag>博弈</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>codeforces 585E</title>
+    <url>/2020/01/18/codeforces-585E/</url>
+    <content><![CDATA[<p><a href="https://codeforces.com/contest/585/problem/E" target="_blank" rel="noopener">题目链接</a></p>
+<p>先求出$h_i$表示$gcd$是$i$的倍数的集合有几个，$h_i=2^{cnt_i}$，其中$cnt_i$表示$i$的倍数的个数。</p>
+<p>那么考虑容斥，$gcd$不为一的集合数量为$Sum=2^n-\sum\mu_i h_i$。</p>
+<p>枚举那单独一个数的位置，令它的值为$x$，那么对于这个$x$可行的集合的数量为$Sum+\sum_{d|x,d\ne1}\mu_d h_d$。</p>
+<p>直接求和即可。</p>
+<p>时间复杂度$O(V+n\times 2^k)$，其中$V$为值域，$k$为一个数的不同因子个数。</p>
+<a id="more"></a>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> ll long long</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> lld long double</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> tn&gt; <span class="function"><span class="keyword">void</span> <span class="title">read</span><span class="params">(tn &amp;a)</span></span>&#123;</span><br><span class="line">	tn x=<span class="number">0</span>,f=<span class="number">1</span>; <span class="keyword">char</span> c=<span class="string">' '</span>;</span><br><span class="line">	<span class="keyword">for</span>(;!<span class="built_in">isdigit</span>(c);c=getchar()) <span class="keyword">if</span>(c==<span class="string">'-'</span>) f=<span class="number">-1</span>;</span><br><span class="line">	<span class="keyword">for</span>(;<span class="built_in">isdigit</span>(c);c=getchar()) x=x*<span class="number">10</span>+c-<span class="string">'0'</span>;</span><br><span class="line">	a=x*f;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N = <span class="number">10001000</span>,mod = <span class="number">1e9</span>+<span class="number">7</span>;</span><br><span class="line"><span class="keyword">int</span> n,m,a[N],f[N],h[N],mu[N],pri[N],tot;</span><br><span class="line"><span class="function">ll <span class="title">fp</span><span class="params">(ll a,ll k)</span></span>&#123;</span><br><span class="line">	ll ans=<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">for</span>(;k;k&gt;&gt;=<span class="number">1</span>,a=a*a%mod)</span><br><span class="line">		<span class="keyword">if</span>(k&amp;<span class="number">1</span>) ans=a*ans%mod;</span><br><span class="line">	<span class="keyword">return</span> ans;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">init</span><span class="params">(<span class="keyword">int</span> n)</span></span>&#123;</span><br><span class="line">	mu[<span class="number">1</span>]=<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">2</span>;i&lt;=n;i++)&#123;</span><br><span class="line">		<span class="keyword">if</span>(!f[i])&#123;f[i]=i;pri[++tot]=i;mu[i]=<span class="number">-1</span>;&#125;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;pri[j]*i&lt;=n;j++)&#123;</span><br><span class="line">			f[pri[j]*i]=pri[j];</span><br><span class="line">			mu[pri[j]*i]=-mu[i];</span><br><span class="line">			<span class="keyword">if</span>(pri[j]==f[i])&#123;mu[pri[j]*i]=<span class="number">0</span>;<span class="keyword">break</span>;&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	read(n);</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">		read(a[i]),h[a[i]]++,m=max(a[i],m);</span><br><span class="line">	init(m);</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=m;i++)&#123;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> j=i+i;j&lt;=m;j+=i)</span><br><span class="line">			h[i]+=h[j];</span><br><span class="line">		h[i]=fp(<span class="number">2</span>,h[i])-(i&gt;<span class="number">1</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	ll s1=<span class="number">0</span>,s2=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=m;i++)</span><br><span class="line">		s1=(s1+h[i]*mu[i])%mod;</span><br><span class="line">	s2=fp(<span class="number">2</span>,n)-s1;</span><br><span class="line">	ll ans=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">		<span class="keyword">int</span> x=a[i];</span><br><span class="line">		<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; v;</span><br><span class="line">		<span class="keyword">while</span>(x&gt;<span class="number">1</span>)&#123;</span><br><span class="line">			<span class="keyword">if</span>(v.empty()||v.back()!=f[x]) v.push_back(f[x]);</span><br><span class="line">			x/=f[x];</span><br><span class="line">		&#125;</span><br><span class="line">		ll now=<span class="number">0</span>;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;<span class="number">1</span>&lt;&lt;v.size();j++)&#123;</span><br><span class="line">			ll p=<span class="number">1</span>;</span><br><span class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> k=<span class="number">0</span>;k&lt;v.size();k++)</span><br><span class="line">				<span class="keyword">if</span>(j&gt;&gt;k&amp;<span class="number">1</span>) p*=v[k];</span><br><span class="line">			now=(now+mu[p]*h[p])%mod;</span><br><span class="line">		&#125;</span><br><span class="line">		ans=(ans+now+s2)%mod;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;(ans+mod)%mod&lt;&lt;<span class="string">'\n'</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>解题报告</category>
+      </categories>
+      <tags>
+        <tag>OI</tag>
+        <tag>codeforces</tag>
+        <tag>数论</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>codeforces 605E</title>
     <url>/2020/01/17/codeforces-605E/</url>
     <content><![CDATA[<p><a href="https://codeforces.com/contest/605/problem/E" target="_blank" rel="noopener">题目链接</a></p>
@@ -19,7 +62,6 @@
       </categories>
       <tags>
         <tag>OI</tag>
-        <tag>解题报告</tag>
         <tag>codeforces</tag>
         <tag>DP</tag>
         <tag>概率</tag>
@@ -47,7 +89,6 @@
       </categories>
       <tags>
         <tag>OI</tag>
-        <tag>解题报告</tag>
         <tag>codeforces</tag>
         <tag>计算几何</tag>
         <tag>搜索</tag>
@@ -71,7 +112,6 @@
       </categories>
       <tags>
         <tag>OI</tag>
-        <tag>解题报告</tag>
         <tag>codeforces</tag>
         <tag>DP</tag>
       </tags>
@@ -99,7 +139,6 @@
       </categories>
       <tags>
         <tag>OI</tag>
-        <tag>解题报告</tag>
         <tag>codeforces</tag>
         <tag>矩阵树定理</tag>
       </tags>
@@ -129,7 +168,6 @@
       </categories>
       <tags>
         <tag>OI</tag>
-        <tag>解题报告</tag>
         <tag>codeforces</tag>
         <tag>二分答案</tag>
       </tags>
@@ -154,7 +192,6 @@
       </categories>
       <tags>
         <tag>OI</tag>
-        <tag>解题报告</tag>
         <tag>codeforces</tag>
         <tag>AC自动机</tag>
         <tag>分块</tag>
@@ -173,7 +210,6 @@
       </categories>
       <tags>
         <tag>OI</tag>
-        <tag>解题报告</tag>
         <tag>codeforces</tag>
         <tag>后缀数组</tag>
         <tag>树链剖分</tag>
@@ -196,7 +232,6 @@
       </categories>
       <tags>
         <tag>OI</tag>
-        <tag>解题报告</tag>
         <tag>codeforces</tag>
         <tag>dfs</tag>
       </tags>
@@ -216,7 +251,6 @@
       </categories>
       <tags>
         <tag>OI</tag>
-        <tag>解题报告</tag>
         <tag>codeforces</tag>
         <tag>线段树</tag>
       </tags>
@@ -243,7 +277,6 @@
       </categories>
       <tags>
         <tag>OI</tag>
-        <tag>解题报告</tag>
         <tag>codeforces</tag>
         <tag>DP</tag>
         <tag>FWT</tag>
@@ -277,7 +310,6 @@
       <tags>
         <tag>OI</tag>
         <tag>atcoder</tag>
-        <tag>解题报告</tag>
         <tag>DP</tag>
       </tags>
   </entry>
@@ -319,7 +351,6 @@
       <tags>
         <tag>OI</tag>
         <tag>atcoder</tag>
-        <tag>解题报告</tag>
         <tag>势能分析</tag>
       </tags>
   </entry>

@@ -5,7 +5,6 @@ tags:
   - codeforces
   - AC自动机
   - 分块
-  - 解题报告
 date: 2020-01-14 17:00:09
 categories: 解题报告
 top:

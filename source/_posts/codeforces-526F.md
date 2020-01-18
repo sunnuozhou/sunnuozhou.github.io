@@ -4,7 +4,6 @@ date: 2020-01-09 16:53:02
 tags:
 - OI
 - codeforces
-- 解题报告
 - 线段树
 categories: 解题报告
 ---

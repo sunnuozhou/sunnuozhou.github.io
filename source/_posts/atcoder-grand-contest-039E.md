@@ -4,7 +4,6 @@ date: 2020-01-09 16:40:01
 tags:
 - OI
 - atcoder
-- 解题报告
 - DP
 categories: 解题报告
 ---
