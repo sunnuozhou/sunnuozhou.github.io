@@ -287,6 +287,167 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-Haus">
+    <link itemprop="mainEntityOfPage" href="http://sunnuozhou.github.io/2020/01/23/codeforces-674D/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="sunnuozhou">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="SNZ的博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/01/23/codeforces-674D/" class="post-title-link" itemprop="url">codeforces 674D</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2020-01-23 20:16:21 / Modified: 20:26:47" itemprop="dateCreated datePublished" datetime="2020-01-23T20:16:21+08:00">2020-01-23</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/" itemprop="url" rel="index">
+                    <span itemprop="name">解题报告</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><a href="https://codeforces.com/contest/674/problem/D" target="_blank" rel="noopener">题目描述</a></p>
+<p>每一个节点记录$sum_i$表示除了$f_i$的贡献以外的权值和，那么就可以支持$O(1)$的修改和$O(1)$的询问单点。</p>
+<p>再在每一个点上记录一个$set$，存下除了$f_i$以外每一个相邻点的权值，然后用一个全局的$set$维护最小值和最大值就可以了。</p>
+<p>时间复杂度$O(q\log n+n\log n)$。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/01/23/codeforces-674D/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-Haus">
+    <link itemprop="mainEntityOfPage" href="http://sunnuozhou.github.io/2020/01/21/codeforces-538G/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="sunnuozhou">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="SNZ的博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/01/21/codeforces-538G/" class="post-title-link" itemprop="url">codeforces 538G</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2020-01-21 10:24:00 / Modified: 10:36:51" itemprop="dateCreated datePublished" datetime="2020-01-21T10:24:00+08:00">2020-01-21</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/" itemprop="url" rel="index">
+                    <span itemprop="name">解题报告</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><a href="https://codeforces.com/contest/538/problem/G" target="_blank" rel="noopener">题目链接</a></p>
+<p>对于一组$(t,x,y)$将坐标转为$(\frac{x+y+t}{2},\frac{x-y+t}{2})$。那么每一次移动就变成了$x$坐标上$+0/+1$，$y$坐标上$+0/+1$，可以分开讨论。下面以$x$坐标为例。</p>
+<p>令$S$为一个周期内增加的量，$s_i$表示一个周期的前$i$个时刻增加的量。可以列出等式$s_{t_i mod  L}=X_i-S\times\lfloor \frac{t_i}{L}\rfloor$。</p>
+<p>把等式按$t_i mod L$排序，相邻两项相减，可以得到若干不等式，形如$0\le k_2\times S+k_3\le k_1$，合并后的不等式若有解，随意取一组解即可，求出$S$后即可算出所有$s_i$。</p>
+<p>时间复杂度$O(n\log n)$</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/01/21/codeforces-538G/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-Haus">
     <link itemprop="mainEntityOfPage" href="http://sunnuozhou.github.io/2020/01/20/codeforces-611G/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -869,189 +1030,6 @@
   
   
 
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-Haus">
-    <link itemprop="mainEntityOfPage" href="http://sunnuozhou.github.io/2020/01/16/codeforces-704B/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.png">
-      <meta itemprop="name" content="sunnuozhou">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="SNZ的博客">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/01/16/codeforces-704B/" class="post-title-link" itemprop="url">codeforces 704B</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2020-01-16 10:56:08" itemprop="dateCreated datePublished" datetime="2020-01-16T10:56:08+08:00">2020-01-16</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-01-18 08:41:59" itemprop="dateModified" datetime="2020-01-18T08:41:59+08:00">2020-01-18</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/" itemprop="url" rel="index">
-                    <span itemprop="name">解题报告</span>
-                  </a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p><a href="https://codeforces.com/contest/704/problem/B" target="_blank" rel="noopener">题目链接</a></p>
-<p>令$a_i+=x_i,b_i-=x_i,c_i+=x_i,d_i-=x_i$，那么从$i$走到$j$的代价是：</p>
-<p>$c_i+b_j,j&lt;i$</p>
-<p>$d_i+a_j,j&gt;i$</p>
-<p>记录$f_{i,j}$表示前$i-1$个点，共有$j$个连通块的最小代价。</p>
-<p>转移时枚举第$i$个点从前面还是后面到，向前面还是后面走。为了转移方便，我使终点向起点连了一条边，但要注意这条边必须直接连接两个点，中间不能有其他点。</p>
-<p>时间复杂度$O(n^2)$。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/01/16/codeforces-704B/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-Haus">
-    <link itemprop="mainEntityOfPage" href="http://sunnuozhou.github.io/2020/01/16/codeforces-578F/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.png">
-      <meta itemprop="name" content="sunnuozhou">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="SNZ的博客">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/01/16/codeforces-578F/" class="post-title-link" itemprop="url">codeforces 578F</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2020-01-16 09:25:34" itemprop="dateCreated datePublished" datetime="2020-01-16T09:25:34+08:00">2020-01-16</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-01-18 08:41:11" itemprop="dateModified" datetime="2020-01-18T08:41:11+08:00">2020-01-18</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/" itemprop="url" rel="index">
-                    <span itemprop="name">解题报告</span>
-                  </a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p><a href="https://codeforces.com/contest/578/problem/F" target="_blank" rel="noopener">题目链接</a></p>
-<p>对图黑白染色，对原图添加一些边，如下：</p>
-<p><img src="/2020/01/16/codeforces-578F/1.png" alt></p>
-<p>由于光路一次走过了所有格子，可以发现以下性质：</p>
-<ul>
-<li>图分成了内外两部分，每一部分非空。</li>
-<li>整张图一共有且仅有2个连通块。</li>
-<li>黑点和白点不连通。</li>
-</ul>
-<p>所以如果不考虑添加的边，黑点和白点中只有一个连成连通块，下面只考虑黑点连通的情况。</p>
-<p>因为连通且无环，所以黑点连成一棵树。又因为不确定的边只有200条，可以先缩点，再使用矩阵树定理求出答案。</p>
-<p>时间复杂度$O(nm \log{n m}+cnt^3)$，其中$cnt$为不确定的边数。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/01/16/codeforces-578F/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
   </div>
 
   
@@ -1124,7 +1102,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">25</span>
+          <span class="site-state-item-count">27</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -1137,7 +1115,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">23</span>
+        <span class="site-state-item-count">24</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
