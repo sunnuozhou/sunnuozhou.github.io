@@ -287,6 +287,168 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-Haus">
+    <link itemprop="mainEntityOfPage" href="http://sunnuozhou.github.io/2020/01/27/codeforces-521D/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="sunnuozhou">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="SNZ的博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/01/27/codeforces-521D/" class="post-title-link" itemprop="url">codeforces 521D</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2020-01-27 16:57:51 / Modified: 17:08:23" itemprop="dateCreated datePublished" datetime="2020-01-27T16:57:51+08:00">2020-01-27</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/" itemprop="url" rel="index">
+                    <span itemprop="name">解题报告</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><a href="https://codeforces.com/contest/521/problem/D" target="_blank" rel="noopener">题目链接</a></p>
+<p>假设只有乘，就是排个序取最大的$m$个。</p>
+<p>假设只有乘和加，对一个位置$i$单独考虑，如果$i$从加操作中选了一些，那一定选了最大的若干个。于是我们对于每个$i$，将对这个$i$的加操作从大到小排序，令排完序的序列为$b_1..b_s$，那第$j$个操作的相当于乘上$\frac{a_i+\sum_{1\le l\le j}b_l}{a_i+\sum_{1\le l&lt; j}b_l}$，于是我们可以把所有加操作当成乘操作来做。</p>
+<p>再考虑赋值操作，对于一个位置一定可以不赋值超过1次。所以只考虑赋值操作中值最大的那一个，并把它当成是加操作，然后和上面一样做。</p>
+<p>时间复杂度$O(n\log n)$。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/01/27/codeforces-521D/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-Haus">
+    <link itemprop="mainEntityOfPage" href="http://sunnuozhou.github.io/2020/01/27/codeforces-568C/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="sunnuozhou">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="SNZ的博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/01/27/codeforces-568C/" class="post-title-link" itemprop="url">codeforces 568C</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2020-01-27 15:34:31 / Modified: 15:42:04" itemprop="dateCreated datePublished" datetime="2020-01-27T15:34:31+08:00">2020-01-27</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/" itemprop="url" rel="index">
+                    <span itemprop="name">解题报告</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><a href="https://codeforces.com/contest/568/problem/C" target="_blank" rel="noopener">题目描述</a></p>
+<p>这题显然是一个$2-sat$模型，先建出图。枚举答案串和$S$的公共前缀长度，添加相应的限制（即前$i$个是元音还是辅音已经确定，第$i+1$可能确定，剩下的随便选），找出最长的公共前缀长度。</p>
+<p>然后考虑按位确定，取元音和辅音中可选的字典序小的那个。</p>
+<p>如果没有元音或没有辅音要特殊考虑。</p>
+<p>时间复杂度$O(nm)$。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/01/27/codeforces-568C/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-Haus">
     <link itemprop="mainEntityOfPage" href="http://sunnuozhou.github.io/2020/01/26/codeforces-708E/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -868,167 +1030,6 @@
   
   
 
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-Haus">
-    <link itemprop="mainEntityOfPage" href="http://sunnuozhou.github.io/2020/01/20/codeforces-704C/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.png">
-      <meta itemprop="name" content="sunnuozhou">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="SNZ的博客">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/01/20/codeforces-704C/" class="post-title-link" itemprop="url">codeforces 704C</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-              
-
-              <time title="Created: 2020-01-20 09:53:26 / Modified: 10:18:42" itemprop="dateCreated datePublished" datetime="2020-01-20T09:53:26+08:00">2020-01-20</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/" itemprop="url" rel="index">
-                    <span itemprop="name">解题报告</span>
-                  </a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p><a href="https://codeforces.com/contest/704/problem/C" target="_blank" rel="noopener">题目描述</a></p>
-<p>将变量看成点。对于一个有2个变量的语句，连一条边。对于一个只有1个变量的语句，连一个自环。接着对每一个环或者链分别DP。</p>
-<p>记$f_{i,0/1,0/1}$表示第$i-1$个变量取值为$0/1$,当前布尔值为$0/1$的方案数，枚举$i$的值来转移。</p>
-<p>时间复杂度$O(n+m)$。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/01/20/codeforces-704C/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-Haus">
-    <link itemprop="mainEntityOfPage" href="http://sunnuozhou.github.io/2020/01/19/codeforces-568E/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.png">
-      <meta itemprop="name" content="sunnuozhou">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="SNZ的博客">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/01/19/codeforces-568E/" class="post-title-link" itemprop="url">codeforces 568E</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-              
-
-              <time title="Created: 2020-01-19 14:27:52 / Modified: 14:41:25" itemprop="dateCreated datePublished" datetime="2020-01-19T14:27:52+08:00">2020-01-19</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/" itemprop="url" rel="index">
-                    <span itemprop="name">解题报告</span>
-                  </a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p><a href="https://codeforces.com/contest/568/problem/E" target="_blank" rel="noopener">题目链接</a></p>
-<p>先像普通的最长上升子序列一样，对于每一个确定的位置求出$len_i$和$pre_i$，表示以$i$结尾的最长上升子序列有多长，和该子序列的上一个位置在哪。</p>
-<p>对于不确定的位置，由于一个数被使用多次不会是答案增大，可以直接从大到小枚举用什么数字在填充这个位置，用$two-pointer$来维护答案。</p>
-<p>然后考虑还原整个序列。从后往前考虑，记录$now$表示当前填到哪里，$L$表示最长子序列还有多长。如果位置$now$是确定的，直接跳到$pre_{now}$。</p>
-<p>否则该位置填上比后一个数小的最大数字，令其为$p$。检查在$1\le i&lt;now$中是否存在一个确定的位置满足$a_i&lt;p$并且$len_i=L-1$。如果有，跳到该位置。如果没有，跳到前一个未确定的位置。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/01/19/codeforces-568E/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
   </div>
 
   
@@ -1101,7 +1102,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">31</span>
+          <span class="site-state-item-count">33</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -1114,7 +1115,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">27</span>
+        <span class="site-state-item-count">29</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
