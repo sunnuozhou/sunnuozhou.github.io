@@ -3,7 +3,7 @@ title: 博客搭建
 date: 2020-01-07
 tags:
 - 技术
-categories: 实用工具
+categories: 教程
 top: 5
 ---
 

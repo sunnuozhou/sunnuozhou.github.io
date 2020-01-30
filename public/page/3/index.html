@@ -19,7 +19,7 @@
 <script id="hexo-configurations">
   var NexT = window.NexT || {};
   var CONFIG = {
-    hostname: new URL('http://sunnuozhou.github.io').hostname,
+    hostname: new URL('https://sunnuozhou.github.io').hostname,
     root: '/',
     scheme: 'Pisces',
     version: '7.7.0',
@@ -48,12 +48,12 @@
 
   <meta property="og:type" content="website">
 <meta property="og:title" content="SNZ的博客">
-<meta property="og:url" content="http://sunnuozhou.github.io/page/3/index.html">
+<meta property="og:url" content="https://sunnuozhou.github.io/page/3/index.html">
 <meta property="og:site_name" content="SNZ的博客">
 <meta property="article:author" content="sunnuozhou">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://sunnuozhou.github.io/page/3/">
+<link rel="canonical" href="https://sunnuozhou.github.io/page/3/">
 
 
 <script id="page-configurations">
@@ -200,7 +200,377 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-Haus">
-    <link itemprop="mainEntityOfPage" href="http://sunnuozhou.github.io/2020/01/13/codeforces-504E/">
+    <link itemprop="mainEntityOfPage" href="https://sunnuozhou.github.io/2020/01/16/codeforces-704B/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="sunnuozhou">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="SNZ的博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/01/16/codeforces-704B/" class="post-title-link" itemprop="url">codeforces 704B</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2020-01-16 10:56:08" itemprop="dateCreated datePublished" datetime="2020-01-16T10:56:08+08:00">2020-01-16</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-01-18 08:41:59" itemprop="dateModified" datetime="2020-01-18T08:41:59+08:00">2020-01-18</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/" itemprop="url" rel="index">
+                    <span itemprop="name">解题报告</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><a href="https://codeforces.com/contest/704/problem/B" target="_blank" rel="noopener">题目链接</a></p>
+<p>令$a_i+=x_i,b_i-=x_i,c_i+=x_i,d_i-=x_i$，那么从$i$走到$j$的代价是：</p>
+<p>$c_i+b_j,j&lt;i$</p>
+<p>$d_i+a_j,j&gt;i$</p>
+<p>记录$f_{i,j}$表示前$i-1$个点，共有$j$个连通块的最小代价。</p>
+<p>转移时枚举第$i$个点从前面还是后面到，向前面还是后面走。为了转移方便，我使终点向起点连了一条边，但要注意这条边必须直接连接两个点，中间不能有其他点。</p>
+<p>时间复杂度$O(n^2)$。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/01/16/codeforces-704B/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-Haus">
+    <link itemprop="mainEntityOfPage" href="https://sunnuozhou.github.io/2020/01/16/codeforces-578F/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="sunnuozhou">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="SNZ的博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/01/16/codeforces-578F/" class="post-title-link" itemprop="url">codeforces 578F</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2020-01-16 09:25:34" itemprop="dateCreated datePublished" datetime="2020-01-16T09:25:34+08:00">2020-01-16</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-01-18 08:41:11" itemprop="dateModified" datetime="2020-01-18T08:41:11+08:00">2020-01-18</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/" itemprop="url" rel="index">
+                    <span itemprop="name">解题报告</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><a href="https://codeforces.com/contest/578/problem/F" target="_blank" rel="noopener">题目链接</a></p>
+<p>对图黑白染色，对原图添加一些边，如下：</p>
+<p><img src="/2020/01/16/codeforces-578F/1.png" alt></p>
+<p>由于光路一次走过了所有格子，可以发现以下性质：</p>
+<ul>
+<li>图分成了内外两部分，每一部分非空。</li>
+<li>整张图一共有且仅有2个连通块。</li>
+<li>黑点和白点不连通。</li>
+</ul>
+<p>所以如果不考虑添加的边，黑点和白点中只有一个连成连通块，下面只考虑黑点连通的情况。</p>
+<p>因为连通且无环，所以黑点连成一棵树。又因为不确定的边只有200条，可以先缩点，再使用矩阵树定理求出答案。</p>
+<p>时间复杂度$O(nm \log{n m}+cnt^3)$，其中$cnt$为不确定的边数。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/01/16/codeforces-578F/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-Haus">
+    <link itemprop="mainEntityOfPage" href="https://sunnuozhou.github.io/2020/01/16/codeforces-685C/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="sunnuozhou">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="SNZ的博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/01/16/codeforces-685C/" class="post-title-link" itemprop="url">codeforces 685C</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2020-01-16 08:03:24" itemprop="dateCreated datePublished" datetime="2020-01-16T08:03:24+08:00">2020-01-16</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-01-18 08:41:45" itemprop="dateModified" datetime="2020-01-18T08:41:45+08:00">2020-01-18</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/" itemprop="url" rel="index">
+                    <span itemprop="name">解题报告</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><a href="https://codeforces.com/contest/685/problem/C" target="_blank" rel="noopener">题目描述</a></p>
+<p>先二分答案，考虑对于一个答案如何检验。</p>
+<p>二分答案后，一个点的限制就是在八个方向各有一个限制。而多个点的限制就是每个方向的限制取最大值。整理限制可以得到一下式子：</p>
+<p>$l_0\le x+y+z \le r_0$</p>
+<p>$l_1\le -x+y+z \le r_1$</p>
+<p>$l_2\le x-y+z \le r_2$</p>
+<p>$l_3\le x+y-z \le r_3$</p>
+<p>设$a=-x+y+z,b=x-y+z,c=x+y-z$，那么限制变为</p>
+<p>$l_0\le a+b+c \le r_0$</p>
+<p>$l_1\le a \le r_1$</p>
+<p>$l_2\le b \le r_2$</p>
+<p>$l_3\le c \le r_3$</p>
+<p>因为$x=\frac{b+c}{2},y=\frac{a+c}{2},z=\frac{a+b}{2}$，所以$a,b,c$必须同奇或同偶，分类讨论即可。</p>
+<p>时间复杂度$O(T(n+\log V))$，其中$V$为值域。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/01/16/codeforces-685C/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-Haus">
+    <link itemprop="mainEntityOfPage" href="https://sunnuozhou.github.io/2020/01/14/codeforces-587F/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="sunnuozhou">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="SNZ的博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/01/14/codeforces-587F/" class="post-title-link" itemprop="url">codeforces 587F</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2020-01-14 17:00:09" itemprop="dateCreated datePublished" datetime="2020-01-14T17:00:09+08:00">2020-01-14</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-01-18 08:41:31" itemprop="dateModified" datetime="2020-01-18T08:41:31+08:00">2020-01-18</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/" itemprop="url" rel="index">
+                    <span itemprop="name">解题报告</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><a href="https://codeforces.com/contest/587/problem/F" target="_blank" rel="noopener">题目链接</a></p>
+<p>这题很简单，但我很菜。</p>
+<p>先建一个AC自动机，然后再考虑这道题。把询问差分后离线，现在要求的就是前$i$个串在第$k$个串中出现次数的总和。</p>
+<p>对于一个AC自动机，我们把原trie树和fail树分开了看，那么新加入第$i$个串相当于在fail树上的一个子树全体加一。询问就是在原trie树上一个点到根的路径求和。</p>
+<p>考虑分块。</p>
+<p>先将fail树按dfs序分成根号块，记录下数组$sum_{i,j}$表示第$i$个串在原树上对应的点有几个在第$j$个块中，对于整块加就记录下来。</p>
+<p>对于单点加，可以转换为$n\sqrt n$个原树上子树加和$n$个单点求值。再差分一下变为单点加，区间求值，使用分块可以修改$O(1)$，询问$O(\sqrt n)$。</p>
+<p>询问时先算出前面单点加的产生的贡献，再算整块。对于一个整块$j$，贡献为$sum_{i,j}\times tag_j$，$tag_j$为整块被修改的次数。</p>
+<p>总复杂度$O(n\sqrt n)$。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/01/14/codeforces-587F/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-Haus">
+    <link itemprop="mainEntityOfPage" href="https://sunnuozhou.github.io/2020/01/13/codeforces-504E/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.png">
@@ -284,7 +654,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-Haus">
-    <link itemprop="mainEntityOfPage" href="http://sunnuozhou.github.io/2020/01/10/codeforces-521E/">
+    <link itemprop="mainEntityOfPage" href="https://sunnuozhou.github.io/2020/01/10/codeforces-521E/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.png">
@@ -372,7 +742,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-Haus">
-    <link itemprop="mainEntityOfPage" href="http://sunnuozhou.github.io/2020/01/09/codeforces-526F/">
+    <link itemprop="mainEntityOfPage" href="https://sunnuozhou.github.io/2020/01/09/codeforces-526F/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.png">
@@ -458,7 +828,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-Haus">
-    <link itemprop="mainEntityOfPage" href="http://sunnuozhou.github.io/2020/01/09/codeforces-582E/">
+    <link itemprop="mainEntityOfPage" href="https://sunnuozhou.github.io/2020/01/09/codeforces-582E/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.png">
@@ -544,7 +914,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-Haus">
-    <link itemprop="mainEntityOfPage" href="http://sunnuozhou.github.io/2020/01/09/atcoder-grand-contest-039E/">
+    <link itemprop="mainEntityOfPage" href="https://sunnuozhou.github.io/2020/01/09/atcoder-grand-contest-039E/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.png">
@@ -628,7 +998,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-Haus">
-    <link itemprop="mainEntityOfPage" href="http://sunnuozhou.github.io/2020/01/09/atcoder-grand-contest-025F/">
+    <link itemprop="mainEntityOfPage" href="https://sunnuozhou.github.io/2020/01/09/atcoder-grand-contest-025F/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.png">
@@ -697,354 +1067,6 @@
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2020/01/09/atcoder-grand-contest-025F/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-Haus">
-    <link itemprop="mainEntityOfPage" href="http://sunnuozhou.github.io/2020/01/08/CSP2019%E6%B8%B8%E8%AE%B0/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.png">
-      <meta itemprop="name" content="sunnuozhou">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="SNZ的博客">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/01/08/CSP2019%E6%B8%B8%E8%AE%B0/" class="post-title-link" itemprop="url">CSP2019游记</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2020-01-08 22:02:29" itemprop="dateCreated datePublished" datetime="2020-01-08T22:02:29+08:00">2020-01-08</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-01-10 13:15:58" itemprop="dateModified" datetime="2020-01-10T13:15:58+08:00">2020-01-10</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%B8%B8%E8%AE%B0/" itemprop="url" rel="index">
-                    <span itemprop="name">游记</span>
-                  </a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>CSP2019游记</p>
-<h2 id="Day0"><a href="#Day0" class="headerlink" title="Day0"></a>Day0</h2><p>颓废颓了一天，酒馆战棋真的好玩，和lzq双排靠PY吃了鸡。</p>
-<h2 id="Day1"><a href="#Day1" class="headerlink" title="Day1"></a>Day1</h2><p>好久没有做过这种难度的训练了，进考场前有一点虚。</p>
-<p>进考场后状态好了不少，试机时间写好了gedit的片段和外部工具，然后就趴在桌上休息。期间我看到旁边的人问监考为什么Windows下不能调试，庆幸我不用Windows。</p>
-<p>8：30开始考试</p>
-<p>一看T1，是个简单题，一把就把T1给写完了，一边过了所有样例，自己测了一个满数据发现是对的就放着不管了。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/01/08/CSP2019%E6%B8%B8%E8%AE%B0/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-Haus">
-    <link itemprop="mainEntityOfPage" href="http://sunnuozhou.github.io/2020/01/08/NOI2019%E6%B8%B8%E8%AE%B0/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.png">
-      <meta itemprop="name" content="sunnuozhou">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="SNZ的博客">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/01/08/NOI2019%E6%B8%B8%E8%AE%B0/" class="post-title-link" itemprop="url">NOI2019游记</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2020-01-08 21:59:29" itemprop="dateCreated datePublished" datetime="2020-01-08T21:59:29+08:00">2020-01-08</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-01-10 13:16:42" itemprop="dateModified" datetime="2020-01-10T13:16:42+08:00">2020-01-10</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%B8%B8%E8%AE%B0/" itemprop="url" rel="index">
-                    <span itemprop="name">游记</span>
-                  </a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="Day-2"><a href="#Day-2" class="headerlink" title="Day -2"></a>Day -2</h2><p>提前1天就来了广州，下午颓废了半天，不知道应该干嘛。晚上提起精神背了背笔试题库。</p>
-<h2 id="Day-1"><a href="#Day-1" class="headerlink" title="Day -1"></a>Day -1</h2><p>早上睡了个懒觉。然后就出发去报到了，广州是真得热，我感觉我在外面不能呆超过15分钟。</p>
-<p>我的宿舍在5楼，爬楼梯真的让人非常不爽。不过5楼貌似比下面要凉快一点。</p>
-<p>下午回宾馆接着颓废。</p>
-<p>晚上到宿舍后发现现在和冬令营不一样，蚊帐大幅缩小了我的可用空间，我不能像冬令营一样把所有东西都放床边的架子上了。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/01/08/NOI2019%E6%B8%B8%E8%AE%B0/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-Haus">
-    <link itemprop="mainEntityOfPage" href="http://sunnuozhou.github.io/2020/01/08/APIO2019%E6%B8%B8%E8%AE%B0/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.png">
-      <meta itemprop="name" content="sunnuozhou">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="SNZ的博客">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/01/08/APIO2019%E6%B8%B8%E8%AE%B0/" class="post-title-link" itemprop="url">APIO2019游记</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2020-01-08 21:58:33" itemprop="dateCreated datePublished" datetime="2020-01-08T21:58:33+08:00">2020-01-08</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-01-10 13:15:04" itemprop="dateModified" datetime="2020-01-10T13:15:04+08:00">2020-01-10</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%B8%B8%E8%AE%B0/" itemprop="url" rel="index">
-                    <span itemprop="name">游记</span>
-                  </a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>APIO2019游记</p>
-<p>这次APIO我又分到了和CTS一样的考场，一共2场CTS，1场APIO，都在一个考场，真的赚。</p>
-<p>9:00开始考试，打开题面先浏览3道题，发现第一题只会43分，第二题只会10分，第三题只会60分。</p>
-<p>浏览完题目后，我就开始盯着T1看，T1是一道在无向图上的题，其中有一个部分分是树，我盯着这个部分分想了好久，发现根本不会。</p>
-<p>我就换了一个思路想，想到了一个根号log的做法，而且完全没有用树的性质，我仔细理了理我的算法，发现没什么问题，就开始写了。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/01/08/APIO2019%E6%B8%B8%E8%AE%B0/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-Haus">
-    <link itemprop="mainEntityOfPage" href="http://sunnuozhou.github.io/2020/01/08/CTS2019%E6%B8%B8%E8%AE%B0/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.png">
-      <meta itemprop="name" content="sunnuozhou">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="SNZ的博客">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/01/08/CTS2019%E6%B8%B8%E8%AE%B0/" class="post-title-link" itemprop="url">CTS2019游记</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2020-01-08 21:45:46" itemprop="dateCreated datePublished" datetime="2020-01-08T21:45:46+08:00">2020-01-08</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-01-10 13:16:08" itemprop="dateModified" datetime="2020-01-10T13:16:08+08:00">2020-01-10</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%B8%B8%E8%AE%B0/" itemprop="url" rel="index">
-                    <span itemprop="name">游记</span>
-                  </a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>CTS2019-游记</p>
-<h2 id="Day0"><a href="#Day0" class="headerlink" title="Day0"></a>Day0</h2><p>下午到了北京，经过一系列换房间的操作，最终成功和同校的lj一个房间，去试机的时候得知bly，lzq的都是大床房，感到震惊。</p>
-<h2 id="Day1"><a href="#Day1" class="headerlink" title="Day1"></a>Day1</h2><p>00:30的一个陌生人打错的电话成功让我睡不着觉，醒来之后困得要死。</p>
-<p>开始考试后，我想起xyx跟我们说过CTS的难度和NOI差不多，第一题做不出就没了，于是我就盯着第一题看了1个小时，发现只会30分，而且根本没有思路。我再去看T2，发现T2的暴力分很多，就先把暴力分写了，缓和一下心态。写完以后又去看T1，这次我先盯着k=1的部分分看（出了考场后我才知道这一个部分分没有任何意义），发现我还是不会，就写了暴力弃疗了。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/01/08/CTS2019%E6%B8%B8%E8%AE%B0/#more" rel="contents">
                 Read more &raquo;
               </a>
             </div>
@@ -1136,7 +1158,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">33</span>
+          <span class="site-state-item-count">37</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
