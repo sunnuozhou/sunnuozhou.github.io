@@ -1,6 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>lemon spj</title>
+    <url>/2020/02/02/lemon-spj/</url>
+    <content><![CDATA[<p>因为老是忘记$lemon$的$spj$怎么写，又懒得用$testlib$，就在博客里记录一下。</p>
+<p>$argv[1]$是输入文件；</p>
+<p>$argv[2]$是选手输出文件；</p>
+<p>$argv[3]$是标准输出文件；</p>
+<p>$argv[4]$是满分分数<strong>（注意，$argv[4]$不是文件）</strong>；</p>
+<p>$argv[5]$是选手得分（必须创建）；</p>
+<p>$argv[6]$是报告文件（可以不创建）；</p>
+<a id="more"></a>
+<p><a href="https://github.com/iotang/Project_LemonLime" target="_blank" rel="noopener">lemon-lime</a>是真的好用。</p>
+<p>附我的$spj$模板：</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> ll long long</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> lld long double</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N = <span class="number">101000</span>;</span><br><span class="line">FILE *fin,*fout,*fans,*res,*rep;</span><br><span class="line"><span class="keyword">int</span> score;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">quit</span><span class="params">(<span class="keyword">int</span> s)</span></span>&#123;</span><br><span class="line">	<span class="built_in">fprintf</span>(res,<span class="string">"%d"</span>,s);</span><br><span class="line">	<span class="built_in">exit</span>(<span class="number">0</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc,<span class="keyword">char</span>* argv[])</span></span>&#123;</span><br><span class="line">	fin=fopen(argv[<span class="number">1</span>],<span class="string">"r"</span>);</span><br><span class="line">	fout=fopen(argv[<span class="number">2</span>],<span class="string">"r"</span>);</span><br><span class="line">	fans=fopen(argv[<span class="number">3</span>],<span class="string">"r"</span>);</span><br><span class="line">	score=atoi(argv[<span class="number">4</span>]);</span><br><span class="line">	res=fopen(argv[<span class="number">5</span>],<span class="string">"w"</span>);</span><br><span class="line">	rep=fopen(argv[<span class="number">6</span>],<span class="string">"w"</span>);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>技术</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>codeforces 671E</title>
     <url>/2020/01/30/codeforces-671E/</url>
     <content><![CDATA[<p><a href="https://codeforces.com/contest/671/problem/E" target="_blank" rel="noopener">题目链接</a></p>

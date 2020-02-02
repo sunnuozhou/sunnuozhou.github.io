@@ -200,6 +200,94 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-Haus">
+    <link itemprop="mainEntityOfPage" href="https://sunnuozhou.github.io/2020/01/25/codeforces-566E/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="sunnuozhou">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="SNZ的博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/01/25/codeforces-566E/" class="post-title-link" itemprop="url">codeforces 566E</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2020-01-25 17:18:30 / Modified: 17:41:48" itemprop="dateCreated datePublished" datetime="2020-01-25T17:18:30+08:00">2020-01-25</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/" itemprop="url" rel="index">
+                    <span itemprop="name">解题报告</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><a href="https://codeforces.com/contest/566/problem/E" target="_blank" rel="noopener">题目描述</a></p>
+<p>先排除$n=2$的情况，下面讨论$n\ge 3$的情况。</p>
+<p>对于一对点$x,y$，如果它们距离$&gt;$4，那么就没有交集。</p>
+<p>如果距离$=4$，那么有恰好一个点在两边都出现。</p>
+<p>如果距离$=3$，那么恰好有两个点$u,v$都出现，并且$u,v$之间有连边（$u,v$均不是叶子）。</p>
+<p>如果距离$\le2$，那么至少有$3$个点都出现。</p>
+<p>我们可以枚举两个点，如果它们交集为2，就可以得到一条边。</p>
+<p>全部枚举完后，我们可以得到所有连接两个非叶子节点的边，假设一个有$cnt$条。</p>
+<p>如果$cnt=0$ ，输出一棵菊花即可。</p>
+<p>如果$cnt=1$，假设边为$(x,y)$，那么除了$x,y$以外的所有点，集合应该只有至多两种，分别连在$x,y$上就好了。</p>
+<p>如果$cnt&gt;2$，在只考虑非叶子点的情况下，求出每个非叶子点的距离$\le1$集合，如果一个叶子的距离$\le2$集合在只考虑非叶子的时候等于某个非叶子点的距离$\le1$集合，那么就说明他们之间有连边。一个叶子对应的集合一定是包含自己并且在只考虑非叶子的时候最小的集合。</p>
+<p>可以用$bitset$优化，时间复杂度$O(\frac{n^3}{w})$</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/01/25/codeforces-566E/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-Haus">
     <link itemprop="mainEntityOfPage" href="https://sunnuozhou.github.io/2020/01/24/codeforces-566C/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -949,99 +1037,6 @@
   
   
 
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-Haus">
-    <link itemprop="mainEntityOfPage" href="https://sunnuozhou.github.io/2020/01/16/codeforces-698D/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.png">
-      <meta itemprop="name" content="sunnuozhou">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="SNZ的博客">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/01/16/codeforces-698D/" class="post-title-link" itemprop="url">codeforces 698D</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2020-01-16 16:16:50" itemprop="dateCreated datePublished" datetime="2020-01-16T16:16:50+08:00">2020-01-16</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-01-18 08:41:52" itemprop="dateModified" datetime="2020-01-18T08:41:52+08:00">2020-01-18</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/" itemprop="url" rel="index">
-                    <span itemprop="name">解题报告</span>
-                  </a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p><a href="https://codeforces.com/contest/698/problem/D" target="_blank" rel="noopener">题目描述</a></p>
-<p>先求出每一个射击位置射每一个怪物有哪些点会阻拦它。</p>
-<p>对于第$i$个点暴力求解这个点是否可能被射到，方法如下：</p>
-<ul>
-<li>建立一个队列，初始时只有$i$。</li>
-<li>枚举队列里未确定的位置由哪些位置射。</li>
-<li>加入新的障碍点。</li>
-<li>重复以上过程。</li>
-</ul>
-<p>注意在队列大小大于$k$的时候要剪枝。</p>
-<p>时间复杂度$O(n^2k+nk\times k!)$</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/01/16/codeforces-698D/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
   </div>
 
   
@@ -1114,7 +1109,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">37</span>
+          <span class="site-state-item-count">38</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
