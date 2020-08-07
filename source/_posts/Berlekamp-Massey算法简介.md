@@ -58,7 +58,7 @@ void BM(ll *a,int n,vector<ll>&ans){
 		if(ans.size()<lst.size()+i-w) ans.resize(lst.size()+i-w);
 		ans[i-w-1]=(ans[i-w-1]+mul)%mod;
 		for(int j=0;j<lst.size();j++) ans[i-w+j]=(ans[i-w+j]-mul*lst[j])%mod;
-		if(now.size()-i<lst.size()-w){
+		if((int)now.size()-i<(int)lst.size()-w){
 			lst=now;w=i;delta=a[i]-tmp;
 		}
 	}
