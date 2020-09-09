@@ -4,7 +4,7 @@ date: 2020-01-08 21:44:32
 tags:
 - OI
 - 游记
-categories: 游记
+categories: 实事记录
 ---
 
 JSOI2019-ROUND2-游记
