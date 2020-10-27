@@ -67,3 +67,5 @@ sudo apt install chrome-gnome-shell
 在他崩溃第3次后我学会了如何重启`fcitx`。
 
 `vim-youcompleteme`挂了，暂时没去管，就先卸了。
+
+在wyj的建议下，我卸载了[原来的搜狗输入法](https://github.com/laomocode/fcitx-sogouimebs/releases/download/v2.0.0.38-debian/sogouimebs.deb)，改为下载[新版](https://pinyin.sogou.com/linux/)。
