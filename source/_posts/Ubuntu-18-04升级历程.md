@@ -2,6 +2,7 @@
 title: Ubuntu 18.04升级历程
 tags:
   - 技术
+  - ubuntu
 date: 2020-10-12 13:47:16
 categories: 教程
 top:
@@ -66,6 +67,6 @@ sudo apt install chrome-gnome-shell
 
 在他崩溃第3次后我学会了如何重启`fcitx`。
 
-`vim-youcompleteme`挂了，暂时没去管，就先卸了。
+`vim-youcompleteme`挂了，暂时没去管，就先卸了，[现已修复](https://sunnuozhou.github.io/2020/11/18/%E4%BF%AE%E5%A4%8Dvim%E6%8F%92%E4%BB%B6youcompleteme/)。
 
-在wyj的建议下，我卸载了[原来的搜狗输入法](https://github.com/laomocode/fcitx-sogouimebs/releases/download/v2.0.0.38-debian/sogouimebs.deb)，改为下载[新版](https://pinyin.sogou.com/linux/)。
+在wyj的建议下，我卸载了[原来的搜狗输入法](https://github.com/laomocode/fcitx-sogouimebs/releases/download/v2.0.0.38-debian/sogouimebs.deb)，改为下载[新版](https://pinyin.sogou.com/linux/)，并至今为止没有出现问题。

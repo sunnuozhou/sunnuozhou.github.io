@@ -2,6 +2,7 @@
 title: ubuntu录屏软件选择
 tags:
   - 技术
+  - ubuntu
 date: 2020-07-02 19:09:37
 categories: 教程
 top:
