@@ -9,7 +9,7 @@ categories: 解题报告
 top:
 ---
 
-[题目链接](https://codeforces.com/gym/101190/)
+[题目链接](https://codeforces.com/gym/101190)
 
 先考虑暴力费用流，每次对新加入的点求最短路，被逆向走过的边的边权会被当成-1。
 

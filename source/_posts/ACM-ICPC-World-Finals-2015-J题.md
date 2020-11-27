@@ -9,7 +9,7 @@ categories: 解题报告
 top:
 ---
 
-[题目链接](https://codeforces.com/gym/101239/)
+[题目链接](https://codeforces.com/gym/101239)
 
 考虑在 $X\times Y$ 的矩形中，剪出一个 $(a,0),(b,Y),(0,c),(X,d)$ 的平行四边形，其中 $a+b=x,c+d=Y$，其面积为 $ab+cd$。
 

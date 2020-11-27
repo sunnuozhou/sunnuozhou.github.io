@@ -9,7 +9,7 @@ categories: 解题报告
 top:
 ---
 
-[题目链接](https://codeforces.com/gym/100851/)
+[题目链接](https://codeforces.com/gym/100851)
 
 二分答案，考虑check，找到以每个位置为最高点时，左边和右边分别是哪两个位置把它拦住的。
 

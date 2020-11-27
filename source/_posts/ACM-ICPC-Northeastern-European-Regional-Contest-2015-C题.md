@@ -10,7 +10,7 @@ categories: 解题报告
 top:
 ---
 
-[题目链接](https://codeforces.com/gym/100851/)
+[题目链接](https://codeforces.com/gym/100851)
 
 对于是桥的边，删完后贡献为两边大小相乘。
 

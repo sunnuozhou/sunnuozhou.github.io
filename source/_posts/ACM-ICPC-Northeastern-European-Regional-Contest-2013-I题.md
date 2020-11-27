@@ -9,7 +9,7 @@ categories: 解题报告
 top:
 ---
 
-[题目链接](https://codeforces.com/gym/100307/)
+[题目链接](https://codeforces.com/gym/100307)
 
 对于每一个速度维护当前火箭可能在的位置区间，每次询问时问总的火箭可能在的位置区间前一半（也就是二分），然后更新可能的位置区间。
 

@@ -9,7 +9,7 @@ categories: 解题报告
 top:
 ---
 
-[题目链接](https://codeforces.com/gym/102482/)
+[题目链接](https://codeforces.com/gym/102482)
 
 首先注意到2刀一定可以切完所有，考虑如何判断是否可以切一刀。
 

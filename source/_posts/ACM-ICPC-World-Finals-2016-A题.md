@@ -9,7 +9,7 @@ categories: 解题报告
 top:
 ---
 
-[题目链接](https://codeforces.com/gym/101242/)
+[题目链接](https://codeforces.com/gym/101242)
 
 考虑贪心，每次吃最早会到达下限限制的食物，由于上下限的界限足够大，可以不管上限，用堆维护可以做到 $O(n\log n)$。
 

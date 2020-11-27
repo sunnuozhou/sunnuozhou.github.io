@@ -9,7 +9,7 @@ categories: 解题报告
 top:
 ---
 
-[题目链接](https://codeforces.com/gym/101221/)
+[题目链接](https://codeforces.com/gym/101221)
 
 枚举从小到大 $D(A)$，令 $D(B)$ 递减，找到最小的可行 $D(B)$。
 

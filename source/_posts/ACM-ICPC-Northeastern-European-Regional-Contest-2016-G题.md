@@ -10,7 +10,7 @@ categories: 解题报告
 top:
 ---
 
-[题目链接](https://codeforces.com/gym/101190/)
+[题目链接](https://codeforces.com/gym/101190)
 
 对于没有出边的点，胜负状态已经确定了。
 
