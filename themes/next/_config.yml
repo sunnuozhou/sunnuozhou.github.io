@@ -182,9 +182,9 @@ site_state: true
 # Value before `||` delimiter is the target permalink, value after `||` delimiter is the name of Font Awesome icon.
 social:
   GitHub: https://github.com/sunnuozhou || github
-  Codeforces: https://www.codeforces.com/profile/sunnuozhou || code
+  #Codeforces: https://www.codeforces.com/profile/sunnuozhou || code
   Bilibili: https://space.bilibili.com/369660377 || tv
-  #E-Mail: mailto:yourname@gmail.com || envelope
+  E-Mail: mailto:sunnuozhou@qq.com || envelope
   #Weibo: https://weibo.com/yourname || weibo
   #Google: https://plus.google.com/yourname || google
   #Twitter: https://twitter.com/yourname || twitter
@@ -203,11 +203,13 @@ social_icons:
 # Blog rolls
 links_settings:
   icon: link
-  title: Links
+  title: Friend Links
   # Available values: block | inline
-  layout: block
+  layout: inline
 
 links:
+    weiyijun: https://2o181o28.github.io
+    srf: https://www.cnblogs.com/s-r-f
   #Title: http://yoursite.com
 
 # Table of Contents in the Sidebar
