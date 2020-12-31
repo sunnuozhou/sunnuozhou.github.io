@@ -200,7 +200,21 @@ posts.data = posts.data.sort(function(a, b) {
 
 然后就可以在博文的顶栏添加`top: `，表示置顶的等级，默认`-inf`。
 
-并且可以在`scaffolds\post.md`加入`tops:`是`new`出来的文章自带这个属性。
+并且可以在`scaffolds\post.md`加入`top:`使`new`出来的文章自带这个属性。
+
+### 置顶标签
+
+在`theme/next/layout/_macro/post.swig`中，搜索`<div class="post-meta">`，在下面添加:
+
+```swig
+{% if post.top %}
+	<i class="fa fa-thumb-tack"></i>
+	<font color="#1fa67a">Top</font>
+	<span class="post-meta-divider">|</span>
+{% endif %}
+```
+
+根据需求可以修改图标，颜色等。
 
 ## 美化博客
 
