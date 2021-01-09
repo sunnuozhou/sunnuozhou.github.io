@@ -81,10 +81,10 @@ init_printing()
 [官方教程](https://docs.sympy.org/latest/index.html)
 
 - 在一个命令（或类型）后面加`?`可以查看帮助，如`integrate?`。
-
 - 用`x=symbols('x')`来新增变量。
 - 如果直接输出`1/2`会变成实数`0.5`，可以使用`S(1)/2`来保证依然是有理数。
 - `limit`，`limit_seq`用来求极限，不过这东西很菜。
+- `diff`求导。
 
 ## 吐槽
 
