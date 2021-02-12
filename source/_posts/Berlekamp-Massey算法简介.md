@@ -163,7 +163,7 @@ ll calc(int m,vector<ll>&coef,ll*h){
 ```cpp
 #include<bits/stdc++.h>
 #define ll long long
-#define lld long ll
+#define lld long double
 using namespace std;
 template<typename tn> void read(tn &a){
 	tn x=0,f=1; char c=' ';
