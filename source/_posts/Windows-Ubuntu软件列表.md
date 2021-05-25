@@ -35,6 +35,7 @@ top: 1
 - **QQ：社交**
 - **网易云音乐：音乐**
 - **Microsoft office：Windows下为数不多的好东西**
+- shotcut：不知道好不好用的免费开源剪辑软件
 
 ## Ubuntu 20.04
 
@@ -59,9 +60,12 @@ top: 1
 - gnome-tweaks：额外的设置。
 - **zsh：好用的shell**
 - gnome-shell-extensions：各种插件
-	- topicons-plus：显示后台应用。
-	- desktop-icons-ng-ding：比20.04好用的桌面图标功能。
+	- topicons-plus：显示后台应用
+	- desktop-icons-ng-ding：比20.04好用的桌面图标功能
 
 - **QQ：社交**
 - **vim：好用的文本编辑器**
-	- youcompleteme：还算好用的补全。
+	- youcompleteme：还算好用的补全
+
+- typora：编辑md文件
+- hexo：写博客

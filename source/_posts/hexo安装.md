@@ -178,6 +178,8 @@ git push
 
 来更新部署文件。
 
+更新：换新电脑后尝试同步河西，很方便，只要装好nodejs和hexo，然后直接`git clone`就好了。
+
 ### 置顶功能
 
 在`node_modules/hexo-generator-index/lib/generator.js`中的`const post=xxx`后插入以下代码。
