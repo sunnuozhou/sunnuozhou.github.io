@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="zh-Haus">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    hostname: new URL('https://sunnuozhou.github.io').hostname,
+    root: '/',
+    scheme: 'Pisces',
+    version: '7.7.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},
+    copycode: {"enable":true,"show_result":true,"style":"mac"},
+    back2top: {"enable":true,"sidebar":true,"scrollpercent":true},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: true,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    comments: {"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: 'search.xml',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}
+  };
+</script>
+
+  <meta name="description" content="tlt某天给我做了一道美国数学竞赛题，我又给wyj做了。现在我感觉它非常有意思。 尽管据tlt所说，他给其他人做的时候没人做出来，但其实这并不是大难题。我之所以感觉它有意思，是因为它多种多样的解法和与OI的相关性。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="有意思的数学题">
+<meta property="og:url" content="https://sunnuozhou.github.io/2021/01/21/%E6%9C%89%E6%84%8F%E6%80%9D%E7%9A%84%E6%95%B0%E5%AD%A6%E9%A2%98/index.html">
+<meta property="og:site_name" content="SNZ的博客">
+<meta property="og:description" content="tlt某天给我做了一道美国数学竞赛题，我又给wyj做了。现在我感觉它非常有意思。 尽管据tlt所说，他给其他人做的时候没人做出来，但其实这并不是大难题。我之所以感觉它有意思，是因为它多种多样的解法和与OI的相关性。">
+<meta property="article:published_time" content="2021-01-21T06:47:18.000Z">
+<meta property="article:modified_time" content="2021-05-25T04:03:56.480Z">
+<meta property="article:author" content="sunnuozhou">
+<meta property="article:tag" content="数学">
+<meta property="article:tag" content="线性代数">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://sunnuozhou.github.io/2021/01/21/%E6%9C%89%E6%84%8F%E6%80%9D%E7%9A%84%E6%95%B0%E5%AD%A6%E9%A2%98/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true
+  };
+</script>
+
+  <title>有意思的数学题 | SNZ的博客</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">SNZ的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>About</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>Tags</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>Categories</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+
+</nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="Searching..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
+</div>
+    </header>
+
+    
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-Haus">
+    <link itemprop="mainEntityOfPage" href="https://sunnuozhou.github.io/2021/01/21/%E6%9C%89%E6%84%8F%E6%80%9D%E7%9A%84%E6%95%B0%E5%AD%A6%E9%A2%98/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="sunnuozhou">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="SNZ的博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          有意思的数学题
+        </h1>
+
+        <div class="post-meta">
+		  
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2021-01-21 14:47:18" itemprop="dateCreated datePublished" datetime="2021-01-21T14:47:18+08:00">2021-01-21</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-05-25 12:03:56" itemprop="dateModified" datetime="2021-05-25T12:03:56+08:00">2021-05-25</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/" itemprop="url" rel="index">
+                    <span itemprop="name">解题报告</span>
+                  </a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">Views: </span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>tlt某天给我做了一道美国数学竞赛题，我又给wyj做了。现在我感觉它非常有意思。</p>
+<p>尽管据tlt所说，他给其他人做的时候没人做出来，但其实这并不是大难题。我之所以感觉它有意思，是因为它多种多样的解法和与OI的相关性。</p>
+<a id="more"></a>
+<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p>有数列 $a_n,b_n$ 满足 $(2+i)^n=a_n+b_ni$，求 $\sum\limits_{n=0}^\infty \frac{a_nb_n}{7^n}$。</p>
+<h2 id="我的思路"><a href="#我的思路" class="headerlink" title="我的思路"></a>我的思路</h2><p>在我看到这一题的时候，我就已经有了暴算的思路了：</p>
+<p>首先，写出 $a_n,b_n$ 的递推式，可以得到：</p>
+<script type="math/tex; mode=display">
+\left\{
+    \begin{matrix}
+        a_n=2a_{n-1}-b_{n-1}\\
+        b_n=2b_{n-1}+a_{n-1}\\
+    \end{matrix}
+\right.</script><p>这很明显可以写出矩阵的形式：</p>
+<script type="math/tex; mode=display">
+\left\{
+\begin{matrix}
+a_n\\
+b_n\\
+\end{matrix}
+\right\}
+=
+\left\{
+\begin{matrix}
+2&-1\\
+1&2\\
+\end{matrix}
+\right\}^n
+\times
+\left\{
+\begin{matrix}
+1\\
+0\\
+\end{matrix}
+\right\}</script><p>令 $A$ 为转移矩阵，根据哈密尔顿–凯莱定理，对于特征多形式 $p(\lambda)=\det(\lambda I_n-A)$，有 $p(A)=0$，因此 $p(A)$ 是序列 $A^0,A^1 A^2,…$ 的线性递推式，因此有：</p>
+<script type="math/tex; mode=display">
+A^n=4A^{n-1}-5A^{n-2}</script><p>于是有</p>
+<script type="math/tex; mode=display">
+\left\{
+    \begin{matrix}
+        a_n=4a_{n-1}-5a_{n-1}\\
+        b_n=4b_{n-1}-5b_{n-1}\\
+    \end{matrix}
+\right.</script><p>现在序列 $a_n,b_n$ 不互相转移了，可以通过特征多项式轻松求得通项公式：</p>
+<script type="math/tex; mode=display">
+\left\{
+    \begin{matrix}
+         a_n=\frac{(2-i)^n+(2+i)^n}{2}\\
+         b_n=i\frac{(2+i)^n-(2-i)^n}{2}\\
+    \end{matrix}
+\right.</script><p>其实做到这一步，我就发现我是个大彩笔，这个通项不就是直接单位根反演吗，我居然没看出来。就当前面都是在练习线性代数吧。</p>
+<p>接着答案式子就可以列出来了：</p>
+<script type="math/tex; mode=display">
+\begin{array}{rl}
+ans&=\frac{i}4\sum\limits_{n=0}^\infty \frac{((2-i)^n+(2+i)^n)\times((2+i)^n-(2-i)^n)}{7^n}\\
+&=\frac{i}4\sum\limits_{n=0}^\infty \frac{(2-i)^{2n}-(2+i)^{2n}}{7^n}\\
+&=\frac{i}4(\sum\limits_{n=0}^\infty \frac{((2-i)^2)^{n}}{7^n}-\sum\limits_{n=0}^\infty \frac{((2+i)^2)^{n}}{7^n})\\
+&=\frac7{16}
+\end{array}</script><p>由于我不精通复数，一开始就往线性代数上钻，花的时间还是挺多的。</p>
+<h2 id="wyj的思路"><a href="#wyj的思路" class="headerlink" title="wyj的思路"></a>wyj的思路</h2><p>wyj很神仙，他用的是二项式定理的思路。</p>
+<script type="math/tex; mode=display">
+(2+i)^n=\sum\limits_{k=0}^ni^k2^{n-k}\binom{n}{k}</script><p>那么就有</p>
+<script type="math/tex; mode=display">
+\begin{array}{rl}
+a&=\sum\limits_{k=0}^{n/2}(-1)^k2^{n-2k}\binom{n}{2k}\\
+&=2^n\sum\limits_{k=0}^{n/2}(-\frac14)^k\binom{n}{2k}\\
+\end{array}</script><p>同理，也有 $b=2^{n-1}\sum\limits_{k=0}^{(n-1)/2}(-\frac14)^k\binom{n}{2k+1}$</p>
+<p>于是答案式就有了：</p>
+<script type="math/tex; mode=display">
+\begin{array}{rl}
+&\frac{2^{2n-1}}{7^n}\sum\limits_{k=0}^{n/2}(-\frac14)^k\binom{n}{2k}\sum\limits_{i=0}^{(n-1)/2}(-\frac14)^i\binom{n}{2i+1}\\
+=&\frac{2^{2n-1}}{7^n}\sum\limits_{x=0}^{n-1}(-\frac14)^x\sum\limits_{k=0}^{\min(x,n/2)}\binom{n}{2k}\binom{n}{2(x-k)+1}\\
+=&\frac{2^{2n-2}}{7^n}\sum\limits_{x=0}^{n-1}(-\frac14)^x\binom{2n}{2x+1}\\
+\end{array}</script><p>其中第二行到第三行是通过组合意义，wyj通过打表才发现这一点。</p>
+<p>接着是很神仙的一步，wyj开始逆用二项式定理：</p>
+<script type="math/tex; mode=display">
+\begin{array}{rl}
+& \sum\limits_{x=0}^{n-1}(-\frac14)^x\binom{2n}{2x+1}\\
+=&\sum\limits_{x=1,x+=2}^{2n-1}\binom{2n}x(-\frac14)^{\frac{x-1}2}\\
+=&\Re(\sum\limits_{x=1}^{2n}\binom{2n}x(-\frac14)^{\frac{x-1}2})\\
+=&\Re(2i\sum\limits_{x=1}^{2n}\binom{2n}x(\frac i2)^x1^{2n-x}\\
+=&\Re(2i\times(\frac i2+1)^{2n})
+\end{array}</script><p>然后就有答案为</p>
+<script type="math/tex; mode=display">
+\frac12\sum(\frac47(\frac i2+1)^2)^n=\frac7{16}</script><p>wyj所有的时间比我长很多，这让我很开心。</p>
+<h2 id="标算"><a href="#标算" class="headerlink" title="标算"></a>标算</h2><script type="math/tex; mode=display">
+\begin{array}{rl}
+(2+i)^n&=a_n+ib_n\\
+(2+i)^{2n}&=a_n^2-b_n^2+2ia_nb_n\\
+a_nb_n&=\frac{Im((2+i)^{2n})}2
+\end{array}</script><p>然后答案式就直接出来了：</p>
+<script type="math/tex; mode=display">
+\begin{array}{rl}
+&\sum\frac{a_nb_n}{7^n}\\
+=&\frac12\sum\frac{Im((2+i)^{2n})}{7^n}\\
+=&\Im(\frac12\sum\frac{(2+i)^{2n}}{7^n})\\
+=&\frac7{16}
+\end{array}</script><p>甚至比我的做法里把线性代数部分换为单位根反演都简单。</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E6%95%B0%E5%AD%A6/" rel="tag"># 数学</a>
+              <a href="/tags/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/" rel="tag"># 线性代数</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/01/19/Ubuntu-%E7%BE%8E%E5%8C%96grub%E7%95%8C%E9%9D%A2/" rel="prev" title="Ubuntu 美化grub界面">
+      <i class="fa fa-chevron-left"></i> Ubuntu 美化grub界面
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2021/02/20/%E7%AE%80%E5%8D%95-%E7%9A%84%E4%B8%89%E8%A7%92%E5%87%BD%E6%95%B0%E9%A2%98/" rel="next" title="简单(?)的三角函数题">
+      简单(?)的三角函数题 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let activeClass = CONFIG.comments.activeClass;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#题目描述"><span class="nav-number">1.</span> <span class="nav-text">题目描述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#我的思路"><span class="nav-number">2.</span> <span class="nav-text">我的思路</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#wyj的思路"><span class="nav-number">3.</span> <span class="nav-text">wyj的思路</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#标算"><span class="nav-number">4.</span> <span class="nav-text">标算</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="sunnuozhou"
+      src="/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">sunnuozhou</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">154</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">75</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/sunnuozhou" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;sunnuozhou" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://space.bilibili.com/369660377" title="Bilibili → https:&#x2F;&#x2F;space.bilibili.com&#x2F;369660377" rel="noopener" target="_blank"><i class="fa fa-fw fa-tv"></i>Bilibili</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:sunnuozhou@qq.com" title="E-Mail → mailto:sunnuozhou@qq.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title">
+      <i class="fa fa-fw fa-link"></i>
+      Friend Links
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://2o181o28.github.io/" title="https:&#x2F;&#x2F;2o181o28.github.io" rel="noopener" target="_blank">weiyijun</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://www.cnblogs.com/s-r-f" title="https:&#x2F;&#x2F;www.cnblogs.com&#x2F;s-r-f" rel="noopener" target="_blank">srf</a>
+        </li>
+    </ul>
+  </div>
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-snz"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">sunnuozhou</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> v4.2.0
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">Theme – <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.7.0
+  </div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="Total Visitors">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="Total Views">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+      
+<script type="text/x-mathjax-config">
+
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$', '$'], ['\\(', '\\)'] ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      equationNumbers: {
+        autoNumber: 'AMS'
+      }
+    }
+  });
+
+  MathJax.Hub.Register.StartupHook('TeX Jax Ready', function() {
+    MathJax.InputJax.TeX.prefilterHooks.Add(function(data) {
+      if (data.display) {
+        var next = data.script.nextSibling;
+        while (next && next.nodeName.toLowerCase() === '#text') {
+          next = next.nextSibling;
+        }
+        if (next && next.nodeName.toLowerCase() === 'br') {
+          next.parentNode.removeChild(next);
+        }
+      }
+    });
+  });
+
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for (i = 0; i < all.length; i += 1) {
+      element = document.getElementById(all[i].inputID + '-Frame').parentNode;
+      if (element.nodeName.toLowerCase() == 'li') {
+        element = element.parentNode;
+      }
+      element.classList.add('has-jax');
+    }
+  });
+</script>
+<script>
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML', () => {
+    MathJax.Hub.Typeset();
+  }, window.MathJax);
+</script>
+
+    
+
+  
+
+</body>
+</html>

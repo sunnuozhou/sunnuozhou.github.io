@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="zh-Haus">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    hostname: new URL('https://sunnuozhou.github.io').hostname,
+    root: '/',
+    scheme: 'Pisces',
+    version: '7.7.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},
+    copycode: {"enable":true,"show_result":true,"style":"mac"},
+    back2top: {"enable":true,"sidebar":true,"scrollpercent":true},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: true,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    comments: {"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: 'search.xml',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}
+  };
+</script>
+
+  <meta name="description" content="新电脑终于到货了，比想象中的厚一些，重量还可以接受。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="配置新电脑！">
+<meta property="og:url" content="https://sunnuozhou.github.io/2021/05/22/%E9%85%8D%E7%BD%AE%E6%96%B0%E7%94%B5%E8%84%91%EF%BC%81/index.html">
+<meta property="og:site_name" content="SNZ的博客">
+<meta property="og:description" content="新电脑终于到货了，比想象中的厚一些，重量还可以接受。">
+<meta property="og:image" content="https://sunnuozhou.github.io/2021/05/22/%E9%85%8D%E7%BD%AE%E6%96%B0%E7%94%B5%E8%84%91%EF%BC%81/ludashi1.jpg">
+<meta property="og:image" content="https://sunnuozhou.github.io/2021/05/22/%E9%85%8D%E7%BD%AE%E6%96%B0%E7%94%B5%E8%84%91%EF%BC%81/ludashi2.jpg">
+<meta property="article:published_time" content="2021-05-22T02:55:01.000Z">
+<meta property="article:modified_time" content="2021-05-25T04:14:25.666Z">
+<meta property="article:author" content="sunnuozhou">
+<meta property="article:tag" content="技术">
+<meta property="article:tag" content="Ubuntu">
+<meta property="article:tag" content="Windows">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://sunnuozhou.github.io/2021/05/22/%E9%85%8D%E7%BD%AE%E6%96%B0%E7%94%B5%E8%84%91%EF%BC%81/ludashi1.jpg">
+
+<link rel="canonical" href="https://sunnuozhou.github.io/2021/05/22/%E9%85%8D%E7%BD%AE%E6%96%B0%E7%94%B5%E8%84%91%EF%BC%81/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true
+  };
+</script>
+
+  <title>配置新电脑！ | SNZ的博客</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">SNZ的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>About</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>Tags</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>Categories</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+
+</nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="Searching..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
+</div>
+    </header>
+
+    
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-Haus">
+    <link itemprop="mainEntityOfPage" href="https://sunnuozhou.github.io/2021/05/22/%E9%85%8D%E7%BD%AE%E6%96%B0%E7%94%B5%E8%84%91%EF%BC%81/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="sunnuozhou">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="SNZ的博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          配置新电脑！
+        </h1>
+
+        <div class="post-meta">
+		  
+            <i class="fa fa-thumb-tack"></i>
+            <font color="#1fa67a">Top</font>
+            <span class="post-meta-divider">|</span>
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2021-05-22 10:55:01" itemprop="dateCreated datePublished" datetime="2021-05-22T10:55:01+08:00">2021-05-22</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-05-25 12:14:25" itemprop="dateModified" datetime="2021-05-25T12:14:25+08:00">2021-05-25</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%AE%9E%E4%BA%8B%E8%AE%B0%E5%BD%95/" itemprop="url" rel="index">
+                    <span itemprop="name">实事记录</span>
+                  </a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">Views: </span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>新电脑终于到货了，比想象中的厚一些，重量还可以接受。</p>
+<a id="more"></a>
+<h3 id="简易的Windows配置"><a href="#简易的Windows配置" class="headerlink" title="简易的Windows配置"></a>简易的Windows配置</h3><p>先按引导配置好Windows的设置，然后把常用的软件都装了一下，具体见<a href="https://sunnuozhou.github.io/2021/05/22/Windows-Ubuntu%E8%BD%AF%E4%BB%B6%E5%88%97%E8%A1%A8/">软件列表</a>。</p>
+<p>然后用鲁大师（经典版）测了一下新旧电脑的性能对比，发现还是有不少提升的：</p>
+<center>
+<div style="display:inline-block;"><img src="/2021/05/22/%E9%85%8D%E7%BD%AE%E6%96%B0%E7%94%B5%E8%84%91%EF%BC%81/ludashi1.jpg" style="zoom: 30%;"> </div>
+<div style="display:inline-block;margin-left:10px;"><img src="/2021/05/22/%E9%85%8D%E7%BD%AE%E6%96%B0%E7%94%B5%E8%84%91%EF%BC%81/ludashi2.jpg" style="zoom: 30%;"></div>
+</center>
+
+<p>接着把Microsoft office激活了一下，没遇到太大的问题。</p>
+<h2 id="配置过程"><a href="#配置过程" class="headerlink" title="配置过程"></a>配置过程</h2><h3 id="Ubuntu安装"><a href="#Ubuntu安装" class="headerlink" title="Ubuntu安装"></a>Ubuntu安装</h3><p>接下来就是激动人心的Ubuntu安装环节了，Ubuntu20.04的安装盘我已经早早弄好了，先用Windows自带的磁盘管理给Ubuntu分了150G的空间，然后插U盘进BIOS。没想到thinkbook的BIOS键居然是F1，根本猜不对。</p>
+<p>好不容易进了Ubuntu的安装界面，结果发现这Windows居然有bitlocker的磁盘保护，我只能在回到Windows把它关掉。到安装环节，我已经不记得是选和Windows共存还是选其他了，看了看网上的教程，貌似是选其他的多，我就也选了其他，运气不错，安装过程中没遇到什么问题。</p>
+<h3 id="Ubuntu配置"><a href="#Ubuntu配置" class="headerlink" title="Ubuntu配置"></a>Ubuntu配置</h3><p>第一步当然是换源后跑<code>sudo apt update</code>和<code>sudo apt upgrade</code>。换了源速度还是比较快的。</p>
+<p>众所周知，Ubuntu的拼音相当智能，所以第二步就是装上搜狗输入法。如果不是对着我当时升级20.04的博客看，我都不知道怎么启用fcitx了。</p>
+<p>本来想先装Chrome的，但快速的下载地址不是很好找，我就准备等等在装了，毕竟在Ubuntu上安装软件基本不用Chrome。</p>
+<p>先把sudo免密开了，不然每次输密码太烦了。</p>
+<p>先装了ssh方便传输文件，先把ssr传过去了，结果发现在右上角根本没有显示，以至于什么都做不了。了解了一下，原来是没装topicons plus。一通折磨后，用我以前不会用的<code>chrome-gnome-shell</code>装好了。调配ssr过程遇到了一些问题，见下文。</p>
+<p>bash实在是太难用了，赶紧装个zsh。顺便给git设置了一个代理。</p>
+<p>把以前用的Desktop icons的插件装好了，装过一次就比较轻车熟路了。</p>
+<p>外观问题是最先需要解决的，于是我依葫芦画瓢地把grub界面的优化搞了一搞。</p>
+<p>顺便把vim的配置用ssh全扔过去了。</p>
+<p>在wyj的帮助一键装好了qq，比现在这台电脑好用多了。</p>
+<p>尝试使用指纹识别，但由于设备太新了，Ubuntu没有对应的驱动，故放弃。</p>
+<p>尝试在新电脑下编辑hexo博客，没有遇到任何问题，clone下来可以直接用。顺带下载了typora。</p>
+<h2 id="遇到的问题"><a href="#遇到的问题" class="headerlink" title="遇到的问题"></a>遇到的问题</h2><h3 id="配置代理"><a href="#配置代理" class="headerlink" title="配置代理"></a>配置代理</h3><p>其他部分一切顺利，除了不能上网。研究了半天electron-ssr的报错，发现一点用也没有，因为老电脑上也有这些报错。测试端口情况，一切良好；测试代理通道情况，一切良好。于是我在Firefox上装了switchyomega，设置了一个通过socks5代理的情景模式，居然就能上网了。装了Chrome，发现Chrome一切正常，全局代理也可以上网。</p>
+<p>推测是Firefox的问题，但老电脑上并没有这个问题。</p>
+<p>过几天自然而然的好了。</p>
+<p>已解决。</p>
+<h3 id="连接-raw-githubusercontent-com"><a href="#连接-raw-githubusercontent-com" class="headerlink" title="连接 raw.githubusercontent.com"></a>连接 raw.githubusercontent.com</h3><p>用wget和curl都会出现拒绝连接，观察返回信息发现访问的IP是0.0.0.0，很奇怪，网上一搜发现在hosts里加一项就好了。不知道为什么会这样。</p>
+<p>原来是在墙外的原因，我都不知道。</p>
+<p>已解决。</p>
+<h3 id="系统问题"><a href="#系统问题" class="headerlink" title="系统问题"></a>系统问题</h3><p>每次开机都会显示系统出现内部问题，大概看了一下，是fcitx导致的。但我以前用18.04的时候也天天出现类似地问题，只要不影响我正常使用我就先不管了。</p>
+<p>未解决。</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E6%8A%80%E6%9C%AF/" rel="tag"># 技术</a>
+              <a href="/tags/Ubuntu/" rel="tag"># Ubuntu</a>
+              <a href="/tags/Windows/" rel="tag"># Windows</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/03/02/%E5%91%A8%E6%9C%AB%E4%BD%9C%E4%B8%9A%E4%B8%AD%E7%9A%84%E5%9B%B0%E9%9A%BE%E6%95%B0%E5%AD%A6%E9%A2%98/" rel="prev" title="周末作业中的困难数学题">
+      <i class="fa fa-chevron-left"></i> 周末作业中的困难数学题
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2021/05/22/Windows-Ubuntu%E8%BD%AF%E4%BB%B6%E5%88%97%E8%A1%A8/" rel="next" title="Windows&Ubuntu软件列表">
+      Windows&Ubuntu软件列表 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let activeClass = CONFIG.comments.activeClass;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#简易的Windows配置"><span class="nav-number">1.</span> <span class="nav-text">简易的Windows配置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置过程"><span class="nav-number"></span> <span class="nav-text">配置过程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Ubuntu安装"><span class="nav-number">1.</span> <span class="nav-text">Ubuntu安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Ubuntu配置"><span class="nav-number">2.</span> <span class="nav-text">Ubuntu配置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#遇到的问题"><span class="nav-number"></span> <span class="nav-text">遇到的问题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#配置代理"><span class="nav-number">1.</span> <span class="nav-text">配置代理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#连接-raw-githubusercontent-com"><span class="nav-number">2.</span> <span class="nav-text">连接 raw.githubusercontent.com</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#系统问题"><span class="nav-number">3.</span> <span class="nav-text">系统问题</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="sunnuozhou"
+      src="/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">sunnuozhou</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">154</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">75</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/sunnuozhou" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;sunnuozhou" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://space.bilibili.com/369660377" title="Bilibili → https:&#x2F;&#x2F;space.bilibili.com&#x2F;369660377" rel="noopener" target="_blank"><i class="fa fa-fw fa-tv"></i>Bilibili</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:sunnuozhou@qq.com" title="E-Mail → mailto:sunnuozhou@qq.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title">
+      <i class="fa fa-fw fa-link"></i>
+      Friend Links
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://2o181o28.github.io/" title="https:&#x2F;&#x2F;2o181o28.github.io" rel="noopener" target="_blank">weiyijun</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://www.cnblogs.com/s-r-f" title="https:&#x2F;&#x2F;www.cnblogs.com&#x2F;s-r-f" rel="noopener" target="_blank">srf</a>
+        </li>
+    </ul>
+  </div>
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-snz"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">sunnuozhou</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> v4.2.0
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">Theme – <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.7.0
+  </div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="Total Visitors">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="Total Views">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+      
+<script type="text/x-mathjax-config">
+
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$', '$'], ['\\(', '\\)'] ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      equationNumbers: {
+        autoNumber: 'AMS'
+      }
+    }
+  });
+
+  MathJax.Hub.Register.StartupHook('TeX Jax Ready', function() {
+    MathJax.InputJax.TeX.prefilterHooks.Add(function(data) {
+      if (data.display) {
+        var next = data.script.nextSibling;
+        while (next && next.nodeName.toLowerCase() === '#text') {
+          next = next.nextSibling;
+        }
+        if (next && next.nodeName.toLowerCase() === 'br') {
+          next.parentNode.removeChild(next);
+        }
+      }
+    });
+  });
+
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for (i = 0; i < all.length; i += 1) {
+      element = document.getElementById(all[i].inputID + '-Frame').parentNode;
+      if (element.nodeName.toLowerCase() == 'li') {
+        element = element.parentNode;
+      }
+      element.classList.add('has-jax');
+    }
+  });
+</script>
+<script>
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML', () => {
+    MathJax.Hub.Typeset();
+  }, window.MathJax);
+</script>
+
+    
+
+  
+
+</body>
+</html>
