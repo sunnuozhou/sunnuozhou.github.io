@@ -36,6 +36,23 @@ top: 1
 - **网易云音乐：音乐**
 - **Microsoft office：Windows下为数不多的好东西**
 - shotcut：不知道好不好用的免费开源剪辑软件
+- typora：编辑md文件
+
+### 娱乐
+- **steam：单机游戏**
+  - besiege：仿真物理引擎沙盒游戏
+  - The Binding of Isaac：经典rogue-like
+  - Darkest Dungeon：经典rogue-like
+  - Human Fall Flat：折磨游戏
+  - Danganronpa2：弹丸系列最高评价
+  - Angels of Death：简单日式RPG游戏
+  - Stick Fight：以前和学长一起颓
+  - Helltaker：画风很有特色的小游戏
+  - 超阈限空间 Superliminal：评价不错，但是很短
+- **暴雪战网：游戏**
+  - 炉石传说：游玩时间最长的游戏
+
+- 炉石传说官方插件：比盒子好用的记牌器
 
 ## Ubuntu 20.04
 
@@ -53,6 +70,8 @@ top: 1
 - **electron-ssr：不可描述**
 - ssh：传输文件
 - git：使用github必备。
+- curl：在终端访问网络
+- aria2：bt下载
 
 ### 工具
 
@@ -62,10 +81,14 @@ top: 1
 - gnome-shell-extensions：各种插件
 	- topicons-plus：显示后台应用
 	- desktop-icons-ng-ding：比20.04好用的桌面图标功能
-
 - **QQ：社交**
 - **vim：好用的文本编辑器**
 	- youcompleteme：还算好用的补全
-
 - typora：编辑md文件
 - hexo：写博客
+- sympy：数学工具
+- lemonlime：评测工具
+- WPS：Microsoft office的替代品
+- VLC：看视频，音频
+- gnome-boxex：虚拟机，尽管一个没装。
+- texstudio：写题面

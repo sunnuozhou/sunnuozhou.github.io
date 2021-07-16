@@ -9,7 +9,7 @@ categories: 解题报告
 top:
 ---
 
-[题目链接](https://codeforces.com/gym/101242)
+[题目链接](https://codeforces.com/gym/101471)
 
 结论：答案线段上至少有两个顶点。
 
