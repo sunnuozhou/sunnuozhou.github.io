@@ -4368,4 +4368,22 @@ a_nb_n&=\frac{Im((2+i)^{2n})}2
         <tag>日常</tag>
       </tags>
   </entry>
+  <entry>
+    <title>安装nvidia驱动</title>
+    <url>/2021/07/16/%E5%AE%89%E8%A3%85nvidia%E9%A9%B1%E5%8A%A8/</url>
+    <content><![CDATA[<p>突然发现没有装NVIDIA的驱动，就尝试装一下。</p>
+<a id="more"></a>
+<h2 id="失败的尝试"><a href="#失败的尝试" class="headerlink" title="失败的尝试"></a>失败的尝试</h2><p>一开始我是用<code>sudo ubuntu-drivers autoinstall</code>来装的，给我装了460.84的版本。我虽然能在<code>/usr/src</code>中找到对应的文件夹，但<code>nvidia-smi</code>和<code>nvidia-settings</code>都是失败的——它们告诉我我没装NVIDIA驱动。</p>
+<p>我在网上翻了翻教程，发现很多教程都说用<code>dkms</code>来安装模组，但我的<code>dkms</code>里根本就没记录到这个驱动，只有一个<code>virtualbox</code>。</p>
+<p>研究半天无果，我就先假装看不见<code>dkms</code>，看看别人是怎么装的。我发现有人在装完后手动<code>modprobe nvidia</code>，也试了试，结果发现我连这个模组都没有。即使我改用<code>apt</code>重新装了一遍，也压根没有生成模组。</p>
+<p>翻了翻别的教程，发现有人甚至是手动装的驱动，我立刻觉得这安装方法太过陈旧了，不应该是20.04所需要的方法，就改为搜20.04的安装方法。</p>
+<h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><p>Google上<a href="https://www.myfreax.com/how-to-nvidia-drivers-on-ubuntu-20-04/" target="_blank" rel="noopener">第一篇博客</a>就很靠谱，我按这个来搞，一下就搞好了。</p>
+]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>技术</tag>
+      </tags>
+  </entry>
 </search>

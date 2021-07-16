@@ -201,6 +201,107 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-Haus">
+    <link itemprop="mainEntityOfPage" href="https://sunnuozhou.github.io/2020/04/22/Berlekamp-Massey%E7%AE%97%E6%B3%95%E7%AE%80%E4%BB%8B/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="sunnuozhou">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="SNZ的博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/04/22/Berlekamp-Massey%E7%AE%97%E6%B3%95%E7%AE%80%E4%BB%8B/" class="post-title-link" itemprop="url">Berlekamp-Massey算法简介</a>
+        </h1>
+
+        <div class="post-meta">
+		  
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2020-04-22 18:16:41" itemprop="dateCreated datePublished" datetime="2020-04-22T18:16:41+08:00">2020-04-22</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-05-25 12:03:56" itemprop="dateModified" datetime="2021-05-25T12:03:56+08:00">2021-05-25</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%95%99%E7%A8%8B/" itemprop="url" rel="index">
+                    <span itemprop="name">教程</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><a href="https://www.luogu.com.cn/problem/P5487" target="_blank" rel="noopener">模板题链接</a></p>
+<h2 id="Berlekamp-Massey算法"><a href="#Berlekamp-Massey算法" class="headerlink" title="Berlekamp-Massey算法"></a>Berlekamp-Massey算法</h2><p>Berlekamp-Massey算法，简称BM算法，是用来求解一个数列最短线性递推式的算法，时间复杂度为$O(n^2)$。</p>
+<h3 id="算法流程"><a href="#算法流程" class="headerlink" title="算法流程"></a>算法流程</h3><p>记数列为$\{a_1,a_2,..,a_n\}$，只考虑$\{a_1,a_2,..,a_i\}$的最短线性递推为$R_i$，$a_{i+1}$和用$R_i$推算出的下一个数的差为$delta_i$。特别的，$R_0=\{\}$。</p>
+<p>现在考虑如果我们已经知道了$R_1,R_2,..R_{i-1}$，如何求$R_i$？</p>
+<ul>
+<li><p>如果$delta_{i-1}=0$，那么显然$R_i=R_{i-1}$</p>
+</li>
+<li><p>如果$R_{i-1}$为$\{\}$，那么$R_i=\{0,0,..,0\}$，共$i$个0。</p>
+</li>
+<li><p>否则我们需要对$R_{i-1}$进行调整来得到$R_i$。一个简单的思想是找到一个线性递推式$R’=\{r’_1,r’_2,..,r’_k\}$满足$\sum_{j=1}^kr’_j\times a_{w-j}=0$对所有$k&lt;w&lt;i$成立，并且在$i$处的值为$delta_{i-1}$。那么$R_i$就可以等于$R_{i-1}+R’$。</p>
+</li>
+<li><p>一种可行的构造方案是对于$0\le w&lt;i-1$，可以使$R’=\{0,0,..,0,\frac{delta_{i-1}}{delta_w},-\frac{delta_{i-1}}{delta_w}\times R_w\}$，其中0的个数为$i-w-2$。</p>
+</li>
+<li><p>为了使$R_i$最短，找到一个$w$使得$R’$最短即可。</p>
+</li>
+</ul>
+<p>其中有用的$R_i$只有当前的$R_i$和使$R’$最短的$R_w$，并不需要记录所有$R_i$，空间是$O(n)$的。</p>
+<p>用这个方法生成的线性递推正确性是显然的，但我并不会证明一定是最短的。<del>但是过了模板题</del></p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/04/22/Berlekamp-Massey%E7%AE%97%E6%B3%95%E7%AE%80%E4%BB%8B/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-Haus">
     <link itemprop="mainEntityOfPage" href="https://sunnuozhou.github.io/2020/04/12/%E8%93%9D%E7%89%995%E8%AE%BE%E5%A4%87%E8%BF%9E%E6%8E%A5%E5%8F%8C%E7%B3%BB%E7%BB%9F/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1021,90 +1122,6 @@
   
   
 
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-Haus">
-    <link itemprop="mainEntityOfPage" href="https://sunnuozhou.github.io/2020/01/28/%E8%AE%A9goolge%E6%94%B6%E5%BD%95hexo%E5%8D%9A%E5%AE%A2/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="sunnuozhou">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="SNZ的博客">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/01/28/%E8%AE%A9goolge%E6%94%B6%E5%BD%95hexo%E5%8D%9A%E5%AE%A2/" class="post-title-link" itemprop="url">让goolge收录hexo博客</a>
-        </h1>
-
-        <div class="post-meta">
-		  
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2020-01-28 17:48:18" itemprop="dateCreated datePublished" datetime="2020-01-28T17:48:18+08:00">2020-01-28</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-05-25 12:03:56" itemprop="dateModified" datetime="2021-05-25T12:03:56+08:00">2021-05-25</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%95%99%E7%A8%8B/" itemprop="url" rel="index">
-                    <span itemprop="name">教程</span>
-                  </a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>我发现在google上搜不到自己的博客，就研究了一下。</p>
-<h3 id="生成站点地图"><a href="#生成站点地图" class="headerlink" title="生成站点地图"></a>生成站点地图</h3><p>先在自己的网站中生成站点地图，在博客目录下<code>npm install hexo-generator-sitemap --save</code>安装插件。</p>
-<p>然后再配置文件中插入以下内容：</p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 自动生成sitemap</span></span><br><span class="line"><span class="attr">sitemap:</span> </span><br><span class="line">  <span class="attr">path:</span> <span class="string">sitemap.xml</span></span><br></pre></td></tr></table></figure>
-<p>现在<code>hexo g</code>之后就可以在<code>/public</code>中发现<code>sitemap.xml</code>。</p>
-<h3 id="验证网站所有权"><a href="#验证网站所有权" class="headerlink" title="验证网站所有权"></a>验证网站所有权</h3><p>我选的是$google$推荐的验证方式——上传html。先在<a href="https://search.google.com/search-console/welcome" target="_blank" rel="noopener">Google Search Console</a>输入你的网址，选择继续，把$google$的html放到博客文件夹的<code>public</code>目录下，然后<code>hexo d</code>上传。</p>
-<p>等上传完后开始验证就好了。</p>
-<h3 id="上传站点地图"><a href="#上传站点地图" class="headerlink" title="上传站点地图"></a>上传站点地图</h3><p>在左侧选择站点地图一项，输入站点地图的位置，然后上传就好了。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
   </div>
 
   
@@ -1177,7 +1194,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">154</span>
+          <span class="site-state-item-count">155</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
