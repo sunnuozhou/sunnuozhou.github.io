@@ -13,15 +13,26 @@ I have a broad interest in theoretical computer science, especially theoretical 
 
 ## News
 
+- **July, 2024** Attending EC 2024!
 - **Feb, 2024** Spring research at CMU!
 
 ## Publications and Manuscripts
 
+- **[Setting Targets is All You Need:Improved Order Competitive Ratio for Online Selection](https://arxiv.org/abs/2406.15192)**
+
+  	Liyan Chen, <ins>Nuozhou Sun</ins>, Zhihao Gavin Tang
+
+  	In EC 2024
+
 - **[Fiat-Shamir for Bounded-Depth Adversaries](https://eprint.iacr.org/2024/256)**
+  
 	Liyan Chen, Yilei Chen, Zikuan Huang, <ins>Nuozhou Sun</ins>, Tianqi Yang and Yiding Zhang
+
 	Preprint
 	
 - **[SODA: A Set of Fast Oblivious Algorithms in Distributed Secure Data Analytics](https://www.vldb.org/pvldb/vol16/p1671-li.pdf)**
+  
 	Xiang Li, <ins>Nuozhou Sun</ins>, Yunqian Luo, Mingyu Gao
+
 	In VLDB 2023
 
