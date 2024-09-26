@@ -20,7 +20,7 @@ I have a broad interest in theoretical computer science, especially theoretical 
 
 - **[Setting Targets is All You Need: Improved Order Competitive Ratio for Online Selection](https://arxiv.org/abs/2406.15192)**
 
-  	Liyan Chen, <ins>Nuozhou Sun</ins>, Zhihao Gavin Tang
+  	Liyan Chen, Nuozhou Sun, Zhihao Gavin Tang
 
   	In EC 2024
 
