@@ -18,11 +18,11 @@ I have a broad interest in theoretical computer science, especially theoretical 
 
 ## Publications and Manuscripts
 
-- **[Setting Targets is All You Need](https://arxiv.org/abs/2406.15192)**
+- **[Setting Targets is All You Need:Improved Order Competitive Ratio for Online Selection](https://arxiv.org/abs/2406.15192)**
+  
+	Liyan Chen, <ins>Nuozhou Sun</ins>, Zhihao Gavin Tang
 
-  	Liyan Chen, Nuozhou Sun, Zhihao Gavin Tang
-
-  	In EC 2024
+	In EC 2024
 
 - **[Fiat-Shamir for Bounded-Depth Adversaries](https://eprint.iacr.org/2024/256)**
   
